@@ -13,6 +13,8 @@
     content="Meet Pip Inkwing, the tiny book dragon and Keeper of the Manuscripts at Macarons Manuscripts."
   >
 
+  <meta name="color-scheme" content="light">
+
   <title>Meet Pip | Macarons Manuscripts</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,8 +32,8 @@
 
   <style>
     :root {
+      color-scheme: light;
       --cream: #fffaf6;
-      --soft-cream: #fdf3ed;
       --blush: #f6dce5;
       --dusty-pink: #d989a9;
       --raspberry: #bd5f8a;
@@ -50,6 +52,8 @@
 
     html {
       scroll-behavior: smooth;
+      color-scheme: light;
+      background: var(--cream);
     }
 
     body {
@@ -61,8 +65,8 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
     a {
@@ -96,7 +100,7 @@
       padding: 13px 18px 13px 24px;
       border: 1px solid rgba(255, 255, 255, 0.82);
       border-radius: 999px;
-      background: rgba(255, 250, 246, 0.86);
+      background: rgba(255, 250, 246, 0.9);
       box-shadow: 0 12px 38px rgba(93, 67, 95, 0.09);
       backdrop-filter: blur(16px);
     }
@@ -171,10 +175,6 @@
       margin: auto;
     }
 
-    .hero-copy {
-      position: relative;
-    }
-
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -183,7 +183,7 @@
       padding: 9px 16px;
       border: 1px solid rgba(189, 95, 138, 0.15);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.68);
+      background: rgba(255, 255, 255, 0.7);
       color: var(--raspberry);
       font-size: 13px;
       font-weight: 800;
@@ -220,7 +220,7 @@
       padding: 18px 22px;
       border: 1px solid rgba(255, 255, 255, 0.82);
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.63);
+      background: rgba(255, 255, 255, 0.68);
       box-shadow: 0 12px 30px rgba(93, 67, 95, 0.08);
       color: var(--soft-purple);
       font-family: "Playfair Display", serif;
@@ -257,27 +257,27 @@
       font-weight: 700;
     }
 
-    .sparkle {
+    .hero-sparkle {
       position: absolute;
       z-index: 3;
       pointer-events: none;
       animation: twinkle 2.4s ease-in-out infinite;
     }
 
-    .sparkle.one {
+    .hero-sparkle.one {
       top: 12%;
       left: 3%;
       font-size: 28px;
     }
 
-    .sparkle.two {
+    .hero-sparkle.two {
       top: 18%;
       right: 4%;
       font-size: 34px;
       animation-delay: 0.8s;
     }
 
-    .sparkle.three {
+    .hero-sparkle.three {
       bottom: 9%;
       left: 46%;
       font-size: 26px;
@@ -340,22 +340,17 @@
       background: #fffdfb;
     }
 
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 54px;
-    }
-
     .story-card {
-      padding: 42px;
+      max-width: 980px;
+      margin: auto;
+      padding: 46px;
       border: 1px solid rgba(93, 67, 95, 0.08);
       border-radius: 36px;
       background:
         linear-gradient(
           145deg,
-          rgba(255, 255, 255, 0.95),
-          rgba(246, 220, 229, 0.55)
+          rgba(255, 255, 255, 0.98),
+          rgba(246, 220, 229, 0.48)
         );
       box-shadow: var(--shadow);
     }
@@ -369,54 +364,6 @@
 
     .story-card p:last-child {
       margin-bottom: 0;
-    }
-
-    .speech-wrap {
-      display: grid;
-      gap: 20px;
-    }
-
-    .speech-bubble {
-      position: relative;
-      padding: 25px 27px;
-      border: 1px solid rgba(189, 95, 138, 0.13);
-      border-radius: 28px;
-      background: white;
-      box-shadow: 0 16px 38px rgba(93, 67, 95, 0.1);
-      color: var(--deep-purple);
-      font-family: "Playfair Display", serif;
-      font-size: 20px;
-      line-height: 1.55;
-      opacity: 0;
-      transform: translateY(25px);
-      transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-    }
-
-    .speech-bubble.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .speech-bubble::after {
-      position: absolute;
-      bottom: -17px;
-      left: 42px;
-      width: 0;
-      height: 0;
-      border-top: 18px solid white;
-      border-right: 18px solid transparent;
-      content: "";
-    }
-
-    .speech-bubble:nth-child(2) {
-      margin-left: 48px;
-      background: #fff5fa;
-    }
-
-    .speech-bubble:nth-child(2)::after {
-      border-top-color: #fff5fa;
     }
 
     .facts-section {
@@ -444,7 +391,7 @@
       padding: 30px;
       border: 1px solid rgba(93, 67, 95, 0.08);
       border-radius: 30px;
-      background: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.9);
       box-shadow: 0 14px 38px rgba(93, 67, 95, 0.08);
       text-align: center;
       transition:
@@ -547,7 +494,7 @@
       padding: 48px;
       border: 2px solid rgba(255, 255, 255, 0.72);
       border-radius: 42px;
-      background: rgba(255, 255, 255, 0.62);
+      background: rgba(255, 255, 255, 0.68);
       box-shadow: var(--shadow);
     }
 
@@ -639,7 +586,7 @@
           rgba(231, 223, 242, 0.84),
           transparent 32%
         ),
-        rgba(255, 255, 255, 0.75);
+        rgba(255, 255, 255, 0.8);
       box-shadow: var(--shadow);
       text-align: center;
     }
@@ -762,11 +709,137 @@
       font-size: 13px;
     }
 
+    .pip-popover {
+      position: fixed;
+      right: 22px;
+      bottom: 24px;
+      z-index: 999;
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+      width: min(430px, calc(100vw - 34px));
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(28px) scale(0.96);
+      transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+    }
+
+    .pip-popover.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    .pip-avatar {
+      flex: 0 0 74px;
+      width: 74px;
+      height: 74px;
+      overflow: hidden;
+      border: 5px solid white;
+      border-radius: 50%;
+      background: var(--lavender);
+      box-shadow: 0 14px 34px rgba(93, 67, 95, 0.22);
+    }
+
+    .pip-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 22%;
+      transform: scale(1.55);
+    }
+
+    .pip-bubble {
+      position: relative;
+      flex: 1;
+      padding: 18px 44px 18px 20px;
+      border: 2px solid rgba(189, 95, 138, 0.14);
+      border-radius: 24px 24px 24px 8px;
+      background: white;
+      box-shadow: 0 18px 46px rgba(93, 67, 95, 0.2);
+    }
+
+    .pip-bubble::before {
+      position: absolute;
+      bottom: 16px;
+      left: -15px;
+      width: 24px;
+      height: 24px;
+      background: white;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+      content: "";
+    }
+
+    .pip-label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--raspberry);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .pip-message {
+      margin: 0;
+      color: var(--deep-purple);
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .pip-close {
+      position: absolute;
+      top: 9px;
+      right: 11px;
+      width: 28px;
+      height: 28px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--blush);
+      color: var(--deep-purple);
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .bubble-sparkle {
+      position: absolute;
+      pointer-events: none;
+      animation: bubbleTwinkle 1.2s ease-in-out infinite;
+    }
+
+    .bubble-sparkle.a {
+      top: -12px;
+      right: 34px;
+    }
+
+    .bubble-sparkle.b {
+      top: 20px;
+      left: -9px;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes bubbleTwinkle {
+      0%,
+      100% {
+        opacity: 0.35;
+        transform: scale(0.8) rotate(0deg);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.15) rotate(12deg);
+      }
+    }
+
     .floating-sparkle {
       position: fixed;
-      z-index: 999;
+      z-index: 998;
       pointer-events: none;
-      animation: floatAway 1.5s ease-out forwards;
+      animation: floatAway 1.45s ease-out forwards;
     }
 
     @keyframes floatAway {
@@ -781,13 +854,12 @@
 
       100% {
         opacity: 0;
-        transform: translateY(-95px) scale(1.25) rotate(50deg);
+        transform: translateY(-90px) scale(1.2) rotate(45deg);
       }
     }
 
     @media (max-width: 1050px) {
       .hero-grid,
-      .story-grid,
       .collector-panel {
         grid-template-columns: 1fr;
       }
@@ -851,14 +923,6 @@
         border-radius: 30px;
       }
 
-      .speech-bubble {
-        font-size: 18px;
-      }
-
-      .speech-bubble:nth-child(2) {
-        margin-left: 0;
-      }
-
       .facts-grid,
       .favourites-grid,
       .collector-cards {
@@ -888,6 +952,27 @@
 
       .footer-text {
         margin: auto;
+      }
+
+      .pip-popover {
+        right: 10px;
+        bottom: 14px;
+        width: calc(100vw - 20px);
+        gap: 8px;
+      }
+
+      .pip-avatar {
+        flex-basis: 58px;
+        width: 58px;
+        height: 58px;
+      }
+
+      .pip-bubble {
+        padding: 15px 38px 15px 17px;
+      }
+
+      .pip-message {
+        font-size: 15px;
       }
     }
 
@@ -954,9 +1039,9 @@
 
     <section class="hero">
 
-      <span class="sparkle one">✨</span>
-      <span class="sparkle two">✦</span>
-      <span class="sparkle three">✨</span>
+      <span class="hero-sparkle one">✨</span>
+      <span class="hero-sparkle two">✦</span>
+      <span class="hero-sparkle three">✨</span>
 
       <div class="hero-grid">
 
@@ -1026,51 +1111,33 @@
 
         </div>
 
-        <div class="story-grid">
+        <div class="story-card">
 
-          <div class="story-card">
+          <p>
+            While other dragons collected gold, Pip collected stories.
+            He guarded dog-eared paperbacks, rescued forgotten
+            bookmarks and believed every reader deserved a little
+            magic with their next chapter.
+          </p>
 
-            <p>
-              While other dragons collected gold, Pip collected stories.
-              He guarded dog-eared paperbacks, rescued forgotten
-              bookmarks and believed every reader deserved a little
-              magic with their next chapter.
-            </p>
+          <p>
+            One day, Pip met Maria. She was creating a cosy little
+            bookish shop filled with gifts, reading accessories and
+            happy mail. Pip immediately offered to help.
+          </p>
 
-            <p>
-              One day, Pip met Maria. She was creating a cosy little
-              bookish shop filled with gifts, reading accessories and
-              happy mail. Pip immediately offered to help.
-            </p>
+          <p>
+            His definition of “help” includes inspecting every parcel,
+            organising magnetic bookmarks, supervising snack breaks
+            and occasionally falling asleep on the packaging.
+          </p>
 
-            <p>
-              His definition of “help” includes inspecting every parcel,
-              organising magnetic bookmarks, supervising snack breaks
-              and occasionally falling asleep on the packaging.
-            </p>
-
-            <p>
-              Together, Maria and Pip created Macarons Manuscripts: a
-              magical bookish boutique for readers who believe there is
-              no such thing as too many books—or too many cute reading
-              accessories.
-            </p>
-
-          </div>
-
-          <div class="speech-wrap">
-
-            <div class="speech-bubble reveal">
-              Psst... don’t tell Maria... I may have hidden a sticker in
-              your parcel. 🤫
-            </div>
-
-            <div class="speech-bubble reveal">
-              I’m supposed to be organising bookmarks... but I started
-              another chapter instead. 📖
-            </div>
-
-          </div>
+          <p>
+            Together, Maria and Pip created Macarons Manuscripts: a
+            magical bookish boutique for readers who believe there is
+            no such thing as too many books—or too many cute reading
+            accessories.
+          </p>
 
         </div>
 
@@ -1379,72 +1446,133 @@
 
   </footer>
 
-  <script>
-    const revealItems = document.querySelectorAll(".reveal");
+  <div
+    class="pip-popover"
+    id="pipPopover"
+    role="status"
+    aria-live="polite"
+  >
 
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
+    <div class="pip-avatar">
+      <img
+        src="file_000000002ea882438fa417ce76c79f20.png"
+        alt=""
+      >
+    </div>
+
+    <div class="pip-bubble">
+
+      <span class="bubble-sparkle a">✨</span>
+      <span class="bubble-sparkle b">✦</span>
+
+      <button
+        class="pip-close"
+        id="pipClose"
+        type="button"
+        aria-label="Close Pip’s message"
+      >
+        ×
+      </button>
+
+      <span class="pip-label">
+        Pip whispers...
+      </span>
+
+      <p class="pip-message" id="pipMessage"></p>
+
+    </div>
+
+  </div>
+
+  <script>
+    const pipPopover = document.getElementById("pipPopover");
+    const pipMessage = document.getElementById("pipMessage");
+    const pipClose = document.getElementById("pipClose");
+
+    const messages = [
+      {
+        trigger: 0.18,
+        text: "Psst... don’t tell Maria... I may have hidden a sticker in your parcel. 🤫"
       },
       {
-        threshold: 0.3
+        trigger: 0.5,
+        text: "I’m supposed to be organising bookmarks... but I started another chapter instead. 📖"
+      },
+      {
+        trigger: 0.78,
+        text: "Official dragon fact: marshmallows count as structural support for hot chocolate. ☕"
       }
-    );
+    ];
 
-    revealItems.forEach((item) => {
-      revealObserver.observe(item);
-    });
+    let currentMessage = 0;
+    let hideTimer;
 
-    const sparkleSymbols = ["✨", "✦", "⋆", "💫"];
+    function makeSparkles() {
+      const symbols = ["✨", "✦", "⋆"];
 
-    function createSparkle() {
-      const sparkle = document.createElement("span");
+      for (let i = 0; i < 4; i += 1) {
+        const sparkle = document.createElement("span");
 
-      sparkle.className = "floating-sparkle";
-      sparkle.textContent =
-        sparkleSymbols[
-          Math.floor(Math.random() * sparkleSymbols.length)
-        ];
+        sparkle.className = "floating-sparkle";
+        sparkle.textContent =
+          symbols[Math.floor(Math.random() * symbols.length)];
 
-      sparkle.style.left =
-        Math.floor(Math.random() * 92 + 4) + "vw";
+        sparkle.style.left =
+          Math.floor(Math.random() * 22 + 70) + "vw";
 
-      sparkle.style.top =
-        Math.floor(Math.random() * 70 + 20) + "vh";
+        sparkle.style.top =
+          Math.floor(Math.random() * 20 + 65) + "vh";
 
-      sparkle.style.fontSize =
-        Math.floor(Math.random() * 15 + 16) + "px";
+        sparkle.style.fontSize =
+          Math.floor(Math.random() * 12 + 15) + "px";
 
-      document.body.appendChild(sparkle);
+        document.body.appendChild(sparkle);
 
-      setTimeout(() => {
-        sparkle.remove();
-      }, 1500);
+        setTimeout(() => {
+          sparkle.remove();
+        }, 1500);
+      }
     }
 
-    let sparkleTimer;
+    function showPipMessage(text) {
+      clearTimeout(hideTimer);
 
-    window.addEventListener(
-      "scroll",
-      () => {
-        clearTimeout(sparkleTimer);
+      pipMessage.textContent = text;
+      pipPopover.classList.add("show");
+      makeSparkles();
 
-        sparkleTimer = setTimeout(() => {
-          createSparkle();
+      hideTimer = setTimeout(() => {
+        pipPopover.classList.remove("show");
+      }, 6500);
+    }
 
-          if (Math.random() > 0.5) {
-            setTimeout(createSparkle, 180);
-          }
-        }, 80);
-      },
-      {
-        passive: true
+    function checkScrollMessages() {
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      if (scrollableHeight <= 0 || currentMessage >= messages.length) {
+        return;
       }
-    );
+
+      const progress = window.scrollY / scrollableHeight;
+      const next = messages[currentMessage];
+
+      if (progress >= next.trigger) {
+        showPipMessage(next.text);
+        currentMessage += 1;
+      }
+    }
+
+    pipClose.addEventListener("click", () => {
+      pipPopover.classList.remove("show");
+      clearTimeout(hideTimer);
+    });
+
+    window.addEventListener("scroll", checkScrollMessages, {
+      passive: true
+    });
+
+    window.addEventListener("load", checkScrollMessages);
   </script>
 
 </body>

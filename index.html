@@ -602,8 +602,8 @@
     .pip-panel {
       position: relative;
       display: block;
-      min-height: 470px;
-      padding: 68px 65px 68px 400px;
+      min-height: 500px;
+      padding: 70px 65px 70px 405px;
       border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 42px;
       background: rgba(255, 255, 255, 0.68);
@@ -616,90 +616,120 @@
       position: absolute;
       inset: 0 auto 0 0;
       z-index: -1;
-      width: 40%;
+      width: 42%;
       background:
         radial-gradient(
-          circle at 35% 48%,
-          rgba(246, 220, 229, 0.9),
-          rgba(231, 223, 242, 0.42) 48%,
-          transparent 74%
+          circle at 38% 48%,
+          rgba(246, 220, 229, 0.95),
+          rgba(231, 223, 242, 0.48) 48%,
+          transparent 76%
         );
       content: "";
       pointer-events: none;
     }
 
-    .pip-visual {
+    .pip-stage {
       position: absolute;
-      top: 50%;
-      left: -305px;
+      inset: 0 auto 0 0;
       z-index: 2;
       width: 390px;
-      transform: translateY(-50%);
-      animation: pipPeek 10s ease-in-out infinite;
-      filter: drop-shadow(18px 20px 24px rgba(93, 67, 95, 0.18));
-      cursor: pointer;
-    }
-
-    .pip-visual::before,
-    .pip-visual::after {
-      position: absolute;
-      z-index: 4;
+      overflow: hidden;
       pointer-events: none;
-      content: "✨";
-      filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.95));
-      animation: pipSparkle 2.2s ease-in-out infinite;
     }
 
-    .pip-visual::before {
-      top: 28px;
-      right: 35px;
-      font-size: 26px;
+    .pip-character {
+      position: absolute;
+      top: 50%;
+      left: -285px;
+      width: 365px;
+      opacity: 0;
+      transform: translateY(-50%) rotate(-4deg);
+      transform-origin: left center;
+      filter: drop-shadow(16px 20px 20px rgba(93, 67, 95, 0.22));
+      transition:
+        left 0.9s cubic-bezier(0.22, 0.85, 0.3, 1),
+        opacity 0.35s ease,
+        transform 0.45s ease;
+      will-change: left, opacity, transform;
     }
 
-    .pip-visual::after {
-      right: 22px;
-      bottom: 58px;
-      font-size: 20px;
-      animation-delay: 1.1s;
-    }
-
-    .pip-visual img {
+    .pip-character img {
       display: block;
       width: 100%;
       height: auto;
-      border-radius: 28px;
-      transform-origin: 80% 70%;
-      transition: transform 0.3s ease;
+      object-fit: contain;
     }
 
-    .pip-visual:hover img,
-    .pip-visual:focus img {
-      transform: rotate(-3deg) scale(1.025);
+    .pip-character.is-peeking {
+      left: -92px;
+      opacity: 1;
+      transform: translateY(-50%) rotate(0deg);
     }
 
-    @keyframes pipPeek {
+    .pip-character.is-waving {
+      left: -20px;
+      width: 385px;
+      opacity: 1;
+      transform: translateY(-50%) rotate(1deg);
+    }
+
+    .pip-character.is-smiling {
+      left: -10px;
+      width: 365px;
+      opacity: 1;
+      transform: translateY(-50%) rotate(0deg);
+    }
+
+    .pip-character.is-hiding {
+      left: -300px;
+      opacity: 0;
+      transform: translateY(-50%) rotate(-5deg);
+    }
+
+    .pip-wave-bounce {
+      animation: pipWaveBounce 0.7s ease-in-out 2;
+    }
+
+    @keyframes pipWaveBounce {
       0%,
-      10% {
-        left: -305px;
-        transform: translateY(-50%) rotate(-4deg);
-      }
-
-      22%,
-      58% {
-        left: -42px;
+      100% {
         transform: translateY(-50%) rotate(1deg);
       }
 
-      64% {
-        left: -28px;
+      50% {
         transform: translateY(-53%) rotate(-2deg);
       }
+    }
 
-      72%,
-      100% {
-        left: -305px;
-        transform: translateY(-50%) rotate(-4deg);
-      }
+    .pip-sparkle {
+      position: absolute;
+      z-index: 4;
+      color: var(--gold);
+      opacity: 0;
+      pointer-events: none;
+      filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.95));
+      transition: opacity 0.3s ease;
+    }
+
+    .pip-sparkle-one {
+      top: 95px;
+      left: 295px;
+      font-size: 27px;
+    }
+
+    .pip-sparkle-two {
+      top: 205px;
+      left: 330px;
+      font-size: 20px;
+    }
+
+    .pip-stage.is-active .pip-sparkle {
+      opacity: 1;
+      animation: pipSparkle 1.6s ease-in-out infinite;
+    }
+
+    .pip-stage.is-active .pip-sparkle-two {
+      animation-delay: 0.75s;
     }
 
     @keyframes pipSparkle {
@@ -711,7 +741,7 @@
 
       50% {
         opacity: 1;
-        transform: scale(1.15) rotate(15deg);
+        transform: scale(1.18) rotate(15deg);
       }
     }
 
@@ -992,135 +1022,62 @@
       }
 
       .pip-panel {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .site-header {
-        padding: 15px;
-      }
-
-      .navigation {
-        padding: 12px 16px;
-      }
-
-      .brand-name {
-        font-size: 21px;
-      }
-
-      .nav-links a:not(.nav-button) {
-        display: none;
-      }
-
-      .nav-button {
-        padding: 9px 15px;
-        font-size: 13px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 125px 20px 70px;
-      }
-
-      .hero-title {
-        font-size: clamp(57px, 17vw, 78px);
-      }
-
-      .hero-subtitle {
-        margin-top: 25px;
-        font-size: 29px;
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .hero-note {
-        text-align: left;
-      }
-
-      .floating-item.book-one,
-      .floating-item.book-two {
-        display: none;
-      }
-
-      .section {
-        padding: 75px 20px;
-      }
-
-      .collection-grid,
-      .promise-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .collection-card {
-        min-height: 250px;
-      }
-
-      .pip-panel {
-        min-height: 790px;
-        padding: 390px 24px 34px;
+        min-height: 810px;
+        padding: 400px 24px 36px;
         border-radius: 30px;
       }
 
       .pip-panel::before {
         width: 100%;
-        height: 390px;
+        height: 400px;
         background:
           radial-gradient(
-            circle at 30% 45%,
-            rgba(246, 220, 229, 0.92),
-            rgba(231, 223, 242, 0.42) 52%,
-            transparent 78%
+            circle at 30% 44%,
+            rgba(246, 220, 229, 0.95),
+            rgba(231, 223, 242, 0.46) 54%,
+            transparent 80%
           );
       }
 
-      .pip-visual {
-        top: 190px;
-        left: -255px;
+      .pip-stage {
+        width: 100%;
+        height: 390px;
+      }
+
+      .pip-character {
+        top: 195px;
+        width: 330px;
+        left: -265px;
+      }
+
+      .pip-character.is-peeking {
+        left: -82px;
+      }
+
+      .pip-character.is-waving {
+        left: -10px;
         width: 345px;
-        transform: translateY(-50%);
-        animation-name: pipPeekMobile;
       }
 
-      @keyframes pipPeekMobile {
-        0%,
-        10% {
-          left: -255px;
-          transform: translateY(-50%) rotate(-4deg);
-        }
-
-        22%,
-        58% {
-          left: -22px;
-          transform: translateY(-50%) rotate(1deg);
-        }
-
-        64% {
-          left: -12px;
-          transform: translateY(-53%) rotate(-2deg);
-        }
-
-        72%,
-        100% {
-          left: -255px;
-          transform: translateY(-50%) rotate(-4deg);
-        }
+      .pip-character.is-smiling {
+        left: 2px;
+        width: 330px;
       }
 
-      .newsletter-card {
-        padding: 48px 18px;
-        border-radius: 30px;
+      .pip-character.is-hiding {
+        left: -275px;
+      }
+
+      .pip-sparkle-one {
+        top: 58px;
+        left: auto;
+        right: 36px;
+      }
+
+      .pip-sparkle-two {
+        top: 150px;
+        left: auto;
+        right: 18px;
       }
 
       .newsletter-form {
@@ -1466,14 +1423,34 @@
         <div class="pip-panel">
 
           <div
-            class="pip-visual"
-            tabindex="0"
-            aria-label="Pip Inkwing peeks out from the side and waves hello"
+            class="pip-stage"
+            id="pipStage"
+            aria-label="Pip Inkwing peeks out, waves hello and hides again"
           >
-            <img
-              src="Pip-hello.png"
-              alt="Pip Inkwing waving hello"
+            <div
+              class="pip-character is-hiding"
+              id="pipCharacter"
             >
+              <img
+                id="pipAnimatedImage"
+                src="pip-peek.png"
+                alt="Pip Inkwing peeking around the side"
+              >
+            </div>
+
+            <span
+              class="pip-sparkle pip-sparkle-one"
+              aria-hidden="true"
+            >
+              ✨
+            </span>
+
+            <span
+              class="pip-sparkle pip-sparkle-two"
+              aria-hidden="true"
+            >
+              ✨
+            </span>
           </div>
 
           <div class="pip-copy">
@@ -1734,6 +1711,73 @@
     </div>
 
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const stage = document.getElementById("pipStage");
+      const character = document.getElementById("pipCharacter");
+      const image = document.getElementById("pipAnimatedImage");
+
+      if (!stage || !character || !image) {
+        return;
+      }
+
+      const images = {
+        peek: "pip-peek.png",
+        wave: "pip-wave.png",
+        smile: "pip-smile.png"
+      };
+
+      Object.values(images).forEach((src) => {
+        const preload = new Image();
+        preload.src = src;
+      });
+
+      const setPip = (state, src, alt) => {
+        character.className = `pip-character ${state}`;
+        image.src = src;
+        image.alt = alt;
+      };
+
+      const runPipGreeting = () => {
+        stage.classList.add("is-active");
+
+        setPip(
+          "is-peeking",
+          images.peek,
+          "Pip Inkwing peeking around the side"
+        );
+
+        window.setTimeout(() => {
+          setPip(
+            "is-waving pip-wave-bounce",
+            images.wave,
+            "Pip Inkwing waving hello"
+          );
+        }, 1700);
+
+        window.setTimeout(() => {
+          setPip(
+            "is-smiling",
+            images.smile,
+            "Pip Inkwing smiling"
+          );
+        }, 4300);
+
+        window.setTimeout(() => {
+          setPip(
+            "is-hiding",
+            images.peek,
+            "Pip Inkwing hiding behind the side"
+          );
+          stage.classList.remove("is-active");
+        }, 6200);
+      };
+
+      window.setTimeout(runPipGreeting, 1800);
+      window.setInterval(runPipGreeting, 12000);
+    });
+  </script>
 
 </body>
 </html>

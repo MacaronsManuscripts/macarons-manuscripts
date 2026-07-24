@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Meet Maria, the maker behind Macarons Manuscripts, a cosy UK bookish boutique filled with gifts, reading accessories and dragon mischief."
+  >
+
+  <meta name="color-scheme" content="light">
+
+  <title>About Maria | Macarons Manuscripts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Satisfy&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      color-scheme: light;
+      --cream: #fffaf6;
+      --blush: #f6dce5;
+      --dusty-pink: #d989a9;
+      --raspberry: #bd5f8a;
+      --lavender: #e7dff2;
+      --soft-purple: #81627e;
+      --deep-purple: #5d435f;
+      --mint: #dcece5;
+      --gold: #d7b36a;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(93, 67, 95, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: light;
+      background: var(--cream);
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--cream);
+      color: var(--deep-purple);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 20;
+      padding: 22px 7%;
+      background:
+        linear-gradient(
+          135deg,
+          #fffaf6,
+          #fdf2f5,
+          #f6f1fa
+        );
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: auto;
+      padding: 13px 18px 13px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      border-radius: 999px;
+      background: rgba(255, 250, 246, 0.9);
+      box-shadow: 0 12px 38px rgba(93, 67, 95, 0.09);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand-name {
+      color: var(--raspberry);
+      font-family: "Satisfy", cursive;
+      font-size: 26px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-button {
+      padding: 11px 20px;
+      border-radius: 999px;
+      background: var(--raspberry);
+      color: white;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 7% 96px;
+      background:
+        radial-gradient(
+          circle at 12% 18%,
+          rgba(246, 220, 229, 0.95),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 88% 18%,
+          rgba(231, 223, 242, 0.95),
+          transparent 33%
+        ),
+        linear-gradient(
+          135deg,
+          #fffaf6,
+          #fdf2f5,
+          #f6f1fa
+        );
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      opacity: 0.28;
+      background-image:
+        radial-gradient(circle, #ffffff 1px, transparent 1px);
+      background-size: 30px 30px;
+      content: "";
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: center;
+      gap: 58px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .portrait-card {
+      position: relative;
+      padding: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.84);
+      border-radius: 40px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.92),
+          rgba(246, 220, 229, 0.72),
+          rgba(231, 223, 242, 0.76)
+        );
+      box-shadow: 0 30px 70px rgba(93, 67, 95, 0.18);
+    }
+
+    .portrait-card img {
+      width: 100%;
+      border-radius: 30px;
+    }
+
+    .portrait-caption {
+      margin: 14px 0 3px;
+      text-align: center;
+      color: var(--soft-purple);
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 9px 16px;
+      border: 1px solid rgba(189, 95, 138, 0.15);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--raspberry);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: var(--raspberry);
+      font-family: "Satisfy", cursive;
+      font-size: clamp(62px, 8vw, 108px);
+      font-weight: 400;
+      line-height: 0.95;
+      text-shadow: 0 5px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .hero h2 {
+      margin: 22px 0 17px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(31px, 4vw, 50px);
+      line-height: 1.12;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #725f70;
+      font-size: 18px;
+      line-height: 1.78;
+    }
+
+    .hero-note {
+      margin-top: 28px;
+      padding: 18px 22px;
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.68);
+      box-shadow: 0 12px 30px rgba(93, 67, 95, 0.08);
+      color: var(--soft-purple);
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .sparkle {
+      position: absolute;
+      z-index: 3;
+      pointer-events: none;
+      animation: twinkle 2.4s ease-in-out infinite;
+    }
+
+    .sparkle.one {
+      top: 12%;
+      left: 3%;
+      font-size: 28px;
+    }
+
+    .sparkle.two {
+      top: 18%;
+      right: 4%;
+      font-size: 34px;
+      animation-delay: 0.8s;
+    }
+
+    .sparkle.three {
+      bottom: 9%;
+      left: 46%;
+      font-size: 26px;
+      animation-delay: 1.4s;
+    }
+
+    @keyframes twinkle {
+      0%,
+      100% {
+        opacity: 0.35;
+        transform: scale(0.85) rotate(0deg);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.15) rotate(8deg);
+      }
+    }
+
+    .section {
+      position: relative;
+      padding: 90px 7%;
+    }
+
+    .section-inner {
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      margin: 0 0 10px;
+      color: var(--raspberry);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(35px, 4vw, 54px);
+      line-height: 1.12;
+    }
+
+    .section-text {
+      margin: 16px auto 0;
+      color: #796877;
+      font-size: 17px;
+      line-height: 1.72;
+    }
+
+    .story-section {
+      background: #fffdfb;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .story-card {
+      padding: 34px;
+      border: 1px solid rgba(93, 67, 95, 0.08);
+      border-radius: 32px;
+      box-shadow: 0 16px 42px rgba(93, 67, 95, 0.09);
+    }
+
+    .story-card:nth-child(1) {
+      background: linear-gradient(145deg, #fbe5ee, #fffaf7);
+    }
+
+    .story-card:nth-child(2) {
+      background: linear-gradient(145deg, #ece4f5, #fffaf7);
+    }
+
+    .story-card:nth-child(3) {
+      background: linear-gradient(145deg, #e4f0ea, #fffaf7);
+    }
+
+    .story-card h3 {
+      margin: 0 0 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+    }
+
+    .story-card p {
+      margin: 0;
+      color: #796877;
+      line-height: 1.75;
+    }
+
+    .values-section {
+      background:
+        radial-gradient(
+          circle at 12% 18%,
+          rgba(231, 223, 242, 0.75),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(220, 236, 229, 0.72),
+          transparent 30%
+        ),
+        var(--cream);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .value-card {
+      padding: 34px;
+      border: 1px solid rgba(93, 67, 95, 0.08);
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 14px 38px rgba(93, 67, 95, 0.08);
+    }
+
+    .value-card h3 {
+      margin: 0 0 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: #796877;
+      line-height: 1.72;
+    }
+
+    .feature-section {
+      background: #fffdfb;
+    }
+
+    .feature-card {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.84);
+      border-radius: 40px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(246, 220, 229, 0.62),
+          rgba(231, 223, 242, 0.68)
+        );
+      box-shadow: var(--shadow);
+    }
+
+    .feature-card img {
+      width: 100%;
+      border-radius: 28px;
+    }
+
+    .feature-caption {
+      margin: 15px 0 2px;
+      text-align: center;
+      color: var(--soft-purple);
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .promise-section {
+      background:
+        linear-gradient(
+          135deg,
+          #f7e9f0,
+          #ece4f5
+        );
+    }
+
+    .promise-card {
+      max-width: 960px;
+      margin: auto;
+      padding: 50px;
+      border: 2px solid rgba(255, 255, 255, 0.72);
+      border-radius: 40px;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .promise-card h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(35px, 4vw, 52px);
+    }
+
+    .promise-card p {
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: #746473;
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    .signature {
+      margin-top: 24px;
+      color: var(--raspberry);
+      font-family: "Satisfy", cursive;
+      font-size: 36px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 25px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background:
+        linear-gradient(
+          135deg,
+          var(--dusty-pink),
+          var(--raspberry)
+        );
+      box-shadow: 0 14px 30px rgba(189, 95, 138, 0.25);
+      color: white;
+    }
+
+    .button-secondary {
+      border: 1px solid rgba(93, 67, 95, 0.12);
+      background: white;
+      color: var(--deep-purple);
+    }
+
+    .site-footer {
+      padding: 65px 7% 28px;
+      background: var(--deep-purple);
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .footer-brand {
+      margin: 0 0 15px;
+      color: white;
+      font-family: "Satisfy", cursive;
+      font-size: 36px;
+    }
+
+    .footer-text {
+      max-width: 440px;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 17px;
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+    }
+
+    .footer-column a {
+      display: block;
+      margin: 10px 0;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 45px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 1050px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .portrait-card {
+        width: min(100%, 620px);
+        margin: auto;
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 15px;
+      }
+
+      .navigation {
+        padding: 12px 16px;
+      }
+
+      .brand-name {
+        font-size: 21px;
+      }
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .nav-button {
+        padding: 9px 15px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 68px 20px 78px;
+      }
+
+      .hero h1 {
+        font-size: clamp(62px, 19vw, 88px);
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 72px 20px;
+      }
+
+      .story-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-card,
+      .value-card,
+      .promise-card {
+        padding: 30px 22px;
+        border-radius: 30px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .site-footer {
+        padding: 55px 25px 25px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+      }
+
+      .footer-text {
+        margin: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <nav class="navigation">
+
+      <a href="index.html" class="brand-name">
+        Macarons Manuscripts
+      </a>
+
+      <div class="nav-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="meet-pip.html">
+          Meet Pip
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a
+          href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS"
+          class="nav-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Etsy
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <span class="sparkle one">✨</span>
+      <span class="sparkle two">✦</span>
+      <span class="sparkle three">✨</span>
+
+      <div class="hero-grid">
+
+        <div class="portrait-card">
+
+          <img
+            src="file_00000000dba0820aab7d9a683fe5167b.png"
+            alt="Maria, the maker behind Macarons Manuscripts"
+          >
+
+          <p class="portrait-caption">
+            Maria — maker, bookworm and Pip’s favourite human
+          </p>
+
+        </div>
+
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            💖 The maker behind the magic
+          </div>
+
+          <h1>
+            About Maria
+          </h1>
+
+          <h2>
+            The Maker. The Bookworm. The Dragon’s Human.
+          </h2>
+
+          <p>
+            Hello, I’m Maria—the heart, hands and slightly chaotic brain
+            behind Macarons Manuscripts. I created this little bookish
+            boutique because I believe books make life better, and
+            beautifully packed happy mail makes it even better.
+          </p>
+
+          <div class="hero-note">
+            “Most days, I’m either making something, packing something,
+            reading something—or looking for the thing I put down two
+            minutes ago.”
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section story-section">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <p class="section-kicker">
+            A little more about me
+          </p>
+
+          <h2 class="section-title">
+            The Story Behind the Shop
+          </h2>
+
+          <p class="section-text">
+            Macarons Manuscripts began with a love of books, creativity
+            and the idea that receiving a parcel should feel like opening
+            a tiny celebration.
+          </p>
+
+        </div>
+
+        <div class="story-grid">
+
+          <div class="story-card">
+
+            <h3>
+              📚 Books Are My Love Language
+            </h3>
+
+            <p>
+              I’m a lifelong reader and a total book addict. Fantasy,
+              romantasy, cosy mysteries, dark romance and magical
+              adventures all have a permanent place on my shelves.
+            </p>
+
+          </div>
+
+          <div class="story-card">
+
+            <h3>
+              🎁 Happy Mail Matters
+            </h3>
+
+            <p>
+              I want every Macarons Manuscripts order to feel exciting
+              from the moment it arrives. Every item is chosen, packed
+              and checked with care—usually under Pip’s extremely serious
+              supervision.
+            </p>
+
+          </div>
+
+          <div class="story-card">
+
+            <h3>
+              ✨ Made With Personality
+            </h3>
+
+            <p>
+              I love creating products that are cosy, funny, magical and
+              useful. The shop is full of magnetic bookmarks, surprise
+              bags, book sleeves, stationery and reader gifts with a
+              little bit of mischief built in.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section values-section">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <p class="section-kicker">
+            What matters here
+          </p>
+
+          <h2 class="section-title">
+            The Heart of Macarons Manuscripts
+          </h2>
+
+        </div>
+
+        <div class="values-grid">
+
+          <div class="value-card">
+
+            <h3>
+              💌 Thoughtful Details
+            </h3>
+
+            <p>
+              From packaging to little extras, I want customers to feel
+              that their order was prepared by a real person who genuinely
+              cared about making them smile.
+            </p>
+
+          </div>
+
+          <div class="value-card">
+
+            <h3>
+              🐉 A Little Dragon Magic
+            </h3>
+
+            <p>
+              Pip brings warmth, humour and personality to the shop. He
+              helps turn Macarons Manuscripts into more than a place to
+              buy things—it becomes a little storybook world.
+            </p>
+
+          </div>
+
+          <div class="value-card">
+
+            <h3>
+              📦 Small-Business Care
+            </h3>
+
+            <p>
+              Every order supports an independent UK business. I pack
+              parcels myself, design new ideas, answer messages and
+              celebrate every lovely review and returning customer.
+            </p>
+
+          </div>
+
+          <div class="value-card">
+
+            <h3>
+              🌸 Cosy, Cute and Never Boring
+            </h3>
+
+            <p>
+              I love soft colours, whimsical details and gifts that make
+              readers laugh. The aim is always premium and magical—not
+              bland, generic or overly serious.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section feature-section">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <p class="section-kicker">
+            Books, family and dragon mischief
+          </p>
+
+          <h2 class="section-title">
+            A Little About Me
+          </h2>
+
+          <p class="section-text">
+            This is the side of Macarons Manuscripts that lives beyond
+            products and parcels.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <img
+            src="file_0000000064a8820a85ac396fe81324f7.png"
+            alt="A little about Maria with Pip, books and hot chocolate"
+          >
+
+          <p class="feature-caption">
+            With love, Maria—and one highly caffeinated book dragon
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section promise-section">
+
+      <div class="section-inner">
+
+        <div class="promise-card">
+
+          <p class="section-kicker">
+            Thank you for being here
+          </p>
+
+          <h2>
+            You’re Part of the Story
+          </h2>
+
+          <p>
+            Every order, review, message and returning customer helps
+            this little shop grow. I’m genuinely grateful that you chose
+            to spend a little time in the Macarons Manuscripts world.
+          </p>
+
+          <p>
+            Whether you came for a magnetic bookmark, a surprise bag or
+            simply to meet Pip, I hope you leave with something that
+            makes your reading life a little happier.
+          </p>
+
+          <div class="signature">
+            With love, Maria 💖
+          </div>
+
+          <div class="button-row">
+
+            <a
+              href="shop.html"
+              class="button button-primary"
+            >
+              Explore the Shop
+            </a>
+
+            <a
+              href="meet-pip.html"
+              class="button button-secondary"
+            >
+              Meet Pip
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div>
+
+        <h2 class="footer-brand">
+          Macarons Manuscripts
+        </h2>
+
+        <p class="footer-text">
+          A magical UK bookish boutique filled with reading accessories,
+          thoughtful gifts and mild financial regret.
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>
+          Explore
+        </h3>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="meet-pip.html">
+          Meet Pip
+        </a>
+
+        <a href="about.html">
+          About Maria
+        </a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>
+          Shop With Us
+        </h3>
+
+        <a
+          href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Etsy Shop
+        </a>
+
+        <a href="shop.html">
+          Browse Collections
+        </a>
+
+        <a href="index.html">
+          Back to Homepage
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.
+    </div>
+
+  </footer>
+
+</body>
+</html>

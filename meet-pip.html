@@ -1,1 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Meet Pip Inkwing, the tiny book dragon and Keeper of the Manuscripts at Macarons Manuscripts."
+  >
+
+  <title>Meet Pip | Macarons Manuscripts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Satisfy&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --cream: #fffaf6;
+      --soft-cream: #fdf3ed;
+      --blush: #f6dce5;
+      --dusty-pink: #d989a9;
+      --raspberry: #bd5f8a;
+      --lavender: #e7dff2;
+      --soft-purple: #81627e;
+      --deep-purple: #5d435f;
+      --mint: #dcece5;
+      --gold: #d7b36a;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(93, 67, 95, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--cream);
+      color: var(--deep-purple);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 20;
+      padding: 22px 7%;
+      background:
+        linear-gradient(
+          135deg,
+          #fffaf6,
+          #fdf2f5,
+          #f6f1fa
+        );
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: auto;
+      padding: 13px 18px 13px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      border-radius: 999px;
+      background: rgba(255, 250, 246, 0.86);
+      box-shadow: 0 12px 38px rgba(93, 67, 95, 0.09);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand-name {
+      color: var(--raspberry);
+      font-family: "Satisfy", cursive;
+      font-size: 26px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-button {
+      padding: 11px 20px;
+      border-radius: 999px;
+      background: var(--raspberry);
+      color: white;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 7% 96px;
+      background:
+        radial-gradient(
+          circle at 12% 18%,
+          rgba(246, 220, 229, 0.95),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 88% 18%,
+          rgba(231, 223, 242, 0.95),
+          transparent 33%
+        ),
+        linear-gradient(
+          135deg,
+          #fffaf6,
+          #fdf2f5,
+          #f6f1fa
+        );
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      opacity: 0.28;
+      background-image:
+        radial-gradient(circle, #ffffff 1px, transparent 1px);
+      background-size: 30px 30px;
+      content: "";
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 58px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .hero-copy {
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 9px 16px;
+      border: 1px solid rgba(189, 95, 138, 0.15);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.68);
+      color: var(--raspberry);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: var(--raspberry);
+      font-family: "Satisfy", cursive;
+      font-size: clamp(62px, 8vw, 108px);
+      font-weight: 400;
+      line-height: 0.95;
+      text-shadow: 0 5px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .hero h2 {
+      margin: 22px 0 17px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(31px, 4vw, 50px);
+      line-height: 1.12;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #725f70;
+      font-size: 18px;
+      line-height: 1.78;
+    }
+
+    .hero-quote {
+      margin-top: 28px;
+      padding: 18px 22px;
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.63);
+      box-shadow: 0 12px 30px rgba(93, 67, 95, 0.08);
+      color: var(--soft-purple);
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero-image-card {
+      position: relative;
+      padding: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.84);
+      border-radius: 40px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.92),
+          rgba(246, 220, 229, 0.72),
+          rgba(231, 223, 242, 0.76)
+        );
+      box-shadow: 0 30px 70px rgba(93, 67, 95, 0.18);
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      border-radius: 30px;
+    }
+
+    .hero-image-caption {
+      margin: 14px 0 3px;
+      text-align: center;
+      color: var(--soft-purple);
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .sparkle {
+      position: absolute;
+      z-index: 3;
+      pointer-events: none;
+      animation: twinkle 2.4s ease-in-out infinite;
+    }
+
+    .sparkle.one {
+      top: 12%;
+      left: 3%;
+      font-size: 28px;
+    }
+
+    .sparkle.two {
+      top: 18%;
+      right: 4%;
+      font-size: 34px;
+      animation-delay: 0.8s;
+    }
+
+    .sparkle.three {
+      bottom: 9%;
+      left: 46%;
+      font-size: 26px;
+      animation-delay: 1.4s;
+    }
+
+    @keyframes twinkle {
+      0%,
+      100% {
+        opacity: 0.35;
+        transform: scale(0.85) rotate(0deg);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.15) rotate(8deg);
+      }
+    }
+
+    .section {
+      position: relative;
+      padding: 90px 7%;
+    }
+
+    .section-inner {
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      margin: 0 0 10px;
+      color: var(--raspberry);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(35px, 4vw, 54px);
+      line-height: 1.12;
+    }
+
+    .section-text {
+      margin: 16px auto 0;
+      color: #796877;
+      font-size: 17px;
+      line-height: 1.72;
+    }
+
+    .story-section {
+      background: #fffdfb;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 54px;
+    }
+
+    .story-card {
+      padding: 42px;
+      border: 1px solid rgba(93, 67, 95, 0.08);
+      border-radius: 36px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(246, 220, 229, 0.55)
+        );
+      box-shadow: var(--shadow);
+    }
+
+    .story-card p {
+      margin: 0 0 18px;
+      color: #705f6d;
+      font-size: 17px;
+      line-height: 1.82;
+    }
+
+    .story-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .speech-wrap {
+      display: grid;
+      gap: 20px;
+    }
+
+    .speech-bubble {
+      position: relative;
+      padding: 25px 27px;
+      border: 1px solid rgba(189, 95, 138, 0.13);
+      border-radius: 28px;
+      background: white;
+      box-shadow: 0 16px 38px rgba(93, 67, 95, 0.1);
+      color: var(--deep-purple);
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      line-height: 1.55;
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .speech-bubble.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .speech-bubble::after {
+      position: absolute;
+      bottom: -17px;
+      left: 42px;
+      width: 0;
+      height: 0;
+      border-top: 18px solid white;
+      border-right: 18px solid transparent;
+      content: "";
+    }
+
+    .speech-bubble:nth-child(2) {
+      margin-left: 48px;
+      background: #fff5fa;
+    }
+
+    .speech-bubble:nth-child(2)::after {
+      border-top-color: #fff5fa;
+    }
+
+    .facts-section {
+      background:
+        radial-gradient(
+          circle at 12% 18%,
+          rgba(231, 223, 242, 0.75),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(220, 236, 229, 0.72),
+          transparent 30%
+        ),
+        var(--cream);
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .fact-card {
+      padding: 30px;
+      border: 1px solid rgba(93, 67, 95, 0.08);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 14px 38px rgba(93, 67, 95, 0.08);
+      text-align: center;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .fact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 48px rgba(93, 67, 95, 0.14);
+    }
+
+    .fact-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      margin-bottom: 18px;
+      border-radius: 23px;
+      background:
+        linear-gradient(
+          145deg,
+          var(--blush),
+          var(--lavender)
+        );
+      font-size: 35px;
+    }
+
+    .fact-card h3 {
+      margin: 0 0 8px;
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+    }
+
+    .fact-card p {
+      margin: 0;
+      color: #796877;
+      line-height: 1.65;
+    }
+
+    .favourites-section {
+      background: #fffdfb;
+    }
+
+    .favourites-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .favourite-card {
+      padding: 34px;
+      border-radius: 32px;
+      box-shadow: 0 16px 42px rgba(93, 67, 95, 0.09);
+    }
+
+    .favourite-card:nth-child(1) {
+      background: linear-gradient(145deg, #fbe5ee, #fffaf7);
+    }
+
+    .favourite-card:nth-child(2) {
+      background: linear-gradient(145deg, #ece4f5, #fffaf7);
+    }
+
+    .favourite-card:nth-child(3) {
+      background: linear-gradient(145deg, #e4f0ea, #fffaf7);
+    }
+
+    .favourite-card:nth-child(4) {
+      background: linear-gradient(145deg, #f9eadb, #fffaf7);
+    }
+
+    .favourite-card h3 {
+      margin: 0 0 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+    }
+
+    .favourite-card p {
+      margin: 0;
+      color: #796877;
+      line-height: 1.7;
+    }
+
+    .collector-section {
+      background:
+        linear-gradient(
+          135deg,
+          #f7e9f0,
+          #ece4f5
+        );
+    }
+
+    .collector-panel {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      align-items: center;
+      gap: 46px;
+      padding: 48px;
+      border: 2px solid rgba(255, 255, 255, 0.72);
+      border-radius: 42px;
+      background: rgba(255, 255, 255, 0.62);
+      box-shadow: var(--shadow);
+    }
+
+    .collector-copy h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(37px, 4vw, 55px);
+      line-height: 1.12;
+    }
+
+    .collector-copy p {
+      color: #6f5d6c;
+      font-size: 17px;
+      line-height: 1.76;
+    }
+
+    .collector-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .mini-card {
+      min-height: 235px;
+      padding: 16px;
+      border: 7px solid white;
+      border-radius: 24px;
+      background:
+        linear-gradient(
+          160deg,
+          #fbe6ef,
+          #e8dff2
+        );
+      box-shadow: 0 14px 30px rgba(93, 67, 95, 0.13);
+      text-align: center;
+      transform: rotate(-3deg);
+    }
+
+    .mini-card:nth-child(2) {
+      transform: translateY(-12px) rotate(2deg);
+    }
+
+    .mini-card:nth-child(3) {
+      transform: rotate(4deg);
+    }
+
+    .mini-number {
+      color: var(--raspberry);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .mini-emoji {
+      margin: 27px 0 18px;
+      font-size: 58px;
+    }
+
+    .mini-card h3 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+    }
+
+    .mini-card p {
+      margin: 7px 0 0;
+      color: #796877;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .promise-section {
+      background: var(--cream);
+    }
+
+    .promise-card {
+      max-width: 960px;
+      margin: auto;
+      padding: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 40px;
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(246, 220, 229, 0.88),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 85% 22%,
+          rgba(231, 223, 242, 0.84),
+          transparent 32%
+        ),
+        rgba(255, 255, 255, 0.75);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .promise-card h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(35px, 4vw, 52px);
+    }
+
+    .promise-card p {
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: #746473;
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    .signature {
+      margin-top: 24px;
+      color: var(--raspberry);
+      font-family: "Satisfy", cursive;
+      font-size: 34px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 25px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background:
+        linear-gradient(
+          135deg,
+          var(--dusty-pink),
+          var(--raspberry)
+        );
+      box-shadow: 0 14px 30px rgba(189, 95, 138, 0.25);
+      color: white;
+    }
+
+    .button-secondary {
+      border: 1px solid rgba(93, 67, 95, 0.12);
+      background: white;
+      color: var(--deep-purple);
+    }
+
+    .site-footer {
+      padding: 65px 7% 28px;
+      background: var(--deep-purple);
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .footer-brand {
+      margin: 0 0 15px;
+      color: white;
+      font-family: "Satisfy", cursive;
+      font-size: 36px;
+    }
+
+    .footer-text {
+      max-width: 440px;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 17px;
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+    }
+
+    .footer-column a {
+      display: block;
+      margin: 10px 0;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 45px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .floating-sparkle {
+      position: fixed;
+      z-index: 999;
+      pointer-events: none;
+      animation: floatAway 1.5s ease-out forwards;
+    }
+
+    @keyframes floatAway {
+      0% {
+        opacity: 0;
+        transform: translateY(15px) scale(0.5) rotate(0deg);
+      }
+
+      25% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-95px) scale(1.25) rotate(50deg);
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .hero-grid,
+      .story-grid,
+      .collector-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-image-card {
+        width: min(100%, 640px);
+        margin: auto;
+      }
+
+      .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 15px;
+      }
+
+      .navigation {
+        padding: 12px 16px;
+      }
+
+      .brand-name {
+        font-size: 21px;
+      }
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .nav-button {
+        padding: 9px 15px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 68px 20px 78px;
+      }
+
+      .hero h1 {
+        font-size: clamp(62px, 19vw, 88px);
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 72px 20px;
+      }
+
+      .story-card,
+      .promise-card,
+      .collector-panel {
+        padding: 30px 22px;
+        border-radius: 30px;
+      }
+
+      .speech-bubble {
+        font-size: 18px;
+      }
+
+      .speech-bubble:nth-child(2) {
+        margin-left: 0;
+      }
+
+      .facts-grid,
+      .favourites-grid,
+      .collector-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .mini-card,
+      .mini-card:nth-child(2),
+      .mini-card:nth-child(3) {
+        min-height: 205px;
+        transform: none;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .site-footer {
+        padding: 55px 25px 25px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+      }
+
+      .footer-text {
+        margin: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <nav class="navigation">
+
+      <a href="index.html" class="brand-name">
+        Macarons Manuscripts
+      </a>
+
+      <div class="nav-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="meet-pip.html">
+          Meet Pip
+        </a>
+
+        <a href="index.html#about">
+          About
+        </a>
+
+        <a
+          href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS"
+          class="nav-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Etsy
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <span class="sparkle one">✨</span>
+      <span class="sparkle two">✦</span>
+      <span class="sparkle three">✨</span>
+
+      <div class="hero-grid">
+
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            🐉 Official book dragon
+          </div>
+
+          <h1>
+            Meet Pip Inkwing
+          </h1>
+
+          <h2>
+            Keeper of the Manuscripts
+          </h2>
+
+          <p>
+            Every magical bookshop needs a guardian. Ours just happens
+            to be tiny, purple, bespectacled and permanently distracted
+            by books, bookmarks and hot chocolate covered in far too
+            many marshmallows.
+          </p>
+
+          <div class="hero-quote">
+            “I take my responsibilities very seriously. Apart from the
+            bits involving tidying.”
+          </div>
+
+        </div>
+
+        <div class="hero-image-card">
+
+          <img
+            src="file_000000002ea882438fa417ce76c79f20.png"
+            alt="Pip Inkwing reading beside books and hot chocolate with marshmallows"
+          >
+
+          <p class="hero-image-caption">
+            Pip Inkwing — Book dragon, parcel inspector and suspected sticker thief
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section story-section">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <p class="section-kicker">
+            Once upon a bookshelf
+          </p>
+
+          <h2 class="section-title">
+            Pip’s Story
+          </h2>
+
+          <p class="section-text">
+            Long before Macarons Manuscripts existed, a tiny dragon made
+            his home between the shelves of a magical library.
+          </p>
+
+        </div>
+
+        <div class="story-grid">
+
+          <div class="story-card">
+
+            <p>
+              While other dragons collected gold, Pip collected stories.
+              He guarded dog-eared paperbacks, rescued forgotten
+              bookmarks and believed every reader deserved a little
+              magic with their next chapter.
+            </p>
+
+            <p>
+              One day, Pip met Maria. She was creating a cosy little
+              bookish shop filled with gifts, reading accessories and
+              happy mail. Pip immediately offered to help.
+            </p>
+
+            <p>
+              His definition of “help” includes inspecting every parcel,
+              organising magnetic bookmarks, supervising snack breaks
+              and occasionally falling asleep on the packaging.
+            </p>
+
+            <p>
+              Together, Maria and Pip created Macarons Manuscripts: a
+              magical bookish boutique for readers who believe there is
+              no such thing as too many books—or too many cute reading
+              accessories.
+            </p>
+
+          </div>
+
+          <div class="speech-wrap">
+
+            <div class="speech-bubble reveal">
+              Psst... don’t tell Maria... I may have hidden a sticker in
+              your parcel. 🤫
+            </div>
+
+            <div class="speech-bubble reveal">
+              I’m supposed to be organising bookmarks... but I started
+              another chapter instead. 📖
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section facts-section">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <p class="section-kicker">
+            Important dragon information
+          </p>
+
+          <h2 class="section-title">
+            Pip’s Dragon Facts
+          </h2>
+
+        </div>
+
+        <div class="facts-grid">
+
+          <div class="fact-card">
+            <div class="fact-icon">🐉</div>
+            <h3>Full Name</h3>
+            <p>Pip Inkwing</p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">📚</div>
+            <h3>Official Job</h3>
+            <p>Keeper of the Manuscripts</p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">☕</div>
+            <h3>Favourite Drink</h3>
+            <p>Hot chocolate buried beneath ridiculous amounts of marshmallows</p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">🍪</div>
+            <h3>Favourite Snack</h3>
+            <p>Macarons, preferably eaten while reading</p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">🔖</div>
+            <h3>Favourite Product</h3>
+            <p>Magnetic bookmarks—because folded page corners are forbidden</p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">✨</div>
+            <h3>Special Ability</h3>
+            <p>Can smell a brand-new book from three rooms away</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section favourites-section">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <p class="section-kicker">
+            Pip-approved pleasures
+          </p>
+
+          <h2 class="section-title">
+            Pip’s Favourite Things
+          </h2>
+
+        </div>
+
+        <div class="favourites-grid">
+
+          <div class="favourite-card">
+            <h3>📖 Favourite Genres</h3>
+            <p>
+              Fantasy, romantasy, cosy mysteries and magical adventures
+              involving suspiciously charming villains.
+            </p>
+          </div>
+
+          <div class="favourite-card">
+            <h3>🌙 Biggest Weakness</h3>
+            <p>
+              Saying “just one more chapter” at midnight and believing it.
+            </p>
+          </div>
+
+          <div class="favourite-card">
+            <h3>🏡 Favourite Place</h3>
+            <p>
+              Curled up between the shelves with a blanket, a book and a
+              mug bigger than his head.
+            </p>
+          </div>
+
+          <div class="favourite-card">
+            <h3>📦 Favourite Activity</h3>
+            <p>
+              Quality-checking happy mail and pretending the loose
+              stickers jumped into his paws by themselves.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section collector-section">
+
+      <div class="section-inner">
+
+        <div class="collector-panel">
+
+          <div class="collector-copy">
+
+            <p class="section-kicker">
+              Collect the mischief
+            </p>
+
+            <h2>
+              Pip’s Collector Cards
+            </h2>
+
+            <p>
+              Pip’s collector cards reveal his adventures, favourite
+              snacks, seasonal outfits, funny facts and increasingly
+              questionable book-hoarding habits.
+            </p>
+
+            <p>
+              New cards will appear throughout the year. Some may be
+              common, some may be rare, and one day there may even be a
+              shiny Pip card hiding somewhere in the shop.
+            </p>
+
+          </div>
+
+          <div class="collector-cards">
+
+            <div class="mini-card">
+              <div class="mini-number">#001</div>
+              <div class="mini-emoji">🐉</div>
+              <h3>Keeper Pip</h3>
+              <p>Guardian of books and occasional thief of bookmarks.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-number">#002</div>
+              <div class="mini-emoji">☕</div>
+              <h3>Marshmallow Pip</h3>
+              <p>Hot chocolate level: structurally irresponsible.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-number">#003</div>
+              <div class="mini-emoji">📚</div>
+              <h3>Book Hoarder Pip</h3>
+              <p>Claims every new book is essential research.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section promise-section">
+
+      <div class="section-inner">
+
+        <div class="promise-card">
+
+          <p class="section-kicker">
+            The official dragon guarantee
+          </p>
+
+          <h2>
+            Pip’s Promise
+          </h2>
+
+          <p>
+            Every Macarons Manuscripts order is packed with care,
+            checked for quality and sent with a little bit of book-dragon
+            magic. Pip cannot promise that he did not briefly consider
+            keeping your bookmark, but he can promise it was admired
+            thoroughly before dispatch.
+          </p>
+
+          <div class="signature">
+            🐉 Ink & Scales
+          </div>
+
+          <div class="button-row">
+
+            <a
+              href="shop.html"
+              class="button button-primary"
+            >
+              Shop Pip’s Favourites
+            </a>
+
+            <a
+              href="index.html"
+              class="button button-secondary"
+            >
+              Return Home
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div>
+
+        <h2 class="footer-brand">
+          Macarons Manuscripts
+        </h2>
+
+        <p class="footer-text">
+          Whimsical bookish gifts, reading accessories and mild
+          financial regret—approved by one extremely small dragon.
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>
+          Explore
+        </h3>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="meet-pip.html">
+          Meet Pip
+        </a>
+
+        <a href="index.html#about">
+          About
+        </a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>
+          Shop With Us
+        </h3>
+
+        <a
+          href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Etsy Shop
+        </a>
+
+        <a href="shop.html">
+          Browse Collections
+        </a>
+
+        <a href="index.html">
+          Back to Homepage
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.
+    </div>
+
+  </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.3
+      }
+    );
+
+    revealItems.forEach((item) => {
+      revealObserver.observe(item);
+    });
+
+    const sparkleSymbols = ["✨", "✦", "⋆", "💫"];
+
+    function createSparkle() {
+      const sparkle = document.createElement("span");
+
+      sparkle.className = "floating-sparkle";
+      sparkle.textContent =
+        sparkleSymbols[
+          Math.floor(Math.random() * sparkleSymbols.length)
+        ];
+
+      sparkle.style.left =
+        Math.floor(Math.random() * 92 + 4) + "vw";
+
+      sparkle.style.top =
+        Math.floor(Math.random() * 70 + 20) + "vh";
+
+      sparkle.style.fontSize =
+        Math.floor(Math.random() * 15 + 16) + "px";
+
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => {
+        sparkle.remove();
+      }, 1500);
+    }
+
+    let sparkleTimer;
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        clearTimeout(sparkleTimer);
+
+        sparkleTimer = setTimeout(() => {
+          createSparkle();
+
+          if (Math.random() > 0.5) {
+            setTimeout(createSparkle, 180);
+          }
+        }, 80);
+      },
+      {
+        passive: true
+      }
+    );
+  </script>
+
+</body>
+</html>

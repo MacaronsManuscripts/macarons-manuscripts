@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read kind words from happy Macarons Manuscripts customers, including many wonderful repeat customers.">
+  <title>Customer Reviews | Macarons Manuscripts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Satisfy&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --raspberry: #cf4f86;
+      --raspberry-dark: #a83b6d;
+      --pink: #f7dce8;
+      --lavender: #e9e0f4;
+      --cream: #fffaf7;
+      --ink: #4d3b4c;
+      --muted: #786a77;
+      --gold: #e6b84f;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(92, 62, 91, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(247,220,232,.7), transparent 34%),
+        radial-gradient(circle at top right, rgba(233,224,244,.75), transparent 32%),
+        var(--cream);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,250,247,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(77,59,76,.08);
+    }
+
+    .nav-wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      min-height: 82px;
+    }
+
+    .brand {
+      font-family: "Satisfy", cursive;
+      font-size: clamp(25px, 3vw, 36px);
+      color: var(--raspberry);
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 22px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--raspberry);
+    }
+
+    .hero {
+      padding: 92px 20px 64px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      width: min(920px, 100%);
+      margin: auto;
+    }
+
+    .kicker {
+      margin: 0 0 14px;
+      color: var(--raspberry);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(46px, 8vw, 82px);
+      line-height: 1.04;
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 20px);
+      line-height: 1.75;
+    }
+
+    .rating-row {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-stars {
+      color: var(--gold);
+      font-size: 27px;
+      letter-spacing: 4px;
+    }
+
+    .rating-text {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .repeat-banner {
+      width: min(1060px, calc(100% - 32px));
+      margin: 0 auto 60px;
+      padding: 34px 40px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 26px;
+      border: 1px solid rgba(207,79,134,.16);
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(247,220,232,.8), rgba(233,224,244,.74));
+      box-shadow: var(--shadow);
+    }
+
+    .repeat-icon {
+      font-size: 48px;
+    }
+
+    .repeat-banner h2 {
+      margin: 0 0 8px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(25px, 4vw, 36px);
+    }
+
+    .repeat-banner p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .reviews-section {
+      width: min(1180px, calc(100% - 32px));
+      margin: auto;
+      padding-bottom: 90px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 52px);
+    }
+
+    .section-heading p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .reviews-grid {
+      columns: 3 310px;
+      column-gap: 24px;
+    }
+
+    .review-card {
+      break-inside: avoid;
+      margin: 0 0 24px;
+      padding: 28px;
+      border: 1px solid rgba(77,59,76,.08);
+      border-radius: 24px;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 12px 32px rgba(92,62,91,.08);
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 19px;
+      letter-spacing: 3px;
+    }
+
+    blockquote {
+      margin: 18px 0 20px;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .reviewer {
+      margin: 0;
+      color: var(--raspberry-dark);
+      font-weight: 700;
+    }
+
+    .cta {
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto 90px;
+      padding: 52px 30px;
+      border-radius: 34px;
+      text-align: center;
+      background: var(--ink);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(31px, 5vw, 48px);
+    }
+
+    .cta p {
+      max-width: 610px;
+      margin: 16px auto 26px;
+      color: rgba(255,255,255,.78);
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 999px;
+      background: var(--raspberry);
+      color: white;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(207,79,134,.3);
+    }
+
+    footer {
+      padding: 34px 20px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid rgba(77,59,76,.08);
+    }
+
+    @media (max-width: 780px) {
+      .nav-wrap {
+        padding: 16px 0;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 14px 18px;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .repeat-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px 24px;
+      }
+
+      .reviews-grid {
+        columns: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Macarons Manuscripts</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="meet-pip.html">Meet Pip</a>
+        <a href="about.html">About</a>
+        <a href="freebies.html">Pip's Free Library</a>
+        <a href="reviews.html" aria-current="page">Reviews</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="kicker">Kind words from lovely readers</p>
+        <h1>Loved by Bookworms</h1>
+        <p class="hero-copy">
+          Every order is packed with care, a little magic and plenty of bookish joy.
+          These are just some of the wonderful messages customers have shared.
+        </p>
+        <div class="rating-row">
+          <span class="hero-stars" aria-hidden="true">★★★★★</span>
+          <span class="rating-text">57 five-star reviews</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="repeat-banner" aria-label="Repeat customers">
+      <div class="repeat-icon" aria-hidden="true">💗</div>
+      <div>
+        <h2>So lovely, they came back for more</h2>
+        <p>
+          Macarons Manuscripts is proud to have many wonderful repeat customers.
+          Some have returned for their second, third and even more orders — which is
+          the biggest compliment a small business could receive.
+        </p>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <div class="section-heading">
+        <h2>Thirty Lovely Reviews</h2>
+        <p>Real words from happy customers, shared with their first names only.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“I love a surprise bag and this was great — no complaints. A lovely treat for yourself or as a gift. I’ll definitely be coming back to see what else is available. Delivery was quick too. Thank you!”</blockquote>
+          <p class="reviewer">— Rachel</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“What an amazing bag of surprise gifts! I was so happy with everything I received. Well worth getting as a treat for yourself or for someone who loves dragons. Delivery was quick. Thank you!”</blockquote>
+          <p class="reviewer">— Rachel</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“I love these little trinket bags. They’re great for crafting, scrapbooking and those moments when you can’t decide what to make — just pick something from the bag and get going!”</blockquote>
+          <p class="reviewer">— Leanne</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Another surprise goody bundle! I’m always happy with what I receive. Great for personal use or for adding to gifts for other people.”</blockquote>
+          <p class="reviewer">— Leanne</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“I was over the moon with this! I bought two surprise bags and everything was such a wonderful surprise. I loved everything and I’ll definitely be buying again. Thank you so much!”</blockquote>
+          <p class="reviewer">— Julia</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“I really love these magical little bags — this was my third one! There are so many unique pieces that I can use in my vintage journals. Always excellent customer service and fast shipping.”</blockquote>
+          <p class="reviewer">— Varya</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Very happy customer! Always excellent customer service, fast shipping, and beautiful, safe packaging. Thank you so much for the thoughtful extras.”</blockquote>
+          <p class="reviewer">— Varya</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Thank you so much for my amazing parcel. I felt honoured to be your 100th order! An amazing pack of goodies, beautifully packaged and delivered so quickly.”</blockquote>
+          <p class="reviewer">— Karen</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“This was a gift for my mum, who absolutely loved it. Thank you!”</blockquote>
+          <p class="reviewer">— Lisa</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“A great gift with lots of lovely bits inside. It definitely didn’t disappoint.”</blockquote>
+          <p class="reviewer">— Samantha</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Absolutely beautiful trinket bag — I love it! Fast shipping, safely packed and such thoughtful extras.”</blockquote>
+          <p class="reviewer">— Varya</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Such a great bundle of gifts for a book lover. I’ll definitely be coming back for more.”</blockquote>
+          <p class="reviewer">— Lizzi</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Loved it! I wasn’t expecting to receive so much. Very grateful — thank you!”</blockquote>
+          <p class="reviewer">— Leanne</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Great quality, super cute, matched the description perfectly, and I would happily buy again.”</blockquote>
+          <p class="reviewer">— Keely</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Absolutely lovely little bag. I loved all the bits inside!”</blockquote>
+          <p class="reviewer">— Louise</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Great quality, lovely items and well worth it. I would buy again for friends and family.”</blockquote>
+          <p class="reviewer">— Keely</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Absolutely brilliant little bag of treats. Not just toys, but useful things like bookmarks and notebooks to encourage reading. My children will be over the moon!”</blockquote>
+          <p class="reviewer">— Leanne</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Lots of exciting contents and really good value for money.”</blockquote>
+          <p class="reviewer">— Fran</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“The quality was great and I loved all the gifts inside. I’ll definitely be buying again for my friends.”</blockquote>
+          <p class="reviewer">— Nikki</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“As always — perfect! This is my third order, I think. I’m becoming a frequent shopper! So many useful little items that are also lovely to gift.”</blockquote>
+          <p class="reviewer">— Leanne</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Maria is very friendly, quick to reply and kept me updated. Everything I received will be useful, and the personalised freebie was such a lovely touch. I’m getting quite hooked on these! Brilliant.”</blockquote>
+          <p class="reviewer">— Leanne</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“I absolutely loved everything in the surprise bag. The items were beautiful.”</blockquote>
+          <p class="reviewer">— Christine</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“No problems at all from ordering to receiving. The book sign was beautiful and my Secret Santa at book club loved it.”</blockquote>
+          <p class="reviewer">— Tracey</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Beautifully packaged gift box, with the lovely extra touch of including a personal message inside.”</blockquote>
+          <p class="reviewer">— Susan</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Maria was excellent and very responsive to my special requests. She couldn’t be faulted — excellent customer service and lovely touches in the packaging.”</blockquote>
+          <p class="reviewer">— David</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“A really sweet gift, absolutely jam-packed with lovely goodies.”</blockquote>
+          <p class="reviewer">— Holly</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Gorgeous, colourful and great quality. Lovely packaging, thoughtful surprise extras and very quick delivery. I would recommend and purchase again.”</blockquote>
+          <p class="reviewer">— Donna</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“This was even better than I expected and fantastic value for money. I’m sure the recipient will love it. I’m very happy with my purchase and would definitely recommend.”</blockquote>
+          <p class="reviewer">— Audry</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“Beautifully made with gorgeous fabric — you won’t be disappointed. I’m delighted, and the free gifts were so thoughtful and kind.”</blockquote>
+          <p class="reviewer">— Josephine</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five out of five stars">★★★★★</div>
+          <blockquote>“It arrived extremely quickly and was packaged to a very high standard. It’s even better in real life than in the pictures and will make a perfect gift. Thank you!”</blockquote>
+          <p class="reviewer">— Claire</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready for some bookish happy mail?</h2>
+      <p>
+        Discover surprise bags, magnetic bookmarks, reading accessories and gifts
+        created for readers who deserve a little treat.
+      </p>
+      <a class="button" href="shop.html">Explore the Shop</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Macarons Manuscripts · A magical bookish boutique
+  </footer>
+</body>
+</html>

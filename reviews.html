@@ -84,8 +84,48 @@
     }
 
     .hero-inner {
-      width: min(920px, 100%);
+      width: min(1120px, 100%);
       margin: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      align-items: center;
+      gap: 48px;
+      text-align: left;
+    }
+
+    .hero-copy-wrap {
+      min-width: 0;
+    }
+
+    .hero-pip {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-pip::before {
+      position: absolute;
+      width: 86%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle,
+          rgba(247, 220, 232, 0.95) 0%,
+          rgba(233, 224, 244, 0.68) 54%,
+          transparent 74%);
+      content: "";
+      filter: blur(3px);
+    }
+
+    .hero-pip img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: min(100%, 410px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 22px 26px rgba(92, 62, 91, 0.18));
     }
 
     .kicker {
@@ -106,7 +146,7 @@
 
     .hero-copy {
       max-width: 690px;
-      margin: 24px auto 0;
+      margin: 24px 0 0;
       color: var(--muted);
       font-size: clamp(17px, 2vw, 20px);
       line-height: 1.75;
@@ -115,7 +155,7 @@
     .rating-row {
       margin-top: 30px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
       gap: 14px;
@@ -275,6 +315,29 @@
         padding-top: 62px;
       }
 
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+      }
+
+      .hero-copy {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .rating-row {
+        justify-content: center;
+      }
+
+      .hero-pip {
+        order: -1;
+      }
+
+      .hero-pip img {
+        width: min(100%, 340px);
+      }
+
       .repeat-banner {
         grid-template-columns: 1fr;
         text-align: center;
@@ -306,15 +369,24 @@
   <main>
     <section class="hero">
       <div class="hero-inner">
-        <p class="kicker">Kind words from lovely readers</p>
-        <h1>Loved by Bookworms</h1>
-        <p class="hero-copy">
-          Every order is packed with care, a little magic and plenty of bookish joy.
-          These are just some of the wonderful messages customers have shared.
-        </p>
-        <div class="rating-row">
-          <span class="hero-stars" aria-hidden="true">★★★★★</span>
-          <span class="rating-text">57 five-star reviews</span>
+        <div class="hero-copy-wrap">
+          <p class="kicker">Kind words from lovely readers</p>
+          <h1>Loved by Bookworms</h1>
+          <p class="hero-copy">
+            Every order is packed with care, a little magic and plenty of bookish joy.
+            These are just some of the wonderful messages customers have shared.
+          </p>
+          <div class="rating-row">
+            <span class="hero-stars" aria-hidden="true">★★★★★</span>
+            <span class="rating-text">57 five-star reviews</span>
+          </div>
+        </div>
+
+        <div class="hero-pip">
+          <img
+            src="pip-reviews.png"
+            alt="Pip Inkwing holding a sign that says 100% Genuine Reviews"
+          >
         </div>
       </div>
     </section>

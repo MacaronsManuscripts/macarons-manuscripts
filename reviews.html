@@ -94,28 +94,33 @@
     }
 
     .hero-copy-wrap {
+      position: relative;
+      z-index: 3;
       min-width: 0;
     }
 
     .hero-pip {
       position: relative;
+      z-index: 1;
       display: flex;
       align-items: center;
       justify-content: center;
+      isolation: isolate;
     }
 
     .hero-pip::before {
       position: absolute;
-      width: 86%;
+      z-index: -1;
+      width: 78%;
       aspect-ratio: 1;
       border-radius: 50%;
       background:
         radial-gradient(circle,
-          rgba(247, 220, 232, 0.95) 0%,
-          rgba(233, 224, 244, 0.68) 54%,
-          transparent 74%);
+          rgba(247, 220, 232, 0.58) 0%,
+          rgba(233, 224, 244, 0.32) 52%,
+          transparent 72%);
       content: "";
-      filter: blur(3px);
+      pointer-events: none;
     }
 
     .hero-pip img {
@@ -138,14 +143,20 @@
     }
 
     h1 {
+      position: relative;
+      z-index: 4;
       margin: 0;
-      color: #2f202c;
+      color: #261923;
       font-family: "Playfair Display", serif;
       font-size: clamp(46px, 8vw, 82px);
       font-weight: 700;
       line-height: 1.04;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
+      opacity: 1;
+      filter: none;
+      mix-blend-mode: normal;
+      text-shadow: none;
     }
 
     .hero-copy {

@@ -11,12 +11,24 @@
 <style>
 :root{--cream:#fffaf6;--blush:#f6dce5;--pink:#d989a9;--raspberry:#bd5f8a;--lavender:#e7dff2;--purple:#81627e;--deep:#5d435f;--shadow:0 18px 50px rgba(93,67,95,.14)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--cream)}body{margin:0;overflow-x:hidden;background:var(--cream);color:var(--deep);font-family:"DM Sans",sans-serif}img{display:block;max-width:100%}a{color:inherit}.site-header{padding:22px 7%;background:linear-gradient(135deg,#fffaf6,#fdf2f5,#f6f1fa)}.navigation{display:flex;align-items:center;justify-content:space-between;max-width:1400px;margin:auto;padding:13px 18px 13px 24px;border:1px solid rgba(255,255,255,.82);border-radius:999px;background:rgba(255,250,246,.9);box-shadow:0 12px 38px rgba(93,67,95,.09)}.brand-name{color:var(--raspberry);font-family:"Satisfy",cursive;font-size:26px;text-decoration:none}.nav-links{display:flex;align-items:center;gap:25px}.nav-links a{font-size:14px;font-weight:700;text-decoration:none}.nav-button{padding:11px 20px;border-radius:999px;background:var(--raspberry);color:white}.hero{position:relative;overflow:hidden;padding:90px 7% 110px;background:radial-gradient(circle at 12% 18%,rgba(246,220,229,.95),transparent 30%),radial-gradient(circle at 88% 18%,rgba(231,223,242,.95),transparent 33%),linear-gradient(135deg,#fffaf6,#fdf2f5,#f6f1fa);text-align:center}.hero:before{position:absolute;inset:0;opacity:.3;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:30px 30px;content:""}.hero-inner{position:relative;z-index:2;max-width:980px;margin:auto}.eyebrow{display:inline-flex;gap:8px;margin-bottom:22px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.72);color:var(--raspberry);font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.hero h1{margin:0;color:var(--raspberry);font-family:"Satisfy",cursive;font-size:clamp(64px,9vw,116px);font-weight:400;line-height:.95}.hero h2{margin:24px auto 17px;max-width:820px;font-family:"Playfair Display",serif;font-size:clamp(30px,4vw,50px)}.hero p{max-width:820px;margin:auto;color:#725f70;font-size:18px;line-height:1.78}.pip-message{max-width:760px;margin:30px auto 0;padding:20px 24px;border-radius:26px;background:rgba(255,255,255,.72);box-shadow:0 12px 30px rgba(93,67,95,.08);color:var(--purple);font-family:"Playfair Display",serif;font-size:18px}.section{padding:90px 7%}.section-inner{max-width:1400px;margin:auto}.section-heading{max-width:800px;margin:0 auto 48px;text-align:center}.section-kicker{margin:0 0 10px;color:var(--raspberry);font-size:13px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}.section-title{margin:0;font-family:"Playfair Display",serif;font-size:clamp(35px,4vw,54px)}.section-text{margin:16px auto 0;color:#796877;font-size:17px;line-height:1.72}.shelf-section{background:#fffdfb}.freebie-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.freebie-card{overflow:hidden;border:1px solid rgba(93,67,95,.08);border-radius:34px;background:#fff;box-shadow:0 16px 44px rgba(93,67,95,.1);transition:.25s}.freebie-card:hover{transform:translateY(-7px)}.freebie-image-wrap{aspect-ratio:1/1;overflow:hidden;background:var(--blush)}.freebie-image-wrap img{width:100%;height:100%;object-fit:cover}.freebie-content{padding:28px}.number{display:inline-flex;margin-bottom:13px;padding:7px 12px;border-radius:999px;background:var(--lavender);font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}.freebie-content h3{margin:0;font-family:"Playfair Display",serif;font-size:28px}.freebie-content p{margin:13px 0 0;color:#796877;line-height:1.7}.borrow-button{display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;margin-top:22px;padding:14px 20px;border-radius:999px;background:linear-gradient(135deg,var(--pink),var(--raspberry));box-shadow:0 14px 30px rgba(189,95,138,.22);color:#fff;font-weight:800;text-decoration:none}.notice-section{background:radial-gradient(circle at 12% 18%,rgba(231,223,242,.75),transparent 28%),radial-gradient(circle at 90% 20%,rgba(220,236,229,.72),transparent 30%),var(--cream)}.notice-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}.notice-card,.rules-card{padding:40px;border-radius:34px;background:rgba(255,255,255,.9);box-shadow:0 16px 44px rgba(93,67,95,.09)}.notice-card h2,.rules-card h2{margin:0 0 17px;font-family:"Playfair Display",serif;font-size:34px}.notice-card p,.rules-card p,.rules-card li{color:#796877;line-height:1.72}.notice-list{display:grid;gap:13px;margin-top:24px}.notice-item{padding:15px 18px;border-radius:18px;background:linear-gradient(135deg,rgba(246,220,229,.7),rgba(231,223,242,.7));font-weight:700}.coming-soon{background:linear-gradient(135deg,#f7e9f0,#ece4f5)}.coming-card{max-width:980px;margin:auto;padding:48px;border-radius:40px;background:rgba(255,255,255,.7);box-shadow:var(--shadow);text-align:center}.coming-card h2{margin:0;font-family:"Playfair Display",serif;font-size:clamp(35px,4vw,52px)}.coming-card p{max-width:760px;margin:18px auto 0;color:#746473;font-size:17px;line-height:1.78}.coming-items{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}.coming-pill{padding:11px 16px;border-radius:999px;background:#fff;font-weight:700}.signature{margin-top:26px;color:var(--raspberry);font-family:"Satisfy",cursive;font-size:36px}.site-footer{padding:65px 7% 28px;background:var(--deep);color:rgba(255,255,255,.82)}.footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;max-width:1400px;margin:auto}.footer-brand{margin:0 0 15px;color:#fff;font-family:"Satisfy",cursive;font-size:36px}.footer-text{max-width:440px;line-height:1.7}.footer-column h3{margin:0 0 17px;color:#fff;font-family:"Playfair Display",serif;font-size:18px}.footer-column a{display:block;margin:10px 0;color:rgba(255,255,255,.75);text-decoration:none}.footer-bottom{max-width:1400px;margin:45px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);text-align:center;font-size:13px}@media(max-width:1080px){.freebie-grid{grid-template-columns:repeat(2,1fr)}.notice-grid{grid-template-columns:1fr}}@media(max-width:760px){.site-header{padding:15px}.navigation{padding:12px 16px}.brand-name{font-size:21px}.nav-links a:not(.nav-button){display:none}.nav-button{padding:9px 15px;font-size:13px}.hero{padding:72px 20px 84px}.hero h1{font-size:clamp(62px,19vw,88px)}.hero p{font-size:16px}.section{padding:72px 20px}.freebie-grid{grid-template-columns:1fr}.freebie-content,.notice-card,.rules-card,.coming-card{padding:30px 22px}.site-footer{padding:55px 25px 25px}.footer-inner{grid-template-columns:1fr;gap:35px;text-align:center}.footer-text{margin:auto}}
+
+.pip-chat{position:fixed;right:24px;bottom:24px;z-index:50;display:flex;align-items:flex-end;gap:12px;max-width:min(410px,calc(100vw - 28px));opacity:0;pointer-events:none;transform:translateY(30px) scale(.96);transition:opacity .45s ease,transform .45s ease}
+.pip-chat.show{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
+.pip-avatar{display:grid;flex:0 0 68px;width:68px;height:68px;place-items:center;border:4px solid white;border-radius:50%;background:linear-gradient(145deg,#b99add,#7c5ba6);box-shadow:0 12px 28px rgba(93,67,95,.28);font-size:38px;animation:pipBob 2.7s ease-in-out infinite}
+@keyframes pipBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-6px) rotate(2deg)}}
+.pip-bubble{position:relative;padding:18px 46px 18px 19px;border:2px solid rgba(189,95,138,.18);border-radius:24px 24px 24px 8px;background:rgba(255,255,255,.96);box-shadow:0 18px 45px rgba(93,67,95,.2);backdrop-filter:blur(12px)}
+.pip-bubble::after{position:absolute;left:-12px;bottom:13px;width:22px;height:22px;border-bottom:2px solid rgba(189,95,138,.18);border-left:2px solid rgba(189,95,138,.18);background:white;content:"";transform:rotate(45deg)}
+.pip-label{display:block;margin-bottom:5px;color:var(--raspberry);font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.pip-text{margin:0;color:var(--deep-purple);font-family:"Playfair Display",serif;font-size:16px;line-height:1.45}
+.pip-close{position:absolute;top:8px;right:10px;width:30px;height:30px;padding:0;border:0;border-radius:50%;background:var(--blush);color:var(--deep-purple);cursor:pointer;font-size:18px;font-weight:800}
+.pip-open{position:fixed;right:22px;bottom:22px;z-index:49;display:none;width:62px;height:62px;border:4px solid white;border-radius:50%;background:linear-gradient(145deg,#b99add,#7c5ba6);box-shadow:0 14px 32px rgba(93,67,95,.28);cursor:pointer;font-size:34px}
+.pip-open.show{display:block}
 </style>
 </head>
 <body>
 <header class="site-header"><nav class="navigation"><a href="index.html" class="brand-name">Macarons Manuscripts</a><div class="nav-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About</a><a href="freebies.html">Freebies</a><a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" class="nav-button" target="_blank" rel="noopener noreferrer">Visit Etsy</a></div></nav></header>
 <main>
-<section class="hero"><div class="hero-inner"><div class="eyebrow">🐉 A secret shelf for fellow readers</div><h1>Pip's Free Library</h1><h2>Shhh... you've found the hidden room.</h2><p>Maria thinks I’m organising the books. I’m actually leaving little gifts for fellow readers. Promise to read at least one more chapter tonight, and you may borrow anything from my shelf.</p><div class="pip-message" id="pipMessage">“The hot chocolate stains are definitely not my fault.”</div></div></section>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">🐉 A secret shelf for fellow readers</div><h1>Pip's Free Library</h1><h2>Shhh... you've found the hidden room.</h2><p>Pip has been quietly filling these shelves with printable gifts for fellow readers. Everything here is free to borrow, print and enjoy at home.</p><div class="library-invitation">📖 Promise to read one more chapter, then choose your treasure.</div></div></section>
 <section class="section shelf-section"><div class="section-inner"><div class="section-heading"><p class="section-kicker">Currently on Pip's shelf</p><h2 class="section-title">Borrow a Little Bookish Magic</h2><p class="section-text">Every item below is free to download and print for personal use. Tap the pink button to borrow your chosen treasure.</p></div><div class="freebie-grid">
 <article class="freebie-card"><div class="freebie-image-wrap"><img src="pip-library-001-preview.png" alt="Preview of Pip's One More Chapter printable bookmark"></div><div class="freebie-content"><div class="number">📚 Pip Library #001</div><h3>One More Chapter Bookmark</h3><p>A cosy printable bookmark featuring Pip, books, hot chocolate and the only completely reasonable reading plan: just one more chapter.</p><a class="borrow-button" href="pip-library-001-bookmark.png" download>📖 Borrow from the Library</a></div></article>
 <article class="freebie-card"><div class="freebie-image-wrap"><img src="pip-library-002-preview.png" alt="Preview of the Official Book Dragon printable sticker"></div><div class="freebie-content"><div class="number">🐉 Pip Library #002</div><h3>Official Book Dragon</h3><p>Pip hugs a tower of books while proudly announcing his very serious role as Professional Bookmark Inspector.</p><a class="borrow-button" href="pip-library-002-official-book-dragon-sticker.png" download>📖 Borrow from the Library</a></div></article>
@@ -28,10 +40,82 @@
 <section class="section notice-section"><div class="section-inner"><div class="notice-grid"><div class="notice-card"><p class="section-kicker">Pip's notice board</p><h2>Currently Being Guarded</h2><p>Pip is already working on more gifts. Some are almost ready. Some are under a blanket. One may have been eaten.</p><div class="notice-list"><div class="notice-item">✨ Monthly reading wallpaper</div><div class="notice-item">📖 Printable reading tracker</div><div class="notice-item">🎃 Seasonal bookmark collection</div><div class="notice-item">🐉 Secret Pip collector card</div></div></div><div class="rules-card"><p class="section-kicker">Library rules</p><h2>A Tiny Note From Maria</h2><p>These files are free for personal use so you can print, cut and enjoy them at home.</p><ul><li>Please do not resell the digital files.</li><li>Please do not claim the artwork as your own.</li><li>Please do not upload the files elsewhere.</li><li>Sharing the link to this page is always appreciated.</li></ul></div></div></div></section>
 <section class="section coming-soon"><div class="section-inner"><div class="coming-card"><p class="section-kicker">More treasures coming soon</p><h2>The Library Is Still Growing</h2><p>New printable gifts will appear on Pip’s shelves from time to time, so pop back whenever you need another little burst of bookish magic.</p><div class="coming-items"><div class="coming-pill">Reading trackers</div><div class="coming-pill">Wallpapers</div><div class="coming-pill">Seasonal bookmarks</div><div class="coming-pill">Collector cards</div><div class="coming-pill">Colouring pages</div></div><div class="signature">🐉 Ink &amp; Scales</div></div></div></section>
 </main>
+
+<div class="pip-chat" id="pipChat" aria-live="polite">
+  <div class="pip-avatar" aria-hidden="true">🐉</div>
+  <div class="pip-bubble">
+    <button class="pip-close" id="pipClose" type="button" aria-label="Close Pip's message">×</button>
+    <span class="pip-label">Pip whispers...</span>
+    <p class="pip-text" id="pipText">Maria thinks I’m organising the books. I’m actually leaving gifts.</p>
+  </div>
+</div>
+
+<button class="pip-open" id="pipOpen" type="button" aria-label="Open Pip's message">🐉</button>
 <footer class="site-footer"><div class="footer-inner"><div><h2 class="footer-brand">Macarons Manuscripts</h2><p class="footer-text">A magical UK bookish boutique filled with reading accessories, thoughtful gifts and mild financial regret.</p></div><div class="footer-column"><h3>Explore</h3><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About Maria</a><a href="freebies.html">Pip's Free Library</a></div><div class="footer-column"><h3>Shop With Us</h3><a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" target="_blank" rel="noopener noreferrer">Etsy Shop</a><a href="shop.html">Browse Collections</a><a href="index.html">Back to Homepage</a></div></div><div class="footer-bottom">© 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.</div></footer>
+
 <script>
-const messages=["I polished every bookshelf myself.","The hot chocolate stains are definitely not my fault.","Please return borrowed dragons by Tuesday.","I accept payment in marshmallows.","Maria thinks I’m organising. I alphabetised the biscuits instead.","Every freebie has passed my very serious inspection.","One more chapter is always the correct answer."];
-const box=document.getElementById("pipMessage");if(box){box.textContent='“'+messages[Math.floor(Math.random()*messages.length)]+'”';}
+const pipMessages = [
+  "Maria thinks I’m organising the books. I’m actually leaving gifts.",
+  "The hot chocolate stains are definitely not my fault.",
+  "Please return borrowed dragons by Tuesday.",
+  "I accept payment in marshmallows.",
+  "I alphabetised the biscuits. That counts as organising.",
+  "Every freebie has passed my extremely serious inspection.",
+  "One more chapter is always the correct answer.",
+  "I hid a bookmark here. Very badly, apparently.",
+  "Borrowing is free. Compliments for the dragon are encouraged."
+];
+
+const pipChat = document.getElementById("pipChat");
+const pipText = document.getElementById("pipText");
+const pipClose = document.getElementById("pipClose");
+const pipOpen = document.getElementById("pipOpen");
+
+let messageIndex = 0;
+let messageTimer;
+
+function showPip() {
+  pipChat.classList.add("show");
+  pipOpen.classList.remove("show");
+}
+
+function hidePip() {
+  pipChat.classList.remove("show");
+  pipOpen.classList.add("show");
+}
+
+function changePipMessage() {
+  messageIndex = (messageIndex + 1) % pipMessages.length;
+  pipChat.classList.remove("show");
+
+  setTimeout(() => {
+    pipText.textContent = pipMessages[messageIndex];
+    pipChat.classList.add("show");
+  }, 400);
+}
+
+function startMessages() {
+  clearInterval(messageTimer);
+  messageTimer = setInterval(changePipMessage, 7200);
+}
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    showPip();
+    startMessages();
+  }, 1400);
+});
+
+pipClose.addEventListener("click", () => {
+  hidePip();
+  clearInterval(messageTimer);
+});
+
+pipOpen.addEventListener("click", () => {
+  showPip();
+  startMessages();
+});
 </script>
+
 </body>
 </html>

@@ -394,14 +394,6 @@
       background: rgba(255, 255, 255, 0.9);
       box-shadow: 0 14px 38px rgba(93, 67, 95, 0.08);
       text-align: center;
-      transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-    }
-
-    .fact-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 22px 48px rgba(93, 67, 95, 0.14);
     }
 
     .fact-icon {
@@ -629,13 +621,6 @@
       border-radius: 999px;
       font-weight: 800;
       text-decoration: none;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-3px);
     }
 
     .button-primary {
@@ -696,10 +681,6 @@
       text-decoration: none;
     }
 
-    .footer-column a:hover {
-      color: white;
-    }
-
     .footer-bottom {
       max-width: 1400px;
       margin: 45px auto 0;
@@ -709,72 +690,57 @@
       font-size: 13px;
     }
 
-    .pip-popover {
+    .pip-companion {
       position: fixed;
-      right: 22px;
-      bottom: 24px;
+      right: 0;
+      bottom: 0;
       z-index: 999;
-      display: flex;
-      align-items: flex-end;
-      gap: 12px;
-      width: min(430px, calc(100vw - 34px));
-      opacity: 0;
+      width: min(460px, 100vw);
       pointer-events: none;
-      transform: translateY(28px) scale(0.96);
+    }
+
+    .pip-message-card {
+      position: absolute;
+      right: 96px;
+      bottom: 105px;
+      width: min(330px, calc(100vw - 120px));
+      padding: 20px 44px 20px 22px;
+      border: 2px solid rgba(189, 95, 138, 0.16);
+      border-radius: 28px 28px 10px 28px;
+      background:
+        linear-gradient(
+          145deg,
+          #fffdf9,
+          #fff4f8
+        );
+      box-shadow: 0 20px 54px rgba(93, 67, 95, 0.22);
+      opacity: 0;
+      transform: translateY(20px) scale(0.96);
       transition:
         opacity 0.45s ease,
         transform 0.45s ease;
-    }
-
-    .pip-popover.show {
-      opacity: 1;
       pointer-events: auto;
-      transform: translateY(0) scale(1);
     }
 
-    .pip-avatar {
-      flex: 0 0 74px;
-      width: 74px;
-      height: 74px;
-      overflow: hidden;
-      border: 5px solid white;
-      border-radius: 50%;
-      background: var(--lavender);
-      box-shadow: 0 14px 34px rgba(93, 67, 95, 0.22);
-    }
-
-    .pip-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 22%;
-      transform: scale(1.55);
-    }
-
-    .pip-bubble {
-      position: relative;
-      flex: 1;
-      padding: 18px 44px 18px 20px;
-      border: 2px solid rgba(189, 95, 138, 0.14);
-      border-radius: 24px 24px 24px 8px;
-      background: white;
-      box-shadow: 0 18px 46px rgba(93, 67, 95, 0.2);
-    }
-
-    .pip-bubble::before {
+    .pip-message-card::after {
       position: absolute;
-      bottom: 16px;
-      left: -15px;
-      width: 24px;
-      height: 24px;
-      background: white;
-      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+      right: 16px;
+      bottom: -22px;
+      width: 34px;
+      height: 28px;
+      background: #fff4f8;
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
       content: "";
+    }
+
+    .pip-message-card.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
 
     .pip-label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       color: var(--raspberry);
       font-size: 12px;
       font-weight: 800;
@@ -792,7 +758,7 @@
 
     .pip-close {
       position: absolute;
-      top: 9px;
+      top: 10px;
       right: 11px;
       width: 28px;
       height: 28px;
@@ -803,6 +769,37 @@
       cursor: pointer;
       font-size: 17px;
       font-weight: 800;
+    }
+
+    .pip-peek {
+      position: absolute;
+      right: -18px;
+      bottom: -18px;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border: 7px solid white;
+      border-radius: 50% 50% 0 50%;
+      background: var(--lavender);
+      box-shadow: 0 18px 48px rgba(93, 67, 95, 0.24);
+      opacity: 0;
+      transform: translate(55px, 55px) rotate(8deg);
+      transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+    }
+
+    .pip-peek.show {
+      opacity: 1;
+      transform: translate(0, 0) rotate(0deg);
+    }
+
+    .pip-peek img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 18%;
+      transform: scale(1.6);
     }
 
     .bubble-sparkle {
@@ -954,25 +951,20 @@
         margin: auto;
       }
 
-      .pip-popover {
-        right: 10px;
-        bottom: 14px;
-        width: calc(100vw - 20px);
-        gap: 8px;
-      }
-
-      .pip-avatar {
-        flex-basis: 58px;
-        width: 58px;
-        height: 58px;
-      }
-
-      .pip-bubble {
-        padding: 15px 38px 15px 17px;
+      .pip-message-card {
+        right: 76px;
+        bottom: 88px;
+        width: calc(100vw - 94px);
+        padding: 17px 40px 17px 18px;
       }
 
       .pip-message {
         font-size: 15px;
+      }
+
+      .pip-peek {
+        width: 118px;
+        height: 118px;
       }
     }
 
@@ -1446,21 +1438,9 @@
 
   </footer>
 
-  <div
-    class="pip-popover"
-    id="pipPopover"
-    role="status"
-    aria-live="polite"
-  >
+  <div class="pip-companion" aria-live="polite">
 
-    <div class="pip-avatar">
-      <img
-        src="file_000000002ea882438fa417ce76c79f20.png"
-        alt=""
-      >
-    </div>
-
-    <div class="pip-bubble">
+    <div class="pip-message-card" id="pipMessageCard">
 
       <span class="bubble-sparkle a">✨</span>
       <span class="bubble-sparkle b">✦</span>
@@ -1482,35 +1462,58 @@
 
     </div>
 
+    <div class="pip-peek" id="pipPeek">
+
+      <img
+        src="file_000000002ea882438fa417ce76c79f20.png"
+        alt="Pip peeking into the page"
+      >
+
+    </div>
+
   </div>
 
   <script>
-    const pipPopover = document.getElementById("pipPopover");
+    const pipMessageCard = document.getElementById("pipMessageCard");
+    const pipPeek = document.getElementById("pipPeek");
     const pipMessage = document.getElementById("pipMessage");
     const pipClose = document.getElementById("pipClose");
 
-    const messages = [
-      {
-        trigger: 0.18,
-        text: "Psst... don’t tell Maria... I may have hidden a sticker in your parcel. 🤫"
-      },
-      {
-        trigger: 0.5,
-        text: "I’m supposed to be organising bookmarks... but I started another chapter instead. 📖"
-      },
-      {
-        trigger: 0.78,
-        text: "Official dragon fact: marshmallows count as structural support for hot chocolate. ☕"
-      }
+    const allMessages = [
+      "Psst... don’t tell Maria... I may have hidden a sticker in your parcel. 🤫",
+      "I’m supposed to be organising bookmarks... but I started another chapter instead. 📖",
+      "Official dragon fact: marshmallows count as structural support for hot chocolate. ☕",
+      "Book dragons never lose bookmarks. We merely relocate them mysteriously. 🔖",
+      "Don’t tell Maria, but I think the shop needs another bookshelf. Possibly twelve. 📚",
+      "I checked your parcel personally. I also considered keeping it. Briefly. 📦",
+      "Just one more chapter is a perfectly sensible bedtime plan. 🌙",
+      "Folded page corners are forbidden in this kingdom. I have spoken. 🐉",
+      "Every new book is essential research. This is science. ✨",
+      "I’m not hoarding stickers. I’m curating a collection. Very different. 💌",
+      "Hot chocolate tastes better when the marshmallows form a small mountain. ☕",
+      "You have excellent taste in magical bookshops, by the way. 💜"
     ];
 
-    let currentMessage = 0;
+    const triggerPoints = [0.16, 0.34, 0.52, 0.7, 0.88];
+
+    let shuffledMessages = [];
+    let currentTrigger = 0;
     let hideTimer;
+
+    function shuffleMessages() {
+      shuffledMessages = [...allMessages];
+
+      for (let i = shuffledMessages.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledMessages[i], shuffledMessages[j]] =
+          [shuffledMessages[j], shuffledMessages[i]];
+      }
+    }
 
     function makeSparkles() {
       const symbols = ["✨", "✦", "⋆"];
 
-      for (let i = 0; i < 4; i += 1) {
+      for (let i = 0; i < 5; i += 1) {
         const sparkle = document.createElement("span");
 
         sparkle.className = "floating-sparkle";
@@ -1518,13 +1521,13 @@
           symbols[Math.floor(Math.random() * symbols.length)];
 
         sparkle.style.left =
-          Math.floor(Math.random() * 22 + 70) + "vw";
+          Math.floor(Math.random() * 18 + 78) + "vw";
 
         sparkle.style.top =
-          Math.floor(Math.random() * 20 + 65) + "vh";
+          Math.floor(Math.random() * 18 + 68) + "vh";
 
         sparkle.style.fontSize =
-          Math.floor(Math.random() * 12 + 15) + "px";
+          Math.floor(Math.random() * 12 + 14) + "px";
 
         document.body.appendChild(sparkle);
 
@@ -1534,45 +1537,67 @@
       }
     }
 
+    function hidePip() {
+      pipMessageCard.classList.remove("show");
+      pipPeek.classList.remove("show");
+    }
+
     function showPipMessage(text) {
       clearTimeout(hideTimer);
 
       pipMessage.textContent = text;
-      pipPopover.classList.add("show");
+      pipPeek.classList.add("show");
+
+      setTimeout(() => {
+        pipMessageCard.classList.add("show");
+      }, 220);
+
       makeSparkles();
 
       hideTimer = setTimeout(() => {
-        pipPopover.classList.remove("show");
-      }, 6500);
+        pipMessageCard.classList.remove("show");
+
+        setTimeout(() => {
+          pipPeek.classList.remove("show");
+        }, 220);
+      }, 7000);
     }
 
     function checkScrollMessages() {
       const scrollableHeight =
         document.documentElement.scrollHeight - window.innerHeight;
 
-      if (scrollableHeight <= 0 || currentMessage >= messages.length) {
+      if (
+        scrollableHeight <= 0 ||
+        currentTrigger >= triggerPoints.length
+      ) {
         return;
       }
 
       const progress = window.scrollY / scrollableHeight;
-      const next = messages[currentMessage];
 
-      if (progress >= next.trigger) {
-        showPipMessage(next.text);
-        currentMessage += 1;
+      if (progress >= triggerPoints[currentTrigger]) {
+        const message =
+          shuffledMessages[currentTrigger % shuffledMessages.length];
+
+        showPipMessage(message);
+        currentTrigger += 1;
       }
     }
 
     pipClose.addEventListener("click", () => {
-      pipPopover.classList.remove("show");
       clearTimeout(hideTimer);
+      hidePip();
     });
 
     window.addEventListener("scroll", checkScrollMessages, {
       passive: true
     });
 
-    window.addEventListener("load", checkScrollMessages);
+    window.addEventListener("load", () => {
+      shuffleMessages();
+      checkScrollMessages();
+    });
   </script>
 
 </body>

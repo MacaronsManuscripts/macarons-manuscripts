@@ -14,14 +14,14 @@
 
 .pip-chat{position:fixed;right:24px;bottom:24px;z-index:50;display:flex;align-items:flex-end;gap:12px;max-width:min(410px,calc(100vw - 28px));opacity:0;pointer-events:none;transform:translateY(30px) scale(.96);transition:opacity .45s ease,transform .45s ease}
 .pip-chat.show{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
-.pip-avatar{display:grid;flex:0 0 68px;width:68px;height:68px;place-items:center;border:4px solid white;border-radius:50%;background:linear-gradient(145deg,#b99add,#7c5ba6);box-shadow:0 12px 28px rgba(93,67,95,.28);font-size:38px;animation:pipBob 2.7s ease-in-out infinite}
+.pip-avatar{display:block;flex:0 0 94px;width:94px;height:94px;overflow:hidden;border:5px solid white;border-radius:50%;background:white;box-shadow:0 14px 34px rgba(93,67,95,.3);animation:pipBob 2.7s ease-in-out infinite}.pip-avatar img{display:block;width:100%;height:100%;object-fit:cover}
 @keyframes pipBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-6px) rotate(2deg)}}
 .pip-bubble{position:relative;padding:18px 46px 18px 19px;border:2px solid rgba(189,95,138,.18);border-radius:24px 24px 24px 8px;background:rgba(255,255,255,.96);box-shadow:0 18px 45px rgba(93,67,95,.2);backdrop-filter:blur(12px)}
 .pip-bubble::after{position:absolute;left:-12px;bottom:13px;width:22px;height:22px;border-bottom:2px solid rgba(189,95,138,.18);border-left:2px solid rgba(189,95,138,.18);background:white;content:"";transform:rotate(45deg)}
 .pip-label{display:block;margin-bottom:5px;color:var(--raspberry);font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
 .pip-text{margin:0;color:var(--deep-purple);font-family:"Playfair Display",serif;font-size:16px;line-height:1.45}
 .pip-close{position:absolute;top:8px;right:10px;width:30px;height:30px;padding:0;border:0;border-radius:50%;background:var(--blush);color:var(--deep-purple);cursor:pointer;font-size:18px;font-weight:800}
-.pip-open{position:fixed;right:22px;bottom:22px;z-index:49;display:none;width:62px;height:62px;border:4px solid white;border-radius:50%;background:linear-gradient(145deg,#b99add,#7c5ba6);box-shadow:0 14px 32px rgba(93,67,95,.28);cursor:pointer;font-size:34px}
+.pip-open{position:fixed;right:22px;bottom:22px;z-index:49;display:none;width:76px;height:76px;padding:0;overflow:hidden;border:4px solid white;border-radius:50%;background:white;box-shadow:0 14px 32px rgba(93,67,95,.28);cursor:pointer}.pip-open img{display:block;width:100%;height:100%;object-fit:cover}
 .pip-open.show{display:block}
 </style>
 </head>
@@ -42,28 +42,29 @@
 </main>
 
 <div class="pip-chat" id="pipChat" aria-live="polite">
-  <div class="pip-avatar" aria-hidden="true">🐉</div>
+  <div class="pip-avatar"><img src="pip-whisper.png" alt="Pip covering his mouth as if sharing a mischievous secret"></div>
   <div class="pip-bubble">
     <button class="pip-close" id="pipClose" type="button" aria-label="Close Pip's message">×</button>
-    <span class="pip-label">Pip whispers...</span>
+    <span class="pip-label">🤫 Psst...</span>
     <p class="pip-text" id="pipText">Maria thinks I’m organising the books. I’m actually leaving gifts.</p>
   </div>
 </div>
 
-<button class="pip-open" id="pipOpen" type="button" aria-label="Open Pip's message">🐉</button>
+<button class="pip-open" id="pipOpen" type="button" aria-label="Open Pip's message"><img src="pip-whisper.png" alt="Open Pip's secret message"></button>
 <footer class="site-footer"><div class="footer-inner"><div><h2 class="footer-brand">Macarons Manuscripts</h2><p class="footer-text">A magical UK bookish boutique filled with reading accessories, thoughtful gifts and mild financial regret.</p></div><div class="footer-column"><h3>Explore</h3><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About Maria</a><a href="freebies.html">Pip's Free Library</a></div><div class="footer-column"><h3>Shop With Us</h3><a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" target="_blank" rel="noopener noreferrer">Etsy Shop</a><a href="shop.html">Browse Collections</a><a href="index.html">Back to Homepage</a></div></div><div class="footer-bottom">© 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.</div></footer>
 
 <script>
 const pipMessages = [
-  "Maria thinks I’m organising the books. I’m actually leaving gifts.",
-  "The hot chocolate stains are definitely not my fault.",
-  "Please return borrowed dragons by Tuesday.",
-  "I accept payment in marshmallows.",
-  "I alphabetised the biscuits. That counts as organising.",
-  "Every freebie has passed my extremely serious inspection.",
-  "One more chapter is always the correct answer.",
-  "I hid a bookmark here. Very badly, apparently.",
-  "Borrowing is free. Compliments for the dragon are encouraged."
+  "Don’t tell Maria... I may have hidden another freebie somewhere.",
+  "I inspected every bookmark personally. Twice.",
+  "The marshmallows have passed inspection.",
+  "I alphabetised the biscuits instead of the books.",
+  "If anyone asks... we’ve always had this many books.",
+  "One more chapter? I fully support that decision.",
+  "You’re officially dragon approved.",
+  "Some dragons hoard gold. I hoard bookmarks.",
+  "Come back soon... I’m making more freebies!",
+  "Promise not to tell Maria I ate the last biscuit?"
 ];
 
 const pipChat = document.getElementById("pipChat");

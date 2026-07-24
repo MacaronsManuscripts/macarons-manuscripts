@@ -627,74 +627,6 @@
       object-fit: contain;
     }
 
-    .pip-eyelid {
-      position: absolute;
-      top: 35.2%;
-      z-index: 3;
-      width: 16.5%;
-      height: 0;
-      border-radius: 50% 50% 46% 46%;
-      background:
-        linear-gradient(
-          to bottom,
-          #8f55c7 0%,
-          #7740aa 100%
-        );
-      opacity: 0;
-      transform-origin: top center;
-      pointer-events: none;
-      animation: pipBlink 5s ease-in-out infinite;
-      box-shadow: inset 0 -2px 0 rgba(72, 33, 100, 0.22);
-    }
-
-    .pip-eyelid-left {
-      left: 33.2%;
-      transform: rotate(5deg);
-    }
-
-    .pip-eyelid-right {
-      left: 51.4%;
-      transform: rotate(-4deg);
-    }
-
-    .pip-sparkle {
-      position: absolute;
-      z-index: 4;
-      color: var(--gold);
-      pointer-events: none;
-      filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.95));
-      animation: pipSparkle 2.8s ease-in-out infinite;
-    }
-
-    .pip-sparkle-one {
-      top: 18%;
-      right: 7%;
-      font-size: 25px;
-    }
-
-    .pip-sparkle-two {
-      right: 1%;
-      bottom: 22%;
-      font-size: 18px;
-      animation-delay: 1.3s;
-    }
-
-    @keyframes pipBlink {
-      0%,
-      92%,
-      96%,
-      100% {
-        height: 0;
-        opacity: 0;
-      }
-
-      93%,
-      95% {
-        height: 7.2%;
-        opacity: 1;
-      }
-    }
-
     @keyframes pipGentleFloat {
       0%,
       100% {
@@ -721,7 +653,6 @@
 
     @media (prefers-reduced-motion: reduce) {
       .pip-visual,
-      .pip-eyelid,
       .pip-sparkle {
         animation: none;
       }
@@ -1363,16 +1294,6 @@
               src="pip-smile.png"
               alt="Pip Inkwing smiling"
             >
-
-            <span
-              class="pip-eyelid pip-eyelid-left"
-              aria-hidden="true"
-            ></span>
-
-            <span
-              class="pip-eyelid pip-eyelid-right"
-              aria-hidden="true"
-            ></span>
 
             <span
               class="pip-sparkle pip-sparkle-one"

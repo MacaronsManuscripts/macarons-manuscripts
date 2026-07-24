@@ -600,155 +600,136 @@
     }
 
     .pip-panel {
-      position: relative;
-      display: block;
-      min-height: 500px;
-      padding: 70px 65px 70px 405px;
+      display: grid;
+      grid-template-columns: minmax(280px, 390px) 1fr;
+      align-items: center;
+      gap: 48px;
+      padding: 58px;
       border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 42px;
       background: rgba(255, 255, 255, 0.68);
       box-shadow: var(--shadow);
       overflow: hidden;
-      isolation: isolate;
     }
 
-    .pip-panel::before {
-      position: absolute;
-      inset: 0 auto 0 0;
-      z-index: -1;
-      width: 42%;
-      background:
-        radial-gradient(
-          circle at 38% 48%,
-          rgba(246, 220, 229, 0.95),
-          rgba(231, 223, 242, 0.48) 48%,
-          transparent 76%
-        );
-      content: "";
-      pointer-events: none;
+    .pip-visual {
+      position: relative;
+      width: min(100%, 365px);
+      margin: auto;
+      filter: drop-shadow(0 22px 28px rgba(93, 67, 95, 0.18));
+      animation: pipGentleFloat 5s ease-in-out infinite;
     }
 
-    .pip-stage {
-      position: absolute;
-      inset: 0 auto 0 0;
-      z-index: 2;
-      width: 390px;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .pip-character {
-      position: absolute;
-      top: 50%;
-      left: -285px;
-      width: 365px;
-      opacity: 0;
-      transform: translateY(-50%) rotate(-4deg);
-      transform-origin: left center;
-      filter: drop-shadow(16px 20px 20px rgba(93, 67, 95, 0.22));
-      transition:
-        left 0.9s cubic-bezier(0.22, 0.85, 0.3, 1),
-        opacity 0.35s ease,
-        transform 0.45s ease;
-      will-change: left, opacity, transform;
-    }
-
-    .pip-character img {
+    .pip-visual img {
       display: block;
       width: 100%;
       height: auto;
       object-fit: contain;
     }
 
-    .pip-character.is-peeking {
-      left: -92px;
-      opacity: 1;
-      transform: translateY(-50%) rotate(0deg);
-    }
-
-    .pip-character.is-waving {
-      left: -20px;
-      width: 385px;
-      opacity: 1;
-      transform: translateY(-50%) rotate(1deg);
-    }
-
-    .pip-character.is-smiling {
-      left: -10px;
-      width: 365px;
-      opacity: 1;
-      transform: translateY(-50%) rotate(0deg);
-    }
-
-    .pip-character.is-hiding {
-      left: -300px;
+    .pip-eyelid {
+      position: absolute;
+      top: 35.2%;
+      z-index: 3;
+      width: 16.5%;
+      height: 0;
+      border-radius: 50% 50% 46% 46%;
+      background:
+        linear-gradient(
+          to bottom,
+          #8f55c7 0%,
+          #7740aa 100%
+        );
       opacity: 0;
-      transform: translateY(-50%) rotate(-5deg);
+      transform-origin: top center;
+      pointer-events: none;
+      animation: pipBlink 5s ease-in-out infinite;
+      box-shadow: inset 0 -2px 0 rgba(72, 33, 100, 0.22);
     }
 
-    .pip-wave-bounce {
-      animation: pipWaveBounce 0.7s ease-in-out 2;
+    .pip-eyelid-left {
+      left: 33.2%;
+      transform: rotate(5deg);
     }
 
-    @keyframes pipWaveBounce {
-      0%,
-      100% {
-        transform: translateY(-50%) rotate(1deg);
-      }
-
-      50% {
-        transform: translateY(-53%) rotate(-2deg);
-      }
+    .pip-eyelid-right {
+      left: 51.4%;
+      transform: rotate(-4deg);
     }
 
     .pip-sparkle {
       position: absolute;
       z-index: 4;
       color: var(--gold);
-      opacity: 0;
       pointer-events: none;
       filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.95));
-      transition: opacity 0.3s ease;
+      animation: pipSparkle 2.8s ease-in-out infinite;
     }
 
     .pip-sparkle-one {
-      top: 95px;
-      left: 295px;
-      font-size: 27px;
+      top: 18%;
+      right: 7%;
+      font-size: 25px;
     }
 
     .pip-sparkle-two {
-      top: 205px;
-      left: 330px;
-      font-size: 20px;
+      right: 1%;
+      bottom: 22%;
+      font-size: 18px;
+      animation-delay: 1.3s;
     }
 
-    .pip-stage.is-active .pip-sparkle {
-      opacity: 1;
-      animation: pipSparkle 1.6s ease-in-out infinite;
+    @keyframes pipBlink {
+      0%,
+      92%,
+      96%,
+      100% {
+        height: 0;
+        opacity: 0;
+      }
+
+      93%,
+      95% {
+        height: 7.2%;
+        opacity: 1;
+      }
     }
 
-    .pip-stage.is-active .pip-sparkle-two {
-      animation-delay: 0.75s;
+    @keyframes pipGentleFloat {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
     }
 
     @keyframes pipSparkle {
       0%,
       100% {
-        opacity: 0.25;
-        transform: scale(0.7) rotate(0deg);
+        opacity: 0.28;
+        transform: scale(0.75) rotate(0deg);
       }
 
       50% {
         opacity: 1;
-        transform: scale(1.18) rotate(15deg);
+        transform: scale(1.15) rotate(14deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pip-visual,
+      .pip-eyelid,
+      .pip-sparkle {
+        animation: none;
       }
     }
 
     .pip-copy {
       position: relative;
-      z-index: 3;
-      max-width: 760px;
+      z-index: 2;
     }
 
     .pip-copy h2 {
@@ -1022,62 +1003,14 @@
       }
 
       .pip-panel {
-        min-height: 810px;
-        padding: 400px 24px 36px;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 28px 24px 36px;
         border-radius: 30px;
       }
 
-      .pip-panel::before {
-        width: 100%;
-        height: 400px;
-        background:
-          radial-gradient(
-            circle at 30% 44%,
-            rgba(246, 220, 229, 0.95),
-            rgba(231, 223, 242, 0.46) 54%,
-            transparent 80%
-          );
-      }
-
-      .pip-stage {
-        width: 100%;
-        height: 390px;
-      }
-
-      .pip-character {
-        top: 195px;
-        width: 330px;
-        left: -265px;
-      }
-
-      .pip-character.is-peeking {
-        left: -82px;
-      }
-
-      .pip-character.is-waving {
-        left: -10px;
-        width: 345px;
-      }
-
-      .pip-character.is-smiling {
-        left: 2px;
-        width: 330px;
-      }
-
-      .pip-character.is-hiding {
-        left: -275px;
-      }
-
-      .pip-sparkle-one {
-        top: 58px;
-        left: auto;
-        right: 36px;
-      }
-
-      .pip-sparkle-two {
-        top: 150px;
-        left: auto;
-        right: 18px;
+      .pip-visual {
+        width: min(100%, 330px);
       }
 
       .newsletter-form {
@@ -1423,20 +1356,23 @@
         <div class="pip-panel">
 
           <div
-            class="pip-stage"
-            id="pipStage"
-            aria-label="Pip Inkwing peeks out, waves hello and hides again"
+            class="pip-visual"
+            aria-label="Pip Inkwing smiling and blinking"
           >
-            <div
-              class="pip-character is-hiding"
-              id="pipCharacter"
+            <img
+              src="pip-smile.png"
+              alt="Pip Inkwing smiling"
             >
-              <img
-                id="pipAnimatedImage"
-                src="pip-peek.png"
-                alt="Pip Inkwing peeking around the side"
-              >
-            </div>
+
+            <span
+              class="pip-eyelid pip-eyelid-left"
+              aria-hidden="true"
+            ></span>
+
+            <span
+              class="pip-eyelid pip-eyelid-right"
+              aria-hidden="true"
+            ></span>
 
             <span
               class="pip-sparkle pip-sparkle-one"
@@ -1712,72 +1648,6 @@
 
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const stage = document.getElementById("pipStage");
-      const character = document.getElementById("pipCharacter");
-      const image = document.getElementById("pipAnimatedImage");
-
-      if (!stage || !character || !image) {
-        return;
-      }
-
-      const images = {
-        peek: "pip-peek.png",
-        wave: "pip-wave.png",
-        smile: "pip-smile.png"
-      };
-
-      Object.values(images).forEach((src) => {
-        const preload = new Image();
-        preload.src = src;
-      });
-
-      const setPip = (state, src, alt) => {
-        character.className = `pip-character ${state}`;
-        image.src = src;
-        image.alt = alt;
-      };
-
-      const runPipGreeting = () => {
-        stage.classList.add("is-active");
-
-        setPip(
-          "is-peeking",
-          images.peek,
-          "Pip Inkwing peeking around the side"
-        );
-
-        window.setTimeout(() => {
-          setPip(
-            "is-waving pip-wave-bounce",
-            images.wave,
-            "Pip Inkwing waving hello"
-          );
-        }, 1700);
-
-        window.setTimeout(() => {
-          setPip(
-            "is-smiling",
-            images.smile,
-            "Pip Inkwing smiling"
-          );
-        }, 4300);
-
-        window.setTimeout(() => {
-          setPip(
-            "is-hiding",
-            images.peek,
-            "Pip Inkwing hiding behind the side"
-          );
-          stage.classList.remove("is-active");
-        }, 6200);
-      };
-
-      window.setTimeout(runPipGreeting, 1800);
-      window.setInterval(runPipGreeting, 12000);
-    });
-  </script>
 
 </body>
 </html>

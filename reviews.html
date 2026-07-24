@@ -12,13 +12,13 @@
 
   <style>
     :root {
-      --raspberry: #cf4f86;
-      --raspberry-dark: #a83b6d;
+      --raspberry: #c83f78;
+      --raspberry-dark: #8f2f5e;
       --pink: #f7dce8;
       --lavender: #e9e0f4;
       --cream: #fffaf7;
-      --ink: #4d3b4c;
-      --muted: #786a77;
+      --ink: #3f2d3a;
+      --muted: #4a3d49;
       --gold: #e6b84f;
       --white: #ffffff;
       --shadow: 0 18px 45px rgba(92, 62, 91, 0.12);
@@ -30,8 +30,8 @@
       margin: 0;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(247,220,232,.7), transparent 34%),
-        radial-gradient(circle at top right, rgba(233,224,244,.75), transparent 32%),
+        radial-gradient(circle at top left, rgba(247,220,232,.38), transparent 34%),
+        radial-gradient(circle at top right, rgba(233,224,244,.42), transparent 32%),
         var(--cream);
       font-family: "DM Sans", sans-serif;
     }
@@ -130,18 +130,22 @@
 
     .kicker {
       margin: 0 0 14px;
-      color: var(--raspberry);
+      color: var(--raspberry-dark);
       text-transform: uppercase;
-      letter-spacing: .2em;
+      letter-spacing: .18em;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     h1 {
       margin: 0;
+      color: var(--ink);
       font-family: "Playfair Display", serif;
       font-size: clamp(46px, 8vw, 82px);
+      font-weight: 700;
       line-height: 1.04;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
     .hero-copy {
@@ -149,7 +153,10 @@
       margin: 24px 0 0;
       color: var(--muted);
       font-size: clamp(17px, 2vw, 20px);
-      line-height: 1.75;
+      font-weight: 500;
+      line-height: 1.78;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
     .rating-row {
@@ -168,8 +175,9 @@
     }
 
     .rating-text {
-      font-weight: 700;
       color: var(--ink);
+      font-weight: 800;
+      letter-spacing: .01em;
     }
 
     .stats-grid {
@@ -211,17 +219,20 @@
       display: block;
       color: var(--raspberry-dark);
       font-family: "Playfair Display", serif;
-      font-size: 27px;
+      font-size: 29px;
+      font-weight: 700;
       line-height: 1.05;
+      text-rendering: optimizeLegibility;
     }
 
     .stat-card span {
       display: block;
       margin-top: 5px;
-      color: var(--muted);
+      color: var(--ink);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       line-height: 1.35;
+      letter-spacing: .01em;
     }
 
     .repeat-banner {
@@ -250,9 +261,10 @@
 
     .repeat-banner p {
       margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
+      color: var(--ink);
+      line-height: 1.72;
       font-size: 16px;
+      font-weight: 500;
     }
 
     .reviews-section {
@@ -274,7 +286,8 @@
 
     .section-heading p {
       margin: 12px 0 0;
-      color: var(--muted);
+      color: var(--ink);
+      font-weight: 500;
     }
 
     .reviews-grid {
@@ -300,9 +313,12 @@
 
     blockquote {
       margin: 18px 0 20px;
+      color: var(--ink);
       font-family: "Playfair Display", serif;
       font-size: 18px;
+      font-weight: 600;
       line-height: 1.65;
+      text-rendering: optimizeLegibility;
     }
 
     .reviewer {
@@ -435,8 +451,8 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-copy-wrap">
-          <p class="kicker">Kind words from lovely readers</p>
-          <h1>Loved by Bookworms</h1>
+          <p class="kicker">Kind Words From Our Customers</p>
+          <h1>Kind Words From Our Customers</h1>
           <p class="hero-copy">
             Every order is packed with care, a little magic and plenty of bookish joy.
             These are just some of the wonderful messages customers have shared.

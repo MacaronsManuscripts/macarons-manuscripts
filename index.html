@@ -1,34 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Macarons Manuscripts creates whimsical bookish gifts, magnetic bookmarks, surprise bags, reading accessories and stationery for book lovers."
-  >
-
-  <title>Macarons Manuscripts | Magical Bookish Gifts</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Satisfy&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Macarons Manuscripts creates whimsical bookish gifts, magnetic bookmarks, surprise bags, reading accessories and stationery for book lovers." name="description"/>
+<title>Macarons Manuscripts | Magical Bookish Gifts</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;family=Satisfy&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --cream: #fffaf6;
       --soft-cream: #fdf3ed;
@@ -1094,615 +1075,470 @@
         transition-duration: 0.01ms !important;
       }
     }
-  </style>
+  
+/* Consistent stacked logo header — announcement bar preserved */
+.site-header{
+  position:absolute;
+  top:42px;
+  left:0;
+  z-index:20;
+  width:100%;
+  padding:22px 7%;
+}
+
+.navigation{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:18px !important;
+  max-width:1400px;
+  margin:auto;
+  padding:20px 24px 22px !important;
+  border:1px solid rgba(255,255,255,.82);
+  border-radius:34px !important;
+  background:rgba(255,250,246,.84);
+  box-shadow:0 12px 38px rgba(93,67,95,.09);
+  backdrop-filter:blur(16px);
+}
+
+.brand-name{
+  display:block;
+  width:min(470px,78vw);
+  margin:0 auto;
+  line-height:0;
+  text-decoration:none;
+}
+
+.brand-name img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+.nav-links{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center !important;
+  flex-wrap:wrap;
+  gap:16px 26px !important;
+}
+
+@media(max-width:760px){
+  .site-header{
+    top:42px;
+    padding:14px 15px 18px;
+  }
+
+  .navigation{
+    gap:16px !important;
+    padding:18px 16px 20px !important;
+    border-radius:28px !important;
+  }
+
+  .brand-name{
+    width:min(430px,88vw);
+  }
+
+  .nav-links{
+    justify-content:center !important;
+    gap:13px 17px !important;
+  }
+}
+</style>
 </head>
-
 <body>
-
-  <div class="announcement-bar" role="region" aria-label="Shop announcement">
-    <div class="announcement-track">
-      <span class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions. &nbsp;•&nbsp; Handmade in the UK &nbsp;•&nbsp; Packed by Maria &nbsp;•&nbsp; Quality checked by Pip 🐉</span>
-      <span class="announcement-message" aria-hidden="true">📖 Warning: Entering this website may result in questionable financial decisions. &nbsp;•&nbsp; Handmade in the UK &nbsp;•&nbsp; Packed by Maria &nbsp;•&nbsp; Quality checked by Pip 🐉</span>
-    </div>
-  </div>
-
-  <header class="site-header">
-
-    <nav class="navigation">
-
-      <a href="index.html" class="brand-name">
-        Macarons Manuscripts
-      </a>
-
-      <div class="nav-links">
-
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="pips-picks.html">Pip's Picks</a>
-        <a href="meet-pip.html">Meet Pip</a>
-        <a href="about.html">About</a>
-        <a href="freebies.html">Pip's Free Library</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
-        <a href="reading-nook.html">Pip's Reading Nook</a>
-
-        <a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" class="nav-button" target="_blank" rel="noopener noreferrer" aria-label="Visit the Macarons Manuscripts Etsy shop">
-          <span class="etsy-icon" aria-hidden="true">E</span>
+<div aria-label="Shop announcement" class="announcement-bar" role="region">
+<div class="announcement-track">
+<span class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions.  •  Handmade in the UK  •  Packed by Maria  •  Quality checked by Pip 🐉</span>
+<span aria-hidden="true" class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions.  •  Handmade in the UK  •  Packed by Maria  •  Quality checked by Pip 🐉</span>
+</div>
+</div>
+<header class="site-header">
+<nav class="navigation">
+<a class="brand-name" href="index.html"><img alt="Macarons Manuscripts" src="macaronsmanuscripts.png"/></a>
+<div class="nav-links">
+<a aria-current="page" href="index.html">Home</a>
+<a href="pips-picks.html">Pip's Picks</a>
+<a href="meet-pip.html">Meet Pip</a>
+<a href="about.html">About</a>
+<a href="freebies.html">Pip's Free Library</a>
+<a href="reviews.html">Reviews</a>
+<a href="contact.html">Contact</a>
+<a href="reading-nook.html">Pip's Reading Nook</a>
+<a aria-label="Visit the Macarons Manuscripts Etsy shop" class="nav-button" href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true" class="etsy-icon">E</span>
           Etsy Shop
         </a>
-      </div>
-
-    </nav>
-
-  </header>
-
-  <main>
-
-    <section class="hero" id="home">
-
-      <span class="floating-item sparkle sparkle-one">
+</div>
+</nav>
+</header>
+<main>
+<section class="hero" id="home">
+<span class="floating-item sparkle sparkle-one">
         ✦
       </span>
-
-      <span class="floating-item sparkle sparkle-two">
+<span class="floating-item sparkle sparkle-two">
         ✨
       </span>
-
-      <span class="floating-item sparkle sparkle-three">
+<span class="floating-item sparkle sparkle-three">
         ✧
       </span>
-
-      <span class="floating-item book-one">
+<span class="floating-item book-one">
         📖
       </span>
-
-      <span class="floating-item book-two">
+<span class="floating-item book-two">
         📚
       </span>
-
-      <span class="floating-item macaron">
+<span class="floating-item macaron">
         🩷
       </span>
-
-      <div class="hero-inner">
-
-        <div class="hero-copy">
-
-          <div class="eyebrow">
+<div class="hero-inner">
+<div class="hero-copy">
+<div class="eyebrow">
             ✨ Handmade bookish treasures
           </div>
-
-          <h1 class="hero-title">
-            Macarons<br>
+<h1 class="hero-title">
+            Macarons<br/>
             Manuscripts
           </h1>
-
-          <h2 class="hero-subtitle">
+<h2 class="hero-subtitle">
             Where Bookworms Buy Cute Things
           </h2>
-
-          <p class="hero-description">
+<p class="hero-description">
             Welcome to our magical little corner of the internet,
             filled with handcrafted magnetic bookmarks, whimsical
             stationery, surprise bags, cosy reading accessories and
             thoughtful gifts for readers.
           </p>
-
-          <div class="hero-buttons">
-
-            <a href="pips-picks.html" class="button button-primary">
+<div class="hero-buttons">
+<a class="button button-primary" href="pips-picks.html">
               Explore Pip's Picks
               <span class="pip-tail">🐉</span>
-            </a>
-
-            <a href="meet-pip.html" class="button button-secondary">
+</a>
+<a class="button button-secondary" href="meet-pip.html">
               Meet Pip
             </a>
-
-          </div>
-
-          <div class="hero-note">
-
-            <span class="hero-note-icon">
+</div>
+<div class="hero-note">
+<span class="hero-note-icon">
               📚
             </span>
-
-            <span>
+<span>
               Handmade in the UK by Maria and quality checked by
               <strong>Pip Inkwing</strong> — although he may have
               tried to steal one bookmark.
             </span>
-
-          </div>
-
-        </div>
-
-        <div class="portrait-area">
-
-          <div class="portrait-glow"></div>
-
-          <div class="portrait-card">
-
-            <img
-              src="file_000000001dc8820a887eeb59c8f74abf.png"
-              alt="Maria and Pip, the creators of Macarons Manuscripts"
-              class="portrait-image"
-            >
-
-            <p class="portrait-label">
-              Maria & Pip — Partners in bookish mischief
+</div>
+</div>
+<div class="portrait-area">
+<div class="portrait-glow"></div>
+<div class="portrait-card">
+<img alt="Maria and Pip, the creators of Macarons Manuscripts" class="portrait-image" src="file_000000001dc8820a887eeb59c8f74abf.png"/>
+<p class="portrait-label">
+              Maria &amp; Pip — Partners in bookish mischief
             </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section
-      class="section collections-section"
-      id="collections"
-    >
-
-      <div class="section-inner">
-
-        <div class="section-heading">
-
-          <p class="section-kicker">
+</div>
+</div>
+</div>
+</section>
+<section class="section collections-section" id="collections">
+<div class="section-inner">
+<div class="section-heading">
+<p class="section-kicker">
             Find your next treasure
           </p>
-
-          <h2 class="section-title">
+<h2 class="section-title">
             Shop Our Bookish Collections
           </h2>
-
-          <p class="section-text">
+<p class="section-text">
             Thoughtful gifts and reading accessories for romantasy
             lovers, cosy readers, dark romance fans and everyone whose
             shelves are already dangerously full.
           </p>
-
-        </div>
-
-        <div class="collection-grid">
-
-          <a href="pips-picks.html" class="collection-card">
-
-            <span class="collection-icon">
+</div>
+<div class="collection-grid">
+<a class="collection-card" href="pips-picks.html">
+<span class="collection-icon">
               🔖
             </span>
-
-            <h3>
+<h3>
               Magnetic Bookmarks
             </h3>
-
-            <p>
+<p>
               Adorable page-saving companions designed to stay exactly
               where you put them.
             </p>
-
-            <span class="collection-arrow">
+<span class="collection-arrow">
               →
             </span>
-
-          </a>
-
-          <a href="pips-picks.html" class="collection-card">
-
-            <span class="collection-icon">
+</a>
+<a class="collection-card" href="pips-picks.html">
+<span class="collection-icon">
               🎁
             </span>
-
-            <h3>
+<h3>
               Surprise Bags
             </h3>
-
-            <p>
+<p>
               A mystery bundle of bookish happiness, tiny treasures and
               extremely sensible financial decisions.
             </p>
-
-            <span class="collection-arrow">
+<span class="collection-arrow">
               →
             </span>
-
-          </a>
-
-          <a href="pips-picks.html" class="collection-card">
-
-            <span class="collection-icon">
+</a>
+<a class="collection-card" href="pips-picks.html">
+<span class="collection-icon">
               📚
             </span>
-
-            <h3>
+<h3>
               Book Sleeves
             </h3>
-
-            <p>
+<p>
               Soft, protective homes for books that deserve to travel
               without acquiring emotional or physical damage.
             </p>
-
-            <span class="collection-arrow">
+<span class="collection-arrow">
               →
             </span>
-
-          </a>
-
-          <a href="pips-picks.html" class="collection-card">
-
-            <span class="collection-icon">
+</a>
+<a class="collection-card" href="pips-picks.html">
+<span class="collection-icon">
               ☕
             </span>
-
-            <h3>
+<h3>
               Bookish Mugs
             </h3>
-
-            <p>
+<p>
               For readers who require hot drinks, fictional worlds and
               approximately five more chapters.
             </p>
-
-            <span class="collection-arrow">
+<span class="collection-arrow">
               →
             </span>
-
-          </a>
-
-          <a href="pips-picks.html" class="collection-card">
-
-            <span class="collection-icon">
+</a>
+<a class="collection-card" href="pips-picks.html">
+<span class="collection-icon">
               ✨
             </span>
-
-            <h3>
-              Stickers & Stationery
+<h3>
+              Stickers &amp; Stationery
             </h3>
-
-            <p>
+<p>
               Whimsical extras for journals, planners, parcels, laptops
               and every available flat surface.
             </p>
-
-            <span class="collection-arrow">
+<span class="collection-arrow">
               →
             </span>
-
-          </a>
-
-          <a href="pips-picks.html" class="collection-card">
-
-            <span class="collection-icon">
+</a>
+<a class="collection-card" href="pips-picks.html">
+<span class="collection-icon">
               🖨️
             </span>
-
-            <h3>
+<h3>
               Digital Downloads
             </h3>
-
-            <p>
+<p>
               Printable reading trackers, bookmarks and bookish goodies
               ready to enjoy instantly.
             </p>
-
-            <span class="collection-arrow">
+<span class="collection-arrow">
               →
             </span>
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section
-      class="section pip-section"
-      id="meet-pip"
-    >
-
-      <div class="section-inner">
-
-        <div class="pip-panel">
-
-          <div
-            class="pip-visual"
-            aria-label="Pip Inkwing smiling and blinking"
-          >
-            <img
-              src="pip-smile.png"
-              alt="Pip Inkwing smiling"
-            >
-
-            <span
-              class="pip-sparkle pip-sparkle-one"
-              aria-hidden="true"
-            >
+</a>
+</div>
+</div>
+</section>
+<section class="section pip-section" id="meet-pip">
+<div class="section-inner">
+<div class="pip-panel">
+<div aria-label="Pip Inkwing smiling and blinking" class="pip-visual">
+<img alt="Pip Inkwing smiling" src="pip-smile.png"/>
+<span aria-hidden="true" class="pip-sparkle pip-sparkle-one">
               ✨
             </span>
-
-            <span
-              class="pip-sparkle pip-sparkle-two"
-              aria-hidden="true"
-            >
+<span aria-hidden="true" class="pip-sparkle pip-sparkle-two">
               ✨
             </span>
-          </div>
-
-          <div class="pip-copy">
-
-            <p class="section-kicker">
+</div>
+<div class="pip-copy">
+<p class="section-kicker">
               Keeper of the Manuscripts
             </p>
-
-            <h2>
+<h2>
               Meet Pip Inkwing
             </h2>
-
-            <p>
+<p>
               Pip is our tiny resident book dragon, professional
               bookmark inspector and occasional thief of marshmallows.
               He loves fantasy, romantasy, cosy mysteries, magical
               adventures and anything served with hot chocolate.
             </p>
-
-            <p>
+<p>
               His mission is to bring a little dragon magic to every
               reader — and to make absolutely sure no bookmark leaves
               the shop without being properly inspected.
             </p>
-
-            <a href="meet-pip.html" class="button button-primary">
+<a class="button button-primary" href="meet-pip.html">
               Discover Pip’s Story
             </a>
-
-            <div class="pip-signature">
-              🐉 Ink & Scales
+<div class="pip-signature">
+              🐉 Ink &amp; Scales
             </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section
-      class="section"
-      id="about"
-    >
-
-      <div class="section-inner">
-
-        <div class="section-heading">
-
-          <p class="section-kicker">
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="about">
+<div class="section-inner">
+<div class="section-heading">
+<p class="section-kicker">
             Why readers love us
           </p>
-
-          <h2 class="section-title">
+<h2 class="section-title">
             Made for People Who Would Rather Be Reading
           </h2>
-
-        </div>
-
-        <div class="promise-grid">
-
-          <div class="promise-card">
-
-            <div class="promise-icon">
+</div>
+<div class="promise-grid">
+<div class="promise-card">
+<div class="promise-icon">
               🩷
             </div>
-
-            <h3>
+<h3>
               Made With Care
             </h3>
-
-            <p>
+<p>
               Thoughtfully created and packed by a real small UK
               business.
             </p>
-
-          </div>
-
-          <div class="promise-card">
-
-            <div class="promise-icon">
+</div>
+<div class="promise-card">
+<div class="promise-icon">
               📖
             </div>
-
-            <h3>
+<h3>
               Designed for Readers
             </h3>
-
-            <p>
+<p>
               Created by a book lover for people with heroic TBR piles.
             </p>
-
-          </div>
-
-          <div class="promise-card">
-
-            <div class="promise-icon">
+</div>
+<div class="promise-card">
+<div class="promise-icon">
               ✨
             </div>
-
-            <h3>
+<h3>
               A Little Extra Magic
             </h3>
-
-            <p>
+<p>
               Whimsical details that make every order feel like happy
               mail.
             </p>
-
-          </div>
-
-          <div class="promise-card">
-
-            <div class="promise-icon">
+</div>
+<div class="promise-card">
+<div class="promise-icon">
               🐉
             </div>
-
-            <h3>
+<h3>
               Pip Approved
             </h3>
-
-            <p>
+<p>
               Personally inspected by a tiny dragon with exceptionally
               high standards.
             </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section
-      class="section newsletter-section"
-      id="newsletter"
-    >
-
-      <div class="section-inner">
-
-        <div class="newsletter-card">
-
-          <h2>
+</div>
+</div>
+</div>
+</section>
+<section class="section newsletter-section" id="newsletter">
+<div class="section-inner">
+<div class="newsletter-card">
+<h2>
             Join Pip’s Book Club
           </h2>
-
-          <p>
+<p>
             Get first peeks at new products, exclusive offers,
             behind-the-scenes bookish mischief and occasional free
             printable treasures.
           </p>
-
-          <form
-            class="newsletter-form"
-            onsubmit="event.preventDefault(); alert('The newsletter signup will be connected later!');"
-          >
-
-            <input
-              type="email"
-              aria-label="Email address"
-              placeholder="Enter your email address"
-              required
-            >
-
-            <button type="submit">
+<form class="newsletter-form" onsubmit="event.preventDefault(); alert('The newsletter signup will be connected later!');">
+<input aria-label="Email address" placeholder="Enter your email address" required="" type="email"/>
+<button type="submit">
               Join the Club
             </button>
-
-          </form>
-
-          <small class="form-note">
+</form>
+<small class="form-note">
             No spam. Pip dislikes spam almost as much as dog-eared pages.
           </small>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-
-    <div class="footer-inner">
-
-      <div>
-
-        <h2 class="footer-brand">
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div>
+<h2 class="footer-brand">
           Macarons Manuscripts
         </h2>
-
-        <p class="footer-text">
+<p class="footer-text">
           Whimsical bookish gifts, reading accessories and mild
           financial regret — handmade with love in the UK.
         </p>
-
-      </div>
-
-      <div class="footer-column">
-
-        <h3>
+</div>
+<div class="footer-column">
+<h3>
           Explore
         </h3>
-
-        <a href="index.html">
+<a href="index.html">
           Home
         </a>
-
-        <a href="pips-picks.html">
+<a href="pips-picks.html">
           Pip's Picks
         </a>
-
-        <a href="reviews.html">
+<a href="reviews.html">
           Reviews
         </a>
-
-        <a href="meet-pip.html">
+<a href="meet-pip.html">
           Meet Pip
         </a>
-
-        <a href="about.html">
+<a href="about.html">
           About
         </a>
-
-        <a href="freebies.html">
+<a href="freebies.html">
           Pip's Free Library
         </a>
-
-        <a href="contact.html">
+<a href="contact.html">
           Contact
         </a>
-
-        <a href="reading-nook.html">
+<a href="reading-nook.html">
           Pip's Reading Nook
         </a>
-
-      </div>
-
-      <div class="footer-column">
-
-        <h3>
+</div>
+<div class="footer-column">
+<h3>
           Follow the Magic
         </h3>
-
-        <a href="#">
+<a href="#">
           Instagram
         </a>
-
-        <a href="#">
+<a href="#">
           TikTok
         </a>
-
-        <a href="#">
+<a href="#">
           Pinterest
         </a>
-
-        <a href="#">
+<a href="#">
           Facebook
         </a>
-
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
+</div>
+</div>
+<div class="footer-bottom">
       © 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.
     </div>
-
-  </footer>
-
-
+</footer>
 </body>
 </html>

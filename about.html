@@ -883,6 +883,14 @@
       font-size: 46px;
     }
 
+    .hidden-pip img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+    }
+
     .hidden-egg {
       left: 3%;
       bottom: 30px;
@@ -1075,80 +1083,6 @@
 
     </section>
 
-    <section class="section story-section">
-
-      <div class="section-inner">
-
-        <div class="section-heading">
-
-          <p class="section-kicker">
-            A little more about me
-          </p>
-
-          <h2 class="section-title">
-            The Story Behind the Shop
-          </h2>
-
-          <p class="section-text">
-            Macarons Manuscripts began with a love of books, creativity
-            and the idea that receiving a parcel should feel like opening
-            a tiny celebration.
-          </p>
-
-        </div>
-
-        <div class="story-grid">
-
-          <div class="story-card">
-
-            <h3>
-              📚 Books Are My Love Language
-            </h3>
-
-            <p>
-              I’m a lifelong reader and a total book addict. Fantasy,
-              romantasy, cosy mysteries, dark romance and magical
-              adventures all have a permanent place on my shelves.
-            </p>
-
-          </div>
-
-          <div class="story-card">
-
-            <h3>
-              🎁 Happy Mail Matters
-            </h3>
-
-            <p>
-              I want every Macarons Manuscripts order to feel exciting
-              from the moment it arrives. Every item is chosen, packed
-              and checked with care—usually under Pip’s extremely serious
-              supervision.
-            </p>
-
-          </div>
-
-          <div class="story-card">
-
-            <h3>
-              ✨ Made With Personality
-            </h3>
-
-            <p>
-              I love creating products that are cosy, funny, magical and
-              useful. The shop is full of magnetic bookmarks, surprise
-              bags, book sleeves, stationery and reader gifts with a
-              little bit of mischief built in.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
     <section class="section values-section">
 
       <div class="section-inner">
@@ -1322,44 +1256,6 @@
 
     </section>
 
-    <section class="section feature-section">
-
-      <div class="section-inner">
-
-        <div class="section-heading">
-
-          <p class="section-kicker">
-            Books, family and dragon mischief
-          </p>
-
-          <h2 class="section-title">
-            A Little About Me
-          </h2>
-
-          <p class="section-text">
-            This is the side of Macarons Manuscripts that lives beyond
-            products and parcels.
-          </p>
-
-        </div>
-
-        <div class="feature-card">
-
-          <img
-            src="file_0000000064a8820a85ac396fe81324f7.png"
-            alt="A little about Maria with Pip, books and hot chocolate"
-          >
-
-          <p class="feature-caption">
-            With love, Maria—and one highly caffeinated book dragon
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
     <section class="section promise-section">
 
       <div class="section-inner">
@@ -1440,7 +1336,7 @@
           aria-label="Hidden Pip"
           onclick="showSecret('pip')"
         >
-          🐉
+          <img src="pippy.png" alt="" aria-hidden="true">
         </button>
 
 

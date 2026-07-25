@@ -620,6 +620,61 @@ font-size:16px}
   height:100%;
   object-fit:contain;
 }
+
+/* Consistent stacked website header */
+.site-header{
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid #f3e5e9;
+}
+.navigation,
+.nav{
+  max-width:1450px;
+  margin:auto;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:20px !important;
+  padding:24px 4% 28px !important;
+}
+.brand-name,
+.brand{
+  display:block;
+  width:min(470px,78vw);
+  margin:0 auto;
+  line-height:0;
+  text-decoration:none;
+}
+.brand-name img,
+.brand img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.nav-links{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center !important;
+  flex-wrap:wrap;
+  gap:18px 28px;
+}
+@media(max-width:760px){
+  .navigation,
+  .nav{
+    gap:18px !important;
+    padding:20px 18px 28px !important;
+  }
+  .brand-name,
+  .brand{
+    width:min(430px,86vw);
+  }
+  .nav-links{
+    justify-content:center !important;
+    gap:14px 18px;
+  }
+}
 </style>
 </head>
 <body>
@@ -629,7 +684,7 @@ font-size:16px}
 </div>
 <header class="site-header">
 <nav aria-label="Main navigation" class="nav">
-<a class="brand" href="index.html">Macarons Manuscripts</a>
+<a class="brand" href="index.html"><img alt="Macarons Manuscripts" src="macaronsmanuscripts.png"/></a>
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="pips-picks.html">Pip’s Picks</a>
@@ -645,17 +700,15 @@ font-size:16px}
 <main class="page">
 <section class="top-grid">
 <article class="panel contact-panel">
-
 <h1 class="display-title">Send a Little<br/>Happy Mail</h1>
 <p class="intro">
-          
-        </p>
+</p>
 <a aria-label="Tap Pip to email Maria" class="pip-email" href="mailto:macaronsandmanuscriptsdesigns@gmail.com">
 <img alt="Pip the purple book dragon sitting on an envelope with pink hearts" src="pip-contact.png"/>
 </a>
 <h2 class="tap-pip">Tap Pip to Email Maria</h2>
 <p class="small-note">
-          <br/>
+<br/>
           We usually reply within 1–2 working days.
         </p>
 <h2 class="social-heading">Follow the Bookish Mischief</h2>

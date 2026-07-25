@@ -73,11 +73,46 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    /* Scrolling announcement bar */
+
+    .announcement-bar {
+      position: relative;
+      z-index: 30;
+      overflow: hidden;
+      height: 42px;
+      background: var(--deep-purple);
+      color: white;
+      box-shadow: 0 6px 20px rgba(93, 67, 95, 0.14);
+    }
+
+    .announcement-track {
+      display: flex;
+      width: max-content;
+      min-width: 200%;
+      height: 100%;
+      align-items: center;
+      animation: announcementScroll 28s linear infinite;
+    }
+
+    .announcement-message {
+      flex: 0 0 auto;
+      padding: 0 42px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.25px;
+      white-space: nowrap;
+    }
+
+    @keyframes announcementScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
     /* Navigation */
 
     .site-header {
       position: absolute;
-      top: 0;
+      top: 42px;
       left: 0;
       z-index: 20;
       width: 100%;
@@ -130,15 +165,41 @@
       transition: width 0.25s ease;
     }
 
-    .nav-links a:hover::after {
+    .nav-links a:hover::after,
+    .nav-links a[aria-current="page"]::after {
       width: 100%;
     }
 
     .nav-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 11px 20px;
       border-radius: 999px;
       background: var(--raspberry);
       color: white;
+      box-shadow: 0 10px 24px rgba(189, 95, 138, 0.24);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .nav-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(189, 95, 138, 0.34);
+    }
+
+    .etsy-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 21px;
+      height: 21px;
+      border-radius: 6px;
+      background: white;
+      color: var(--raspberry);
+      font-family: Georgia, serif;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
     }
 
     /* Hero */
@@ -899,6 +960,54 @@
 
     /* Mobile */
 
+    @media (max-width: 1240px) {
+      .navigation {
+        align-items: flex-start;
+        gap: 16px;
+        border-radius: 28px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 13px 17px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .announcement-message {
+        padding: 0 28px;
+        font-size: 12px;
+      }
+
+      .site-header {
+        padding: 14px;
+      }
+
+      .navigation {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        border-radius: 24px;
+      }
+
+      .brand-name {
+        font-size: 23px;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero {
+        padding-top: 250px;
+      }
+    }
+
     @media (max-width: 1050px) {
       .hero-inner {
         grid-template-columns: 1fr;
@@ -990,6 +1099,13 @@
 
 <body>
 
+  <div class="announcement-bar" role="region" aria-label="Shop announcement">
+    <div class="announcement-track">
+      <span class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions. &nbsp;•&nbsp; Handmade in the UK &nbsp;•&nbsp; Packed by Maria &nbsp;•&nbsp; Quality checked by Pip 🐉</span>
+      <span class="announcement-message" aria-hidden="true">📖 Warning: Entering this website may result in questionable financial decisions. &nbsp;•&nbsp; Handmade in the UK &nbsp;•&nbsp; Packed by Maria &nbsp;•&nbsp; Quality checked by Pip 🐉</span>
+    </div>
+  </div>
+
   <header class="site-header">
 
     <nav class="navigation">
@@ -1000,15 +1116,18 @@
 
       <div class="nav-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html" aria-current="page">Home</a>
         <a href="pips-picks.html">Pip's Picks</a>
         <a href="meet-pip.html">Meet Pip</a>
         <a href="about.html">About</a>
         <a href="freebies.html">Pip's Free Library</a>
         <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="reading-nook.html">Pip's Reading Nook</a>
 
-        <a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" class="nav-button" target="_blank" rel="noopener noreferrer">
-          Visit Etsy
+        <a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" class="nav-button" target="_blank" rel="noopener noreferrer" aria-label="Visit the Macarons Manuscripts Etsy shop">
+          <span class="etsy-icon" aria-hidden="true">E</span>
+          Etsy Shop
         </a>
       </div>
 
@@ -1540,6 +1659,14 @@
 
         <a href="freebies.html">
           Pip's Free Library
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="reading-nook.html">
+          Pip's Reading Nook
         </a>
 
       </div>

@@ -37,17 +37,27 @@
   box-shadow:0 10px 24px rgba(93,67,95,.15);
   outline:none;
 }
+
+.announcement-bar{overflow:hidden;background:var(--deep);color:#fff;white-space:nowrap}.announcement-track{display:inline-block;min-width:100%;padding:10px 0;font-size:14px;font-weight:800;letter-spacing:.35px;animation:announcement-scroll 23s linear infinite}.announcement-copy{padding-left:100vw}@keyframes announcement-scroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.nav-links{flex-wrap:wrap;justify-content:flex-end;gap:8px 18px}.nav-links a{padding:8px 2px;border-bottom:2px solid transparent}.nav-links a.active{border-bottom-color:var(--raspberry);color:var(--raspberry)}.nav-links .nav-button{display:inline-flex;align-items:center;gap:8px;border-bottom:0;background:#f1641e;box-shadow:0 10px 24px rgba(241,100,30,.25)}.etsy-icon{display:inline-grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#fff;color:#f1641e;font-family:Georgia,serif;font-size:17px;font-weight:700;line-height:1}
+.hidden-egg{position:absolute;left:3%;bottom:24px;z-index:6;border:0;background:transparent;font-size:40px;cursor:pointer;filter:drop-shadow(0 7px 10px rgba(93,67,95,.18));transition:transform .2s ease}.hidden-egg:hover,.hidden-egg:focus-visible{transform:scale(1.14) rotate(-5deg)}.coming-soon{position:relative}.egg-message{position:fixed;right:22px;bottom:22px;z-index:100;max-width:min(360px,calc(100vw - 44px));padding:20px 48px 20px 22px;border:2px solid rgba(255,255,255,.86);border-radius:24px;background:linear-gradient(145deg,#fffdfb,#f6e4ec,#ece4f5);box-shadow:0 24px 60px rgba(93,67,95,.26);opacity:0;pointer-events:none;transform:translateY(18px) scale(.96);transition:opacity .25s ease,transform .25s ease}.egg-message.show{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}.egg-message strong{display:block;margin-bottom:6px;color:var(--raspberry);font-family:"Playfair Display",serif;font-size:21px}.egg-message button{position:absolute;top:8px;right:10px;border:0;background:transparent;color:var(--deep);cursor:pointer;font-size:22px}
+@media(max-width:1180px){.navigation{align-items:flex-start;border-radius:28px}.nav-links a{font-size:12px}}@media(max-width:850px){.navigation{flex-direction:column;align-items:center}.nav-links{justify-content:center}}@media(max-width:760px){.nav-links a:not(.nav-button){display:inline-block}.navigation{border-radius:26px}.announcement-track{font-size:12px}}@media(prefers-reduced-motion:reduce){.announcement-track{animation:none}.announcement-copy{padding-left:18px}}
+
 </style>
 </head>
 <body>
-<header class="site-header"><nav class="navigation"><a class="brand-name" href="index.html">Macarons Manuscripts</a><div class="nav-links">
+<div class="announcement-bar" aria-label="Shop announcement"><div class="announcement-track"><span class="announcement-copy">📖 Warning: Entering this website may result in questionable financial decisions. &nbsp; • &nbsp; Handmade in the UK &nbsp; • &nbsp; Packed by Maria &nbsp; • &nbsp; Quality checked by Pip 🐉</span></div></div>
+
+<header class="site-header"><nav class="navigation" aria-label="Main navigation"><a class="brand-name" href="index.html">Macarons Manuscripts</a><div class="nav-links">
 <a href="index.html">Home</a>
 <a href="pips-picks.html">Pip's Picks</a>
 <a href="meet-pip.html">Meet Pip</a>
 <a href="about.html">About</a>
-<a href="freebies.html">Pip's Free Library</a>
+<a class="active" aria-current="page" href="freebies.html">Pip's Free Library</a>
 <a href="reviews.html">Reviews</a>
-<a class="nav-button" href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank">Visit Etsy</a>
+<a href="contact.html">Contact</a>
+<a href="reading-nook.html">Pip's Reading Nook</a>
+<a class="nav-button" href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank"><span class="etsy-icon" aria-hidden="true">E</span>Etsy Shop</a>
 </div></nav></header>
 <main>
 <section class="hero"><div class="hero-inner"><div class="eyebrow">🐉 A secret shelf for fellow readers</div><h1>Pip's Free Library</h1><h2>Shhh... you've found the hidden room.</h2><p>Pip has been quietly filling these shelves with printable gifts for fellow readers. Everything here is free to borrow, print and enjoy at home.</p><div class="library-invitation">📖 Promise to read one more chapter, then choose your treasure.</div></div></section>
@@ -60,8 +70,9 @@
 <article class="freebie-card"><div class="freebie-image-wrap"><img alt="Preview of the Borrowed From Pip's Library printable bookplate" src="pip-library-006-preview.png"/></div><div class="freebie-content"><div class="number">💌 Pip Library #006</div><h3>Borrowed From Pip's Library</h3><p>A decorative printable bookplate with space for a name, borrowing date and Pip’s official Ink &amp; Scales signature.</p><a class="borrow-button" download="" href="pip-library-006-bookplate.png">📖 Borrow from the Library</a></div></article>
 </div></div></section>
 <section class="section notice-section"><div class="section-inner"><div class="notice-grid"><div class="notice-card"><p class="section-kicker">Pip's notice board</p><h2>Currently Being Guarded</h2><p>Pip is already working on more gifts. Some are almost ready. Some are under a blanket. One may have been eaten.</p><div class="notice-list"><div class="notice-item">✨ Monthly reading wallpaper</div><div class="notice-item">📖 Printable reading tracker</div><div class="notice-item">🎃 Seasonal bookmark collection</div><div class="notice-item">🐉 Secret Pip collector card</div></div></div><div class="rules-card"><p class="section-kicker">Library rules</p><h2>A Tiny Note From Maria</h2><p>These files are free for personal use so you can print, cut and enjoy them at home.</p><ul><li>Please do not resell the digital files.</li><li>Please do not claim the artwork as your own.</li><li>Please do not upload the files elsewhere.</li><li>Sharing the link to this page is always appreciated.</li></ul></div></div></div></section>
-<section class="section coming-soon"><div class="section-inner"><div class="coming-card"><p class="section-kicker">More treasures coming soon</p><h2>The Library Is Still Growing</h2><p>New printable gifts will appear on Pip’s shelves from time to time, so pop back whenever you need another little burst of bookish magic.</p><div class="coming-items"><div class="coming-pill">Reading trackers</div><div class="coming-pill">Wallpapers</div><div class="coming-pill">Seasonal bookmarks</div><a aria-label="View and download Pip's collector cards" class="coming-pill collector-cards-link" href="meet-pip.html#collector-cards">Collector cards</a><div class="coming-pill">Colouring pages</div></div><div class="signature">🐉 Ink &amp; Scales</div></div></div></section>
+<section class="section coming-soon"><div class="section-inner"><div class="coming-card"><p class="section-kicker">More treasures coming soon</p><h2>The Library Is Still Growing</h2><p>New printable gifts will appear on Pip’s shelves from time to time, so pop back whenever you need another little burst of bookish magic.</p><div class="coming-items"><div class="coming-pill">Reading trackers</div><div class="coming-pill">Wallpapers</div><div class="coming-pill">Seasonal bookmarks</div><a aria-label="View and download Pip's collector cards" class="coming-pill collector-cards-link" href="meet-pip.html#collector-cards">Collector cards</a><div class="coming-pill">Colouring pages</div></div><div class="signature">🐉 Ink &amp; Scales</div></div></div><button class="hidden-egg" type="button" aria-label="Hidden dragon egg" id="hiddenEgg">🥚</button></section>
 </main>
+<div class="egg-message" id="eggMessage" role="status" aria-live="polite"><button type="button" aria-label="Close message" id="eggClose">×</button><strong>You found Pip's library egg! 🥚</strong><span>Excellent treasure-hunting. Pip says you may borrow an extra imaginary book today.</span></div>
 <div aria-live="polite" class="pip-chat" id="pipChat">
 <div class="pip-avatar"><img alt="Pip covering his mouth as if sharing a mischievous secret" src="pip-whisper.png"/></div>
 <div class="pip-bubble">
@@ -71,7 +82,7 @@
 </div>
 </div>
 <button aria-label="Open Pip's message" class="pip-open" id="pipOpen" type="button"><img alt="Open Pip's secret message" src="pip-whisper.png"/></button>
-<footer class="site-footer"><div class="footer-inner"><div><h2 class="footer-brand">Macarons Manuscripts</h2><p class="footer-text">A magical UK bookish boutique filled with reading accessories, thoughtful gifts and mild financial regret.</p></div><div class="footer-column"><h3>Explore</h3><a href="index.html">Home</a><a href="pips-picks.html">Pip's Picks</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About Maria</a><a href="freebies.html">Pip's Free Library</a></div><div class="footer-column"><h3>Shop With Us</h3><a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank">Etsy Shop</a><a href="pips-picks.html">Browse Pip's Picks</a><a href="index.html">Back to Homepage</a></div></div><div class="footer-bottom">© 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.</div></footer>
+<footer class="site-footer"><div class="footer-inner"><div><h2 class="footer-brand">Macarons Manuscripts</h2><p class="footer-text">A magical UK bookish boutique filled with reading accessories, thoughtful gifts and mild financial regret.</p></div><div class="footer-column"><h3>Explore</h3><a href="index.html">Home</a><a href="pips-picks.html">Pip's Picks</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About Maria</a><a href="freebies.html">Pip's Free Library</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a><a href="reading-nook.html">Pip's Reading Nook</a></div><div class="footer-column"><h3>Shop With Us</h3><a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank">Etsy Shop</a><a href="pips-picks.html">Browse Pip's Picks</a><a href="index.html">Back to Homepage</a></div></div><div class="footer-bottom">© 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.</div></footer>
 <script>
 const pipMessages = [
   "Don’t tell Maria... I may have hidden another freebie somewhere.",
@@ -135,6 +146,24 @@ pipOpen.addEventListener("click", () => {
   showPip();
   startMessages();
 });
+
+const hiddenEgg = document.getElementById("hiddenEgg");
+const eggMessage = document.getElementById("eggMessage");
+const eggClose = document.getElementById("eggClose");
+let eggTimer;
+if (hiddenEgg && eggMessage) {
+  hiddenEgg.addEventListener("click", () => {
+    clearTimeout(eggTimer);
+    eggMessage.classList.add("show");
+    eggTimer = setTimeout(() => eggMessage.classList.remove("show"), 7000);
+  });
+}
+if (eggClose && eggMessage) {
+  eggClose.addEventListener("click", () => {
+    clearTimeout(eggTimer);
+    eggMessage.classList.remove("show");
+  });
+}
 </script>
 </body>
 </html>

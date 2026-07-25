@@ -691,10 +691,295 @@
         transition-duration: 0.01ms !important;
       }
     }
+
+    .announcement-bar {
+      overflow: hidden;
+      background: var(--deep-purple);
+      color: white;
+      white-space: nowrap;
+    }
+
+    .announcement-track {
+      display: inline-block;
+      min-width: 100%;
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.35px;
+      animation: announcement-scroll 23s linear infinite;
+    }
+
+    .announcement-copy {
+      padding-left: 100vw;
+    }
+
+    @keyframes announcement-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 18px;
+    }
+
+    .nav-links a {
+      padding: 8px 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a.active {
+      border-bottom-color: var(--raspberry);
+      color: var(--raspberry);
+    }
+
+    .nav-links .nav-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 0;
+      background: #f1641e;
+      box-shadow: 0 10px 24px rgba(241, 100, 30, 0.25);
+    }
+
+    .etsy-icon {
+      display: inline-grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border-radius: 50%;
+      background: white;
+      color: #f1641e;
+      font-family: Georgia, serif;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .opening-line {
+      margin: 0 0 16px !important;
+      color: var(--raspberry) !important;
+      font-family: "Satisfy", cursive;
+      font-size: clamp(25px, 3vw, 36px) !important;
+    }
+
+    .family-note {
+      max-width: 920px;
+      margin: 38px auto 0;
+      padding: 30px;
+      border: 2px dashed rgba(189, 95, 138, 0.25);
+      border-radius: 30px;
+      background: white;
+      box-shadow: var(--shadow);
+      text-align: center;
+      color: #746473;
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+      line-height: 1.65;
+    }
+
+    .pip-interruption {
+      background: linear-gradient(135deg, #f7e9f0, #ece4f5);
+    }
+
+    .pip-bubble {
+      position: relative;
+      max-width: 940px;
+      margin: auto;
+      padding: 44px 46px;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 40px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .pip-bubble h2 {
+      margin: 0 0 12px;
+      color: var(--raspberry);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(32px, 4vw, 48px);
+    }
+
+    .pip-bubble p {
+      margin: 0;
+      color: var(--deep-purple);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(22px, 3vw, 31px);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .reading-section {
+      background: #fffdfb;
+    }
+
+    .reading-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .reading-card {
+      padding: 34px;
+      border: 1px solid rgba(93, 67, 95, 0.08);
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 14px 38px rgba(93, 67, 95, 0.08);
+    }
+
+    .reading-card h3 {
+      margin: 0 0 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+    }
+
+    .reading-card p {
+      margin: 0;
+      color: #796877;
+      line-height: 1.72;
+    }
+
+    .pip-signoff {
+      margin-top: 18px;
+      color: var(--deep-purple);
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .postscript {
+      max-width: 760px;
+      margin: 28px auto 0;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(231, 223, 242, 0.62);
+      color: var(--soft-purple);
+      font-size: 15px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .hidden-magic {
+      position: absolute;
+      z-index: 5;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      filter: drop-shadow(0 7px 10px rgba(93, 67, 95, 0.18));
+      transition: transform 0.2s ease;
+    }
+
+    .hidden-magic:hover,
+    .hidden-magic:focus-visible {
+      transform: scale(1.14) rotate(-5deg);
+    }
+
+    .hidden-pip {
+      right: 3%;
+      bottom: 26px;
+      font-size: 46px;
+    }
+
+    .hidden-egg {
+      left: 3%;
+      bottom: 30px;
+      font-size: 39px;
+    }
+
+    .secret-message {
+      position: fixed;
+      z-index: 100;
+      right: 22px;
+      bottom: 22px;
+      max-width: min(360px, calc(100vw - 44px));
+      padding: 20px 22px;
+      border: 2px solid rgba(255, 255, 255, 0.86);
+      border-radius: 24px;
+      background: linear-gradient(145deg, #fffdfb, #f6e4ec, #ece4f5);
+      box-shadow: 0 24px 60px rgba(93, 67, 95, 0.26);
+      color: var(--deep-purple);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(18px) scale(0.96);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .secret-message.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    .secret-message strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--raspberry);
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+    }
+
+    .secret-message button {
+      float: right;
+      margin-left: 12px;
+      border: 0;
+      background: transparent;
+      color: var(--deep-purple);
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    @media (max-width: 1180px) {
+      .navigation {
+        align-items: flex-start;
+        border-radius: 28px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .navigation {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .reading-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .announcement-track {
+        font-size: 12px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+
+
+  <div class="announcement-bar" aria-label="Shop announcement">
+    <div class="announcement-track">
+      <span class="announcement-copy">
+        📖 Warning: Entering this website may result in questionable financial decisions.
+        &nbsp; • &nbsp; Handmade in the UK
+        &nbsp; • &nbsp; Packed by Maria
+        &nbsp; • &nbsp; Quality checked by Pip 🐉
+      </span>
+    </div>
+  </div>
+
 
   <header class="site-header">
 
@@ -709,9 +994,11 @@
         <a href="index.html">Home</a>
         <a href="pips-picks.html">Pip's Picks</a>
         <a href="meet-pip.html">Meet Pip</a>
-        <a href="about.html">About</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
         <a href="freebies.html">Pip's Free Library</a>
         <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="reading-nook.html">Pip's Reading Nook</a>
 
         <a
           href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS"
@@ -719,7 +1006,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit Etsy
+          <span class="etsy-icon" aria-hidden="true">E</span>
+          Etsy Shop
         </a>
       </div>
 
@@ -755,6 +1043,10 @@
           <div class="eyebrow">
             💖 The maker behind the magic
           </div>
+
+          <p class="opening-line">
+            Every great story starts with a single page...
+          </p>
 
           <h1>
             About Maria
@@ -864,12 +1156,20 @@
         <div class="section-heading">
 
           <p class="section-kicker">
-            What matters here
+            The reason behind every parcel
           </p>
 
           <h2 class="section-title">
-            The Heart of Macarons Manuscripts
+            Why Macarons Manuscripts?
           </h2>
+
+          <p class="section-text">
+            Every bookmark, surprise bag and little extra is packed with
+            one goal in mind—to make someone’s day a little brighter.
+            I know how magical it feels to receive happy mail, especially
+            when you’re a book lover. That’s why every parcel is packed
+            as though it’s being sent to a friend.
+          </p>
 
         </div>
 
@@ -933,6 +1233,91 @@
 
         </div>
 
+        <p class="family-note">
+          I'm also a proud mummy to four wonderful home educated boys and
+          a flock of mischievous parrots who certainly keep life interesting!
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="section pip-interruption">
+
+      <div class="section-inner">
+
+        <div class="pip-bubble">
+
+          <h2>
+            🐉 Pip Interrupts...
+          </h2>
+
+          <p>
+            “Maria says she runs the shop... but we all know who the real boss is.”
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section reading-section">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <p class="section-kicker">
+            Tea, books and questionable shelf space
+          </p>
+
+          <h2 class="section-title">
+            My Reading Life
+          </h2>
+
+          <p class="section-text">
+            A few entirely sensible facts about the person behind the parcels.
+          </p>
+
+        </div>
+
+        <div class="reading-grid">
+
+          <article class="reading-card">
+            <h3>☕ Favourite Reading Spot</h3>
+            <p>
+              Somewhere cosy, with a hot drink nearby and absolutely no
+              intention of stopping after “just one more chapter.”
+            </p>
+          </article>
+
+          <article class="reading-card">
+            <h3>📚 Bookshop Behaviour</h3>
+            <p>
+              I cannot leave a bookshop empty-handed. Frankly, that would
+              be rude to the books.
+            </p>
+          </article>
+
+          <article class="reading-card">
+            <h3>✨ Powered By</h3>
+            <p>
+              Books, creativity, happy mail, family chaos and the occasional
+              heroic amount of caffeine.
+            </p>
+          </article>
+
+          <article class="reading-card">
+            <h3>🔖 Strongly Held Belief</h3>
+            <p>
+              There is no such thing as too many bookmarks. There are only
+              books that still need matching ones.
+            </p>
+          </article>
+
+        </div>
+
       </div>
 
     </section>
@@ -982,27 +1367,42 @@
         <div class="promise-card">
 
           <p class="section-kicker">
-            Thank you for being here
+            A little note from us
           </p>
 
           <h2>
-            You’re Part of the Story
+            Thank You for Stopping By
           </h2>
 
           <p>
-            Every order, review, message and returning customer helps
-            this little shop grow. I’m genuinely grateful that you chose
-            to spend a little time in the Macarons Manuscripts world.
+            Thank you for stopping by our little corner of the bookish world.
+            I hope something here has made you smile. Whether you're treating
+            yourself or searching for the perfect gift for a fellow book lover,
+            I'm so grateful you've taken the time to visit.
           </p>
 
           <p>
-            Whether you came for a magnetic bookmark, a surprise bag or
-            simply to meet Pip, I hope you leave with something that
-            makes your reading life a little happier.
+            Every order is lovingly packed by hand, wrapped with care, and
+            sent with the hope that it brings a little extra joy to your
+            reading adventures.
           </p>
 
           <div class="signature">
-            With love, Maria 💖
+            With love, Maria ❤️
+          </div>
+
+          <div class="pip-signoff">
+            ...and, of course...<br>
+            🐉 Pip Inkwing<br>
+            <em>Keeper of the Manuscripts</em><br>
+            <small>Professional bookmark inspector and part-time snack thief.</small>
+          </div>
+
+          <div class="postscript">
+            <strong>P.S.</strong> If you spotted the hidden dragon egg and found
+            me lurking on this page... you're officially an honorary member of
+            Pip's Book Dragon Club. Keep exploring—there may be more secrets
+            waiting for you elsewhere. 🐉✨
           </div>
 
           <div class="button-row">
@@ -1025,11 +1425,39 @@
 
         </div>
 
+        <button
+          class="hidden-magic hidden-egg"
+          type="button"
+          aria-label="Hidden dragon egg"
+          onclick="showSecret('egg')"
+        >
+          🥚
+        </button>
+
+        <button
+          class="hidden-magic hidden-pip"
+          type="button"
+          aria-label="Hidden Pip"
+          onclick="showSecret('pip')"
+        >
+          🐉
+        </button>
+
+
       </div>
 
     </section>
 
   </main>
+
+
+  <div class="secret-message" id="secret-message" role="status" aria-live="polite">
+    <button type="button" aria-label="Close message" onclick="hideSecret()">×</button>
+    <strong id="secret-title">You found me!</strong>
+    <span id="secret-copy">
+      I'm beginning to think you're better at hide-and-seek than I am...
+    </span>
+  </div>
 
   <footer class="site-footer">
 
@@ -1054,29 +1482,14 @@
           Explore
         </h3>
 
-        <a href="index.html">
-          Home
-        </a>
-
-        <a href="pips-picks.html">
-          Pip's Picks
-        </a>
-
-        <a href="freebies.html">
-          Pip's Free Library
-        </a>
-
-        <a href="reviews.html">
-          Reviews
-        </a>
-
-        <a href="meet-pip.html">
-          Meet Pip
-        </a>
-
-        <a href="about.html">
-          About Maria
-        </a>
+        <a href="index.html">Home</a>
+        <a href="pips-picks.html">Pip's Picks</a>
+        <a href="meet-pip.html">Meet Pip</a>
+        <a href="about.html">About Maria</a>
+        <a href="freebies.html">Pip's Free Library</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="reading-nook.html">Pip's Reading Nook</a>
 
       </div>
 
@@ -1111,6 +1524,40 @@
     </div>
 
   </footer>
+
+
+  <script>
+    let secretTimer;
+
+    function showSecret(type) {
+      const message = document.getElementById("secret-message");
+      const title = document.getElementById("secret-title");
+      const copy = document.getElementById("secret-copy");
+
+      window.clearTimeout(secretTimer);
+
+      if (type === "egg") {
+        title.textContent = "You found the hidden dragon egg! 🥚";
+        copy.textContent =
+          "Very impressive. Pip says this officially counts as advanced book-dragon detective work.";
+      } else {
+        title.textContent = "🐉 You found me again!";
+        copy.textContent =
+          "I'm beginning to think you're better at hide-and-seek than I am...";
+      }
+
+      message.classList.add("show");
+
+      secretTimer = window.setTimeout(function () {
+        message.classList.remove("show");
+      }, 7000);
+    }
+
+    function hideSecret() {
+      window.clearTimeout(secretTimer);
+      document.getElementById("secret-message").classList.remove("show");
+    }
+  </script>
 
 </body>
 </html>

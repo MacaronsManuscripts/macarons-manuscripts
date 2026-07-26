@@ -180,6 +180,228 @@
     justify-content:center;
   }
 }
+
+/* Requested Freebies page refinements */
+
+/* Hero close beneath navigation */
+.hero{
+  padding-top:26px!important;
+  padding-bottom:44px!important;
+}
+
+/* Borrow a Little Bookish Magic — approximately 50% smaller, keep 3-column grid */
+.shelf-section{
+  padding-top:42px!important;
+  padding-bottom:42px!important;
+}
+.shelf-section .section-heading{
+  margin-bottom:24px!important;
+}
+.shelf-section .section-title{
+  font-size:clamp(24px,2.8vw,36px)!important;
+}
+.shelf-section .section-kicker{
+  font-size:10px!important;
+}
+.shelf-section .section-text{
+  margin-top:8px!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+.freebie-grid{
+  grid-template-columns:repeat(3,1fr)!important;
+  gap:14px!important;
+}
+.freebie-card{
+  border-radius:20px!important;
+}
+.freebie-content{
+  padding:14px!important;
+}
+.number{
+  margin-bottom:7px!important;
+  padding:5px 8px!important;
+  font-size:9px!important;
+}
+.freebie-content h3{
+  font-size:18px!important;
+}
+.freebie-content p{
+  margin-top:7px!important;
+  font-size:11px!important;
+  line-height:1.45!important;
+}
+.borrow-button{
+  min-height:40px!important;
+  margin-top:12px!important;
+  padding:10px 12px!important;
+  font-size:11px!important;
+}
+
+/* Pip notice board and library rules — approximately 50% smaller */
+.notice-section{
+  padding-top:40px!important;
+  padding-bottom:40px!important;
+}
+.notice-grid{
+  gap:14px!important;
+}
+.notice-card,
+.rules-card{
+  padding:20px!important;
+  border-radius:20px!important;
+}
+.notice-card h2,
+.rules-card h2{
+  margin-bottom:9px!important;
+  font-size:22px!important;
+}
+.notice-card p,
+.rules-card p,
+.rules-card li{
+  font-size:12px!important;
+  line-height:1.5!important;
+}
+.notice-list{
+  gap:8px!important;
+  margin-top:12px!important;
+}
+.notice-item{
+  padding:9px 11px!important;
+  border-radius:12px!important;
+  font-size:11px!important;
+}
+
+/* More treasures coming soon — approximately 50% smaller */
+.coming-soon{
+  padding-top:38px!important;
+  padding-bottom:38px!important;
+}
+.coming-card{
+  max-width:620px!important;
+  padding:24px!important;
+  border-radius:24px!important;
+}
+.coming-card h2{
+  font-size:clamp(24px,2.8vw,34px)!important;
+}
+.coming-card p{
+  margin-top:10px!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+.coming-items{
+  gap:7px!important;
+  margin-top:14px!important;
+}
+.coming-pill{
+  padding:7px 10px!important;
+  font-size:11px!important;
+}
+.signature{
+  margin-top:14px!important;
+  font-size:24px!important;
+}
+
+/* Compact footer matching About page */
+.site-footer{
+  margin-top:20px!important;
+  padding:18px 7% 10px!important;
+}
+.footer-inner{
+  display:grid!important;
+  grid-template-columns:110px minmax(0,1fr) auto!important;
+  align-items:center!important;
+  gap:20px!important;
+  max-width:1400px!important;
+}
+.footer-logo-link{
+  display:block;
+  width:110px;
+  line-height:0;
+}
+.footer-logo{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.footer-column h3{
+  margin:0 0 6px!important;
+  font-size:16px!important;
+}
+.footer-explore a{
+  display:inline-block!important;
+  margin:2px 8px 2px 0!important;
+  font-size:13px!important;
+  line-height:1.3!important;
+  white-space:nowrap;
+}
+.footer-explore a:not(:last-child)::after{
+  content:"•";
+  margin-left:8px;
+  color:rgba(255,255,255,.42);
+}
+.footer-socials{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:7px!important;
+  margin:0!important;
+}
+.footer-social-link{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  width:36px!important;
+  height:36px!important;
+  margin:0!important;
+  padding:6px!important;
+  border-radius:10px!important;
+  background:rgba(255,255,255,.1);
+}
+.footer-social-link img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.footer-bottom{
+  margin-top:10px!important;
+  padding-top:8px!important;
+  font-size:11px!important;
+}
+
+@media(max-width:980px){
+  .freebie-grid{
+    grid-template-columns:repeat(2,1fr)!important;
+  }
+}
+@media(max-width:760px){
+  .hero{
+    padding-top:22px!important;
+  }
+  .freebie-grid{
+    grid-template-columns:1fr!important;
+  }
+  .footer-inner{
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+    text-align:center!important;
+  }
+  .footer-logo-link{
+    margin:0 auto;
+  }
+  .footer-socials{
+    justify-content:center!important;
+  }
+  .footer-explore a{
+    white-space:normal;
+    margin:2px 6px!important;
+  }
+  .footer-explore a:not(:last-child)::after{
+    margin-left:6px;
+  }
+}
 </style>
 </head>
 <body>
@@ -218,7 +440,7 @@
 </div>
 </div>
 <button aria-label="Open Pip's message" class="pip-open" id="pipOpen" type="button"><img alt="Open Pip's secret message" src="pip-whisper.png"/></button>
-<footer class="site-footer"><div class="footer-inner"><div><h2 class="footer-brand">Macarons Manuscripts</h2><p class="footer-text">A magical UK bookish boutique filled with reading accessories, thoughtful gifts and mild financial regret.</p></div><div class="footer-column"><h3>Explore</h3><a href="index.html">Home</a><a href="pips-picks.html">Pip's Picks</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About Maria</a><a href="freebies.html">Pip's Free Library</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a><a href="reading-nook.html">Pip's Reading Nook</a></div><div class="footer-column"><h3>Shop With Us</h3><a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank">Etsy Shop</a><a href="pips-picks.html">Browse Pip's Picks</a><a href="index.html">Back to Homepage</a></div><div class="footer-column"><h3>Follow the Magic</h3><div aria-label="Social media links" class="footer-socials"><a aria-label="Facebook" class="footer-social-link" href="https://www.facebook.com/share/1H5H84rygm/" rel="noopener noreferrer" target="_blank"><img alt="Facebook icon" src="facebook.png"/></a><a aria-label="Instagram" class="footer-social-link" href="https://www.instagram.com/macaronsmanuscripts/" rel="noopener noreferrer" target="_blank"><img alt="Instagram icon" src="instagram.png"/></a><a aria-label="TikTok" class="footer-social-link" href="https://www.tiktok.com/@macaronsmanuscripts" rel="noopener noreferrer" target="_blank"><img alt="TikTok icon" src="tiktok.png"/></a><a aria-label="Pinterest" class="footer-social-link" href="https://pin.it/nGIWJ9zFo" rel="noopener noreferrer" target="_blank"><img alt="Pinterest icon" src="pinterest.png"/></a></div></div></div><div class="footer-bottom">© 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.</div></footer>
+<footer class="site-footer"><div class="footer-inner"><div><a class="footer-logo-link" href="index.html"><img alt="Macarons Manuscripts" class="footer-logo" src="macaronsmanuscripts.png"/></a></div><div class="footer-column footer-explore"><h3>Explore</h3><a href="index.html">Home</a><a href="pips-picks.html">Pip's Picks</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About</a><a href="freebies.html">Pip's Free Library</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a><a href="reading-nook.html">Pip's Reading Nook</a></div><div class="footer-column"><h3>Follow the Magic</h3><div aria-label="Social media links" class="footer-socials"><a aria-label="Facebook" class="footer-social-link" href="https://www.facebook.com/share/1H5H84rygm/" rel="noopener noreferrer" target="_blank"><img alt="Facebook icon" src="facebook.png"/></a><a aria-label="Instagram" class="footer-social-link" href="https://www.instagram.com/macaronsmanuscripts/" rel="noopener noreferrer" target="_blank"><img alt="Instagram icon" src="instagram.png"/></a><a aria-label="TikTok" class="footer-social-link" href="https://www.tiktok.com/@macaronsmanuscripts" rel="noopener noreferrer" target="_blank"><img alt="TikTok icon" src="tiktok.png"/></a><a aria-label="Pinterest" class="footer-social-link" href="https://pin.it/nGIWJ9zFo" rel="noopener noreferrer" target="_blank"><img alt="Pinterest icon" src="pinterest.png"/></a></div></div></div><div class="footer-bottom">© 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.</div></footer>
 <script>
 const pipMessages = [
   "Don’t tell Maria... I may have hidden another freebie somewhere.",

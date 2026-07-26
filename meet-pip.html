@@ -1024,6 +1024,65 @@
 .footer-socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
 .footer-social-link{display:inline-flex;width:46px;height:46px;padding:8px;border-radius:14px;background:rgba(255,255,255,.1)}
 .footer-social-link img{width:100%;height:100%;object-fit:contain}
+
+/* Requested Meet Pip refinements */
+.hero{padding-top:26px!important}
+
+.facts-section{padding-top:28px!important;padding-bottom:28px!important}
+.facts-section .section-heading{margin-bottom:20px!important}
+.facts-section .section-title{font-size:clamp(24px,2.5vw,34px)!important}
+.facts-section .section-kicker{font-size:10px!important}
+.facts-grid{gap:12px!important}
+.fact-card{padding:14px!important;border-radius:18px!important}
+.fact-icon{width:42px!important;height:42px!important;margin-bottom:9px!important;border-radius:14px!important;font-size:21px!important}
+.fact-card h3{margin-bottom:5px!important;font-size:16px!important}
+.fact-card p{font-size:12px!important;line-height:1.4!important}
+
+.pip-duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:28px 7%;background:#fffdfb}
+.pip-duo>.section{padding:0!important;background:transparent!important}
+.pip-duo .section-inner{height:100%}
+.pip-duo .section-heading{margin-bottom:18px!important}
+.pip-duo .section-title,.pip-duo .selfie-copy h2{font-size:clamp(23px,2.2vw,32px)!important}
+.pip-duo .section-kicker{font-size:10px!important}
+.pip-duo .favourites-grid{grid-template-columns:1fr 1fr!important;gap:10px!important}
+.pip-duo .favourite-card{padding:14px!important;border-radius:18px!important}
+.pip-duo .favourite-card h3{margin-bottom:6px!important;font-size:15px!important}
+.pip-duo .favourite-card p{font-size:11px!important;line-height:1.4!important}
+.pip-duo .selfie-card{grid-template-columns:110px 1fr!important;gap:16px!important;height:100%;padding:16px!important;border-radius:20px!important}
+.pip-duo .selfie-image{padding:8px!important;border-radius:16px!important}
+.pip-duo .selfie-image img{width:100%!important;max-width:110px!important}
+.pip-duo .selfie-copy p{margin:6px 0!important;font-size:11px!important;line-height:1.4!important}
+.pip-duo .social-tag{margin-top:4px!important;padding:7px 10px!important;font-size:11px!important}
+.pip-duo .pip-selfie-quote{margin-top:8px!important;padding:8px 10px!important;font-size:11px!important;line-height:1.4!important}
+
+.site-footer{margin-top:20px!important;padding:18px 7% 10px!important}
+.footer-inner{display:grid!important;grid-template-columns:110px minmax(0,1fr) auto!important;align-items:center!important;gap:20px!important;max-width:1400px!important}
+.footer-logo-link{display:block;width:110px;line-height:0}
+.footer-logo{display:block;width:100%;height:auto;object-fit:contain}
+.footer-column h3{margin:0 0 6px!important;font-size:16px!important}
+.footer-explore a{display:inline-block!important;margin:2px 8px 2px 0!important;font-size:13px!important;line-height:1.3!important;white-space:nowrap}
+.footer-explore a:not(:last-child)::after{content:"•";margin-left:8px;color:rgba(255,255,255,.42)}
+.footer-socials{gap:7px!important;margin:0!important}
+.footer-social-link{width:36px!important;height:36px!important;padding:6px!important;border-radius:10px!important}
+.footer-bottom{margin-top:10px!important;padding-top:8px!important;font-size:11px!important}
+
+@media(max-width:950px){.pip-duo{grid-template-columns:1fr}}
+@media(max-width:760px){
+.hero{padding-top:22px!important}
+.facts-grid{grid-template-columns:repeat(2,1fr)!important}
+.pip-duo{padding:24px 18px}
+.pip-duo .selfie-card{grid-template-columns:1fr!important;text-align:center}
+.pip-duo .selfie-image img{max-width:140px!important;margin:auto}
+.footer-inner{grid-template-columns:1fr!important;gap:14px!important;text-align:center!important}
+.footer-logo-link{margin:0 auto}
+.footer-socials{justify-content:center!important}
+.footer-explore a{white-space:normal;margin:2px 6px!important}
+.footer-explore a:not(:last-child)::after{margin-left:6px}
+}
+@media(max-width:520px){
+.facts-grid{grid-template-columns:1fr!important}
+.pip-duo .favourites-grid{grid-template-columns:1fr!important}
+}
 </style>
 </head>
 <body>
@@ -1168,7 +1227,7 @@
 </div>
 </div>
 </section>
-<section class="section favourites-section">
+<div class="pip-duo"><section class="section favourites-section">
 <div class="section-inner">
 <div class="section-heading">
 <p class="section-kicker">
@@ -1208,7 +1267,23 @@
 </div>
 </div>
 </div>
-</section>
+</section><section class="section selfie-section">
+<div class="section-inner">
+<div class="selfie-card">
+<div class="selfie-image">
+<img alt="Pip Inkwing ready for a bookish selfie" loading="lazy" src="pip-selfie-corner.png"/>
+</div>
+<div class="selfie-copy">
+<p class="section-kicker">Reader adventures</p>
+<h2>📸 Pip’s Selfie Corner</h2>
+<p><strong>Has Pip travelled to your reading nook yet?</strong></p>
+<p>Snap a photo of your Macarons Manuscripts goodies, your latest read or your cosiest reading corner, then tag us so Pip can admire it. Your photo may even inspire his next bookish adventure.</p>
+<span class="social-tag">@MacaronsManuscripts</span>
+<div class="pip-selfie-quote">🐉 “I’ll be the one trying to sneak into your bookshelf...”</div>
+</div>
+</div>
+</div>
+</section></div>
 <section class="section collector-section" id="collector-cards">
 <div class="section-inner">
 <div class="collector-intro">
@@ -1250,23 +1325,7 @@
 </div>
 </div>
 </section>
-<section class="section selfie-section">
-<div class="section-inner">
-<div class="selfie-card">
-<div class="selfie-image">
-<img alt="Pip Inkwing ready for a bookish selfie" loading="lazy" src="file_000000002ea882438fa417ce76c79f20.png"/>
-</div>
-<div class="selfie-copy">
-<p class="section-kicker">Reader adventures</p>
-<h2>📸 Pip’s Selfie Corner</h2>
-<p><strong>Has Pip travelled to your reading nook yet?</strong></p>
-<p>Snap a photo of your Macarons Manuscripts goodies, your latest read or your cosiest reading corner, then tag us so Pip can admire it. Your photo may even inspire his next bookish adventure.</p>
-<span class="social-tag">@MacaronsManuscripts</span>
-<div class="pip-selfie-quote">🐉 “I’ll be the one trying to sneak into your bookshelf...”</div>
-</div>
-</div>
-</div>
-</section>
+
 <section class="section promise-section">
 <button aria-label="A tiny hidden dragon egg" class="dragon-egg" id="dragonEgg" type="button"></button>
 <button aria-label="Find hidden Pip" class="hidden-pip" id="hiddenPip" type="button"><img alt="" src="file_000000002ea882438fa417ce76c79f20.png"/></button>
@@ -1302,60 +1361,7 @@
 </section>
 </main>
 <footer class="site-footer">
-<div class="footer-inner">
-<div>
-<h2 class="footer-brand">
-          Macarons Manuscripts
-        </h2>
-<p class="footer-text">
-          Whimsical bookish gifts, reading accessories and mild
-          financial regret—approved by one extremely small dragon.
-        </p>
-</div>
-<div class="footer-column">
-<h3>
-          Explore
-        </h3>
-<a href="index.html">
-          Home
-        </a>
-<a href="pips-picks.html">
-          Pip's Picks
-        </a>
-<a href="freebies.html">
-          Pip's Free Library
-        </a>
-<a href="reviews.html">
-          Reviews
-        </a>
-<a href="meet-pip.html">
-          Meet Pip
-        </a>
-<a href="about.html">
-          About
-        </a>
-<a href="contact.html">
-          Contact
-        </a>
-<a href="reading-nook.html">
-          Pip's Reading Nook
-        </a>
-</div>
-<div class="footer-column">
-<h3>
-          Shop With Us
-        </h3>
-<a href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank">
-          Etsy Shop
-        </a>
-<a href="pips-picks.html">
-          Browse Pip's Picks
-        </a>
-<a href="index.html">
-          Back to Homepage
-        </a>
-</div>
-<div class="footer-column"><h3>Follow the Magic</h3><div class="footer-socials"><a aria-label="Facebook" class="footer-social-link" href="https://www.facebook.com/share/1H5H84rygm/" rel="noopener noreferrer" target="_blank"><img alt="Facebook" src="facebook.png"/></a><a aria-label="Instagram" class="footer-social-link" href="https://www.instagram.com/macaronsmanuscripts/" rel="noopener noreferrer" target="_blank"><img alt="Instagram" src="instagram.png"/></a><a aria-label="TikTok" class="footer-social-link" href="https://www.tiktok.com/@macaronsmanuscripts" rel="noopener noreferrer" target="_blank"><img alt="TikTok" src="tiktok.png"/></a><a aria-label="Pinterest" class="footer-social-link" href="https://pin.it/nGIWJ9zFo" rel="noopener noreferrer" target="_blank"><img alt="Pinterest" src="pinterest.png"/></a></div></div></div>
+<div class="footer-inner"><div><a class="footer-logo-link" href="index.html"><img alt="Macarons Manuscripts" class="footer-logo" src="macaronsmanuscripts.png"/></a></div><div class="footer-column footer-explore"><h3>Explore</h3><a href="index.html">Home</a><a href="pips-picks.html">Pip's Picks</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About</a><a href="freebies.html">Pip's Free Library</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a><a href="reading-nook.html">Pip's Reading Nook</a></div><div class="footer-column"><h3>Follow the Magic</h3><div aria-label="Social media links" class="footer-socials"><a aria-label="Facebook" class="footer-social-link" href="https://www.facebook.com/share/1H5H84rygm/" rel="noopener noreferrer" target="_blank"><img alt="Facebook icon" src="facebook.png"/></a><a aria-label="Instagram" class="footer-social-link" href="https://www.instagram.com/macaronsmanuscripts/" rel="noopener noreferrer" target="_blank"><img alt="Instagram icon" src="instagram.png"/></a><a aria-label="TikTok" class="footer-social-link" href="https://www.tiktok.com/@macaronsmanuscripts" rel="noopener noreferrer" target="_blank"><img alt="TikTok icon" src="tiktok.png"/></a><a aria-label="Pinterest" class="footer-social-link" href="https://pin.it/nGIWJ9zFo" rel="noopener noreferrer" target="_blank"><img alt="Pinterest icon" src="pinterest.png"/></a></div></div></div>
 <div class="footer-bottom">
       © 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.
     </div>

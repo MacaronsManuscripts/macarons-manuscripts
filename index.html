@@ -1447,25 +1447,44 @@
   }
 }
 
-/* Compact horizontal footer links */
-.site-footer{
-  margin-top:28px !important;
-  padding:20px 7% 12px !important;
+/* Latest requested homepage layout adjustments */
+.collections-section{
+  padding-bottom:38px !important;
+}
+
+.pip-section{
+  padding-top:38px !important;
+  padding-bottom:30px !important;
+}
+
+.pip-panel{
+  width:min(92%,980px) !important;
+  min-width:0 !important;
+  max-width:980px !important;
+  margin:0 auto !important;
+  grid-template-columns:minmax(0,1.15fr) minmax(220px,.85fr) !important;
+  gap:28px !important;
+  padding:28px 32px !important;
+  border-radius:26px !important;
+}
+
+.pip-copy h2{
+  font-size:clamp(30px,3vw,42px) !important;
+}
+
+.pip-copy p{
+  font-size:15px !important;
+  line-height:1.6 !important;
+}
+
+.pip-visual{
+  width:min(100%,250px) !important;
 }
 
 .footer-inner{
   grid-template-columns:auto minmax(0,1fr) auto !important;
-  align-items:center !important;
-  gap:24px !important;
-}
-
-.footer-logo-link{
-  width:120px !important;
-}
-
-.footer-column h3{
-  margin:0 0 8px !important;
-  font-size:17px !important;
+  align-items:start !important;
+  gap:32px !important;
 }
 
 .footer-column:first-of-type{
@@ -1474,39 +1493,107 @@
 
 .footer-column:first-of-type a{
   display:inline-block !important;
-  margin:3px 10px 3px 0 !important;
-  font-size:14px !important;
-  line-height:1.35 !important;
+  margin:5px 12px 5px 0 !important;
 }
 
 .footer-column:first-of-type a:not(:last-child)::after{
   content:"•";
-  margin-left:10px;
+  margin-left:12px;
+  color:rgba(255,255,255,.4);
+}
+
+@media(max-width:900px){
+  .pip-panel{
+    grid-template-columns:1fr !important;
+    text-align:center;
+  }
+
+  .pip-visual{
+    width:min(100%,210px) !important;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr !important;
+    text-align:center !important;
+  }
+
+  .footer-column:first-of-type a{
+    margin:5px 8px !important;
+  }
+
+  .footer-column:first-of-type a:not(:last-child)::after{
+    margin-left:8px;
+  }
+}
+
+/* Final compact footer — Explore links run horizontally */
+.site-footer{
+  margin-top:24px !important;
+  padding:18px 7% 10px !important;
+}
+
+.footer-inner{
+  display:grid !important;
+  grid-template-columns:110px minmax(0,1fr) auto !important;
+  align-items:center !important;
+  gap:20px !important;
+  max-width:1400px !important;
+}
+
+.footer-logo-link{
+  width:110px !important;
+  margin:0 !important;
+}
+
+.footer-column h3{
+  margin:0 0 6px !important;
+  font-size:16px !important;
+}
+
+.footer-explore{
+  min-width:0 !important;
+}
+
+.footer-explore a{
+  display:inline-block !important;
+  margin:2px 8px 2px 0 !important;
+  font-size:13px !important;
+  line-height:1.3 !important;
+  white-space:nowrap !important;
+}
+
+.footer-explore a:not(:last-child)::after{
+  content:"•";
+  margin-left:8px;
   color:rgba(255,255,255,.42);
 }
 
 .footer-socials{
-  gap:8px !important;
-  margin-top:0 !important;
+  gap:7px !important;
+  margin:0 !important;
 }
 
 .footer-social-link{
-  width:38px !important;
-  height:38px !important;
+  width:36px !important;
+  height:36px !important;
   padding:6px !important;
   border-radius:10px !important;
 }
 
 .footer-bottom{
-  margin-top:14px !important;
-  padding-top:10px !important;
-  font-size:12px !important;
+  margin-top:10px !important;
+  padding-top:8px !important;
+  font-size:11px !important;
 }
 
 @media(max-width:900px){
+  .site-footer{
+    padding:16px 20px 10px !important;
+  }
+
   .footer-inner{
     grid-template-columns:1fr !important;
-    gap:16px !important;
+    gap:12px !important;
     text-align:center !important;
   }
 
@@ -1514,12 +1601,13 @@
     margin:0 auto !important;
   }
 
-  .footer-column:first-of-type a{
-    margin:3px 7px !important;
+  .footer-explore a{
+    margin:2px 6px !important;
+    white-space:normal !important;
   }
 
-  .footer-column:first-of-type a:not(:last-child)::after{
-    margin-left:7px;
+  .footer-explore a:not(:last-child)::after{
+    margin-left:6px;
   }
 
   .footer-socials{
@@ -1641,11 +1729,9 @@
               extremely sensible financial decisions.</p><span aria-hidden="true" class="collection-arrow">→</span></a><a class="collection-card" href="https://www.etsy.com/shop/MACARONSMANUSCRIPTS?section_id=55748256&amp;order=date_desc&amp;utm_source=boe&amp;utm_medium=android&amp;utm_campaign=eSAuXWxbTIiYFaZ9yhgC5w&amp;utm_content=Book%20Sleeves" rel="noopener noreferrer" target="_blank"><img alt="Pip sitting on a sign saying Book Sleeves" class="collection-card-image" loading="lazy" src="booksleeves.png"/><h3>Book Sleeves</h3><p>Soft, protective homes for books that deserve to travel
               without acquiring emotional or physical damage.</p><span aria-hidden="true" class="collection-arrow">→</span></a><a class="collection-card" href="https://www.etsy.com/shop/MACARONSMANUSCRIPTS?section_id=55626380&amp;order=date_desc&amp;utm_source=boe&amp;utm_medium=android&amp;utm_campaign=eSAuXWxbTIiYFaZ9yhgC5w&amp;utm_content=Book%20Lover%20Mugs" rel="noopener noreferrer" target="_blank"><img alt="Pip sitting on a sign saying Bookish Mugs" class="collection-card-image" loading="lazy" src="mugs.png"/><h3>Bookish Mugs</h3><p>For readers who require hot drinks, fictional worlds and
               approximately five more chapters.</p><span aria-hidden="true" class="collection-arrow">→</span></a><a class="collection-card" href="https://www.etsy.com/shop/MACARONSMANUSCRIPTS?section_id=57456846&amp;order=date_desc&amp;utm_source=boe&amp;utm_medium=android&amp;utm_campaign=eSAuXWxbTIiYFaZ9yhgC5w&amp;utm_content=Book%20Lover%20Stickers" rel="noopener noreferrer" target="_blank"><img alt="Pip sitting on a sign saying Stickers/Stationery" class="collection-card-image" loading="lazy" src="stationery.png"/><h3>Stickers/Stationery</h3><p>Whimsical extras for journals, planners, parcels, laptops
-              and every available flat surface.</p><span aria-hidden="true" class="collection-arrow">→</span></a><a class="collection-card" href="https://www.etsy.com/shop/MACARONSMANUSCRIPTS?section_id=57733187&amp;order=date_desc&amp;utm_source=boe&amp;utm_medium=android&amp;utm_campaign=eSAuXWxbTIiYFaZ9yhgC5w&amp;utm_content=Bookish%20Trinkets" rel="noopener noreferrer" target="_blank"><img alt="Pip sitting on a sign saying Trinkets" class="collection-card-image" loading="lazy" src="trinkets.png"/><h3>Trinkets</h3><p>Small bookish treasures and charming extras for readers.</p><span aria-hidden="true" class="collection-arrow">→</span></a><a aria-disabled="true" aria-label="Digital Downloads — coming soon" class="collection-card"><img alt="Pip sitting on a sign saying Digital Downloads" class="collection-card-image" loading="lazy" src="digital.png"/><h3>Digital Downloads</h3><p>Printable reading trackers, bookmarks and bookish goodies
-              ready to enjoy instantly.</p><span aria-hidden="true" class="collection-arrow">Soon</span></a></div>
+              and every available flat surface.</p><span aria-hidden="true" class="collection-arrow">→</span></a><a class="collection-card" href="https://www.etsy.com/shop/MACARONSMANUSCRIPTS?section_id=57733187&amp;order=date_desc&amp;utm_source=boe&amp;utm_medium=android&amp;utm_campaign=eSAuXWxbTIiYFaZ9yhgC5w&amp;utm_content=Bookish%20Trinkets" rel="noopener noreferrer" target="_blank"><img alt="Pip sitting on a sign saying Trinkets" class="collection-card-image" loading="lazy" src="trinkets.png"/><h3>Trinkets</h3><p>Small bookish treasures and charming extras for readers.</p><span aria-hidden="true" class="collection-arrow">→</span></a></div>
 </div>
-</section>
-<section class="section pip-section" id="meet-pip">
+</section><section class="section pip-section" id="meet-pip">
 <div class="section-inner">
 <div class="pip-panel"><div class="pip-copy">
 <p class="section-kicker">
@@ -1768,7 +1854,7 @@
 </section>
 </main>
 <footer class="site-footer">
-<div class="footer-inner"><div><a class="footer-logo-link" href="index.html"><img alt="Macarons Manuscripts" class="footer-logo" src="macaronsmanuscripts.png"/></a></div><div class="footer-column"><h3>Explore</h3><a href="index.html">Home</a><a href="pips-picks.html">Pip's Picks</a><a href="reviews.html">Reviews</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About</a><a href="freebies.html">Pip's Free Library</a><a href="contact.html">Contact</a><a href="reading-nook.html">Pip's Reading Nook</a></div><div class="footer-column"><h3>Follow the Magic</h3><div aria-label="Social media links" class="footer-socials"><a aria-label="Facebook" class="footer-social-link" href="https://www.facebook.com/share/1H5H84rygm/" rel="noopener noreferrer" target="_blank"><img alt="Facebook icon" src="facebook.png"/></a><a aria-label="Instagram" class="footer-social-link" href="https://www.instagram.com/macaronsmanuscripts/" rel="noopener noreferrer" target="_blank"><img alt="Instagram icon" src="instagram.png"/></a><a aria-label="TikTok" class="footer-social-link" href="https://www.tiktok.com/@macaronsmanuscripts" rel="noopener noreferrer" target="_blank"><img alt="TikTok icon" src="tiktok.png"/></a><a aria-label="Pinterest" class="footer-social-link" href="https://pin.it/nGIWJ9zFo" rel="noopener noreferrer" target="_blank"><img alt="Pinterest icon" src="pinterest.png"/></a></div></div></div>
+<div class="footer-inner"><div><a class="footer-logo-link" href="index.html"><img alt="Macarons Manuscripts" class="footer-logo" src="macaronsmanuscripts.png"/></a></div><div class="footer-column footer-explore"><h3>Explore</h3><a href="index.html">Home</a><a href="pips-picks.html">Pip's Picks</a><a href="reviews.html">Reviews</a><a href="meet-pip.html">Meet Pip</a><a href="about.html">About</a><a href="freebies.html">Pip's Free Library</a><a href="contact.html">Contact</a><a href="reading-nook.html">Pip's Reading Nook</a></div><div class="footer-column"><h3>Follow the Magic</h3><div aria-label="Social media links" class="footer-socials"><a aria-label="Facebook" class="footer-social-link" href="https://www.facebook.com/share/1H5H84rygm/" rel="noopener noreferrer" target="_blank"><img alt="Facebook icon" src="facebook.png"/></a><a aria-label="Instagram" class="footer-social-link" href="https://www.instagram.com/macaronsmanuscripts/" rel="noopener noreferrer" target="_blank"><img alt="Instagram icon" src="instagram.png"/></a><a aria-label="TikTok" class="footer-social-link" href="https://www.tiktok.com/@macaronsmanuscripts" rel="noopener noreferrer" target="_blank"><img alt="TikTok icon" src="tiktok.png"/></a><a aria-label="Pinterest" class="footer-social-link" href="https://pin.it/nGIWJ9zFo" rel="noopener noreferrer" target="_blank"><img alt="Pinterest icon" src="pinterest.png"/></a></div></div></div>
 <div class="footer-bottom">
       © 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.
     </div>

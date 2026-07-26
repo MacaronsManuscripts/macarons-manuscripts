@@ -1210,7 +1210,21 @@
   }
 }
 
-/* Requested homepage sizing and footer refinements */
+.hero-title{
+  margin:0;
+  line-height:0;
+  text-shadow:none!important;
+}
+.hero-logo-image{
+  display:block;
+  width:100%;
+  max-width:520px;
+  height:auto;
+  margin:0 auto;
+  object-fit:contain;
+}
+
+/* Requested homepage refinements */
 .collection-grid{
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:16px;
@@ -1331,6 +1345,7 @@
 .footer-logo-link{
   display:block;
   width:141px;
+  margin:0 auto;
   line-height:0;
 }
 .footer-logo{
@@ -1389,7 +1404,6 @@
   }
   .footer-logo-link{
     grid-column:1/-1;
-    margin:0 auto;
   }
 }
 @media(max-width:680px){
@@ -1485,10 +1499,7 @@
 <div class="eyebrow">
             ✨ Handmade bookish treasures
           </div>
-<h1 class="hero-title">
-            Macarons<br/>
-            Manuscripts
-          </h1>
+<h1 class="hero-title"><img alt="Macarons Manuscripts" class="hero-logo-image" src="macaronsmanuscripts.png"/></h1>
 <h2 class="hero-subtitle">
             Where Bookworms Buy Cute Things
           </h2>

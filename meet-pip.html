@@ -1011,20 +1011,31 @@
 .download-badge{display:inline-block;margin:10px auto 6px;padding:6px 12px;border-radius:999px;background:#bd5f8a;color:#fff;font-size:12px;font-weight:800;letter-spacing:.05em}
 .download-note{display:block;font-size:13px;color:#81627e;margin-top:4px}
 
+
+.announcement-bar{position:relative;z-index:30;overflow:hidden;height:42px;background:var(--deep-purple);color:#fff}
+.announcement-track{display:flex;width:max-content;min-width:200%;height:100%;align-items:center;animation:announcementScroll 28s linear infinite}
+.announcement-message{flex:0 0 auto;padding:0 42px;font-size:13px;font-weight:700;white-space:nowrap}
+@keyframes announcementScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.site-header{position:relative!important;padding:22px 7%!important}
+.navigation{display:flex!important;flex-direction:column!important;align-items:center!important;gap:18px!important}
+.brand-name{display:block!important;width:min(141px,24vw)!important;margin:0 auto!important}
+.brand-name img{display:block;width:100%;height:auto}
+.nav-links{display:flex!important;justify-content:center!important;flex-wrap:wrap!important;gap:16px 26px!important}
+.footer-socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.footer-social-link{display:inline-flex;width:46px;height:46px;padding:8px;border-radius:14px;background:rgba(255,255,255,.1)}
+.footer-social-link img{width:100%;height:100%;object-fit:contain}
 </style>
 </head>
 <body>
-<div class="announcement-bar" role="region" aria-label="Shop announcement">
+<div aria-label="Shop announcement" class="announcement-bar" role="region">
 <div class="announcement-track">
-<span class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions. &nbsp;•&nbsp; Handmade in the UK &nbsp;•&nbsp; Packed by Maria &nbsp;•&nbsp; Quality checked by Pip 🐉</span>
-<span class="announcement-message" aria-hidden="true">📖 Warning: Entering this website may result in questionable financial decisions. &nbsp;•&nbsp; Handmade in the UK &nbsp;•&nbsp; Packed by Maria &nbsp;•&nbsp; Quality checked by Pip 🐉</span>
+<span class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions.  •  Handmade in the UK  •  Packed by Maria  •  Quality checked by Pip 🐉</span>
+<span aria-hidden="true" class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions.  •  Handmade in the UK  •  Packed by Maria  •  Quality checked by Pip 🐉</span>
 </div>
 </div>
 <header class="site-header">
 <nav class="navigation">
-<a class="brand-name" href="index.html">
-        Macarons Manuscripts
-      </a>
+<a class="brand-name" href="index.html"><img alt="Macarons Manuscripts" src="macaronsmanuscripts.png"/></a>
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="pips-picks.html">Pip's Picks</a>
@@ -1034,7 +1045,7 @@
 <a href="reviews.html">Reviews</a>
 <a href="contact.html">Contact</a>
 <a href="reading-nook.html">Pip's Reading Nook</a>
-<a class="nav-button" href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank"><span class="etsy-icon" aria-hidden="true">E</span>Etsy Shop</a>
+<a class="nav-button" href="https://www.etsy.com/uk/shop/MACARONSMANUSCRIPTS" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="etsy-icon">E</span>Etsy Shop</a>
 </div>
 </nav>
 </header>
@@ -1257,9 +1268,9 @@
 </div>
 </section>
 <section class="section promise-section">
-<button class="dragon-egg" id="dragonEgg" type="button" aria-label="A tiny hidden dragon egg"></button>
-<button class="hidden-pip" id="hiddenPip" type="button" aria-label="Find hidden Pip"><img alt="" src="file_000000002ea882438fa417ce76c79f20.png"/></button>
-<div class="hidden-pip-message" id="hiddenPipMessage">🐉 Psst... you found me!<br><span style="font-weight:500">You officially have dragon-level observation skills.</span></div>
+<button aria-label="A tiny hidden dragon egg" class="dragon-egg" id="dragonEgg" type="button"></button>
+<button aria-label="Find hidden Pip" class="hidden-pip" id="hiddenPip" type="button"><img alt="" src="file_000000002ea882438fa417ce76c79f20.png"/></button>
+<div class="hidden-pip-message" id="hiddenPipMessage">🐉 Psst... you found me!<br/><span style="font-weight:500">You officially have dragon-level observation skills.</span></div>
 <div class="section-inner">
 <div class="promise-card">
 <p class="section-kicker">
@@ -1344,7 +1355,7 @@
           Back to Homepage
         </a>
 </div>
-</div>
+<div class="footer-column"><h3>Follow the Magic</h3><div class="footer-socials"><a aria-label="Facebook" class="footer-social-link" href="https://www.facebook.com/share/1H5H84rygm/" rel="noopener noreferrer" target="_blank"><img alt="Facebook" src="facebook.png"/></a><a aria-label="Instagram" class="footer-social-link" href="https://www.instagram.com/macaronsmanuscripts/" rel="noopener noreferrer" target="_blank"><img alt="Instagram" src="instagram.png"/></a><a aria-label="TikTok" class="footer-social-link" href="https://www.tiktok.com/@macaronsmanuscripts" rel="noopener noreferrer" target="_blank"><img alt="TikTok" src="tiktok.png"/></a><a aria-label="Pinterest" class="footer-social-link" href="https://pin.it/nGIWJ9zFo" rel="noopener noreferrer" target="_blank"><img alt="Pinterest" src="pinterest.png"/></a></div></div></div>
 <div class="footer-bottom">
       © 2026 Macarons Manuscripts. Made with books, sparkles and dragon mischief.
     </div>

@@ -525,6 +525,38 @@
     margin-left:6px;
   }
 }
+
+/* Three Pip Reading Nook images beneath the stars */
+.pip-reading-row{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  max-width:780px;
+  margin:22px auto 0;
+}
+.pip-reading-card{
+  overflow:hidden;
+  border:5px solid rgba(255,255,255,.9);
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 14px 34px rgba(93,67,95,.13);
+}
+.pip-reading-card img{
+  display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+@media(max-width:680px){
+  .pip-reading-row{
+    gap:10px;
+    margin-top:18px;
+  }
+  .pip-reading-card{
+    border-width:3px;
+    border-radius:15px;
+  }
+}
 </style>
 </head>
 <body><div class="announcement-bar"><div class="announcement-track"><span class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions. • Handmade in the UK • Packed by Maria • Quality checked by Pip 🐉</span><span aria-hidden="true" class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions. • Handmade in the UK • Packed by Maria • Quality checked by Pip 🐉</span></div></div>
@@ -553,7 +585,7 @@
 <div class="hero-inner">
 <div class="eyebrow">🐉 A cosy corner of Macarons Manuscripts</div>
 <h1 class="hero-title">Pip's Reading Nook</h1>
-<div aria-label="Five stars" class="stars">★★★★★</div>
+<div aria-label="Five stars" class="stars">★★★★★</div><div aria-label="Pip in his Reading Nook" class="pip-reading-row"><div class="pip-reading-card"><img alt="Pip looking shy in his reading nook" loading="lazy" src="Pip-reading-nook-shy.png"/></div><div class="pip-reading-card"><img alt="Pip hiding a dark romance book in his reading nook" loading="lazy" src="Pip-reading-nook-shy1.png"/></div><div class="pip-reading-card"><img alt="Pip posing mischievously with a dark romance book" loading="lazy" src="Pip-reading-nook-shy2.png"/></div></div>
 <p class="hero-subtitle">
           Cosy stories, bookish inspiration &amp; gifts for readers.
         </p>

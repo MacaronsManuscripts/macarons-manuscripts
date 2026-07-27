@@ -786,6 +786,41 @@
   .article-body{padding:25px 20px;border-radius:23px}
   .article-body p{font-size:16px}
 }
+
+/* Reading Nook hero image fix: full image visible, centred, and smaller */
+.article-hero-image{
+  display:block !important;
+  width:85% !important;
+  max-width:760px !important;
+  height:auto !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  margin:0 auto !important;
+  padding:12px !important;
+  background:
+    radial-gradient(circle at 18% 20%,rgba(246,220,229,.72),transparent 34%),
+    linear-gradient(135deg,#fffaf6,#f8f1f8) !important;
+  border:7px solid rgba(255,255,255,.92) !important;
+  border-radius:30px !important;
+  box-shadow:var(--shadow) !important;
+}
+
+@media(max-width:680px){
+  .article-hero-image{
+    width:94% !important;
+    max-width:94% !important;
+    height:auto !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    padding:8px !important;
+    border-width:4px !important;
+    border-radius:21px !important;
+  }
+}
+
 </style>
 </head>
 <body><div class="announcement-bar"><div class="announcement-track"><span class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions. • Handmade in the UK • Packed by Maria • Quality checked by Pip 🐉</span><span aria-hidden="true" class="announcement-message">📖 Warning: Entering this website may result in questionable financial decisions. • Handmade in the UK • Packed by Maria • Quality checked by Pip 🐉</span></div></div>
